@@ -27,7 +27,7 @@ gulp.task('js', function() {
 
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
-        server: "./src",
+        server: "./",
         port: 8082
     });
     
@@ -51,6 +51,6 @@ gulp.task("fa", function() {
 
 // Gulp default tasks
 
-gulp.task('default', ['serve', 'fa', 'fonts'])
+gulp.task('default', ['js', 'serve', 'fa', 'fonts'])
 
 
