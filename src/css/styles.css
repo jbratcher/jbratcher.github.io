@@ -135,13 +135,13 @@ main {
   #sidebar h3 {
     font-size: 1rem; }
   #sidebar img {
-    width: 50%;
-    border-radius: 30%;
+    width: 30%;
+    border-radius: 50%;
     display: flex;
     transition: 0.5s ease-in-out;
-    opactiy: 0.75; }
+    opactiy: 0.5; }
   #sidebar img:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
     opacity: 1; }
   #sidebar ul {
     display: flex; }
@@ -170,7 +170,7 @@ main {
 
 #projects {
   display: flex;
-  flex: 3;
+  flex: 5;
   color: #00b5f0; }
   #projects h2 {
     font-size: 3rem;
@@ -180,10 +180,16 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around; }
+    #projects .grid .card {
+      margin-top: 3rem; }
     #projects .grid img {
+      width: 18.75rem;
+      height: 18.75rem;
+      padding: 0;
       margin: 1rem;
       max-width: 30vw;
-      border-radius: 30%;
+      border: 0.0625rem solid #ccc;
+      border-radius: 5rem;
       transition: 0.5s ease-in-out; }
     #projects .grid img:hover {
       transform: scale(1.1); }

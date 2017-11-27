@@ -202,15 +202,15 @@ main {
     }
     
     img {
-        width: 50%;
-        border-radius: 30%;
+        width: 30%;
+        border-radius: 50%;
         display: flex;
         transition: 0.5s ease-in-out;
-        opactiy: 0.75;
+        opactiy: 0.5;
     }
     
     img:hover {
-        transform: scale(1.25);
+        transform: scale(1.1);
         opacity: 1;
     }
     
@@ -262,7 +262,7 @@ main {
 #projects {
 
     display: flex;
-    flex: 3;
+    flex: 5;
     color: $primary-color;
     
     h2 {
@@ -276,10 +276,18 @@ main {
         flex-flow: row wrap;
         justify-content: space-around;
         
+        .card {
+            margin-top: 3rem;
+        }
+        
         img {
+            width: 18.75rem;
+            height: 18.75rem;
+            padding: 0;
             margin: 1rem;
             max-width: 30vw;
-            border-radius: 30%;
+            border: 0.0625rem solid #ccc;
+            border-radius: 5rem;
             transition: 0.5s ease-in-out;
         }
         
