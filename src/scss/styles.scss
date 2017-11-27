@@ -206,7 +206,7 @@ main {
         border-radius: 50%;
         display: flex;
         transition: 0.5s ease-in-out;
-        opactiy: 0.5;
+        opacity: 0.85;
     }
     
     img:hover {
@@ -267,7 +267,6 @@ main {
     
     h2 {
         font-size: 3rem;
-        padding-bottom: 2rem;
     }
     
     .grid {
@@ -289,10 +288,12 @@ main {
             border: 0.0625rem solid #ccc;
             border-radius: 5rem;
             transition: 0.5s ease-in-out;
+            opacity: 0.75;
         }
         
         img:hover {
             transform: scale(1.1);
+            opacity: 1;
         }
     }
     
@@ -319,6 +320,8 @@ main {
         }
         
         img {
+            width: 40vw;
+            height: 50vh;
             border-radius: 0.5rem;
             opacity: 0.6;
             transition: 0.5s ease-in-out;
@@ -372,6 +375,10 @@ main {
 
 #contact form input:focus, textarea:focus {
     border: 0.2rem solid $primary-color;
+}
+
+#contact form .btn {
+    width: 100%;
 }
 
 
@@ -429,6 +436,15 @@ footer {
     .bio {
         margin-top: 3rem;
     }
+        
+    #sidebar img {
+            width: 15%;
+            height: 15%;
+        }
+        
+    #about .btn {
+        font-size: 0.7rem;
+    }
     
     #about {
         order: 0;
@@ -446,8 +462,8 @@ footer {
         max-width: 80vw;
     }
     
-    #about .btn {
-        font-size: 0.7rem;
+    #blog .grid img {
+        width: 80vw;
     }
 
 }

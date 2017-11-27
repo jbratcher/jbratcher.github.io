@@ -139,7 +139,7 @@ main {
     border-radius: 50%;
     display: flex;
     transition: 0.5s ease-in-out;
-    opactiy: 0.5; }
+    opacity: 0.85; }
   #sidebar img:hover {
     transform: scale(1.1);
     opacity: 1; }
@@ -173,8 +173,7 @@ main {
   flex: 5;
   color: #00b5f0; }
   #projects h2 {
-    font-size: 3rem;
-    padding-bottom: 2rem; }
+    font-size: 3rem; }
   #projects .grid {
     width: 100%;
     display: flex;
@@ -190,9 +189,11 @@ main {
       max-width: 30vw;
       border: 0.0625rem solid #ccc;
       border-radius: 5rem;
-      transition: 0.5s ease-in-out; }
+      transition: 0.5s ease-in-out;
+      opacity: 0.75; }
     #projects .grid img:hover {
-      transform: scale(1.1); }
+      transform: scale(1.1);
+      opacity: 1; }
 
 #blog {
   background: #efefef;
@@ -207,6 +208,8 @@ main {
     #blog .grid li {
       margin: 1rem; }
     #blog .grid img {
+      width: 40vw;
+      height: 50vh;
       border-radius: 0.5rem;
       opacity: 0.6;
       transition: 0.5s ease-in-out; }
@@ -243,6 +246,9 @@ main {
 #contact form input:focus, textarea:focus {
   border: 0.2rem solid #00b5f0; }
 
+#contact form .btn {
+  width: 100%; }
+
 footer {
   display: flex;
   justify-content: space-around;
@@ -275,6 +281,11 @@ footer {
     flex-direction: column; }
   .bio {
     margin-top: 3rem; }
+  #sidebar img {
+    width: 15%;
+    height: 15%; }
+  #about .btn {
+    font-size: 0.7rem; }
   #about {
     order: 0; }
   #projects {
@@ -283,8 +294,8 @@ footer {
     flex-direction: column; }
   #projects .grid img {
     max-width: 80vw; }
-  #about .btn {
-    font-size: 0.7rem; } }
+  #blog .grid img {
+    width: 80vw; } }
 
 /* Screen reader only */
 .sr-only {
