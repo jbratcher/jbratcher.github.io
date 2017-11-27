@@ -17,6 +17,23 @@
 	    <!--[if IE]>
 		    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	    <![endif]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+    </script>    
+	    
 </head>
 
 <body onscroll="stickyNav()">
@@ -80,7 +97,7 @@
         <section id="sidebar">
             
             <div class="bio">
-                <img src="https://via.placeholder.com/150x150"></img>
+                <img src="/src/img/jeremybratcher.jpg"></img>
                 <h2>Jeremy Bratcher</h2>
                 <h3>Web Developer</h3>
             </div>
