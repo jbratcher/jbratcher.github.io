@@ -8,4 +8,5 @@ Fully responsive with animations.
 
 Using Gulp, Sass, and Browser-sync for development in a c9.io workspace.
 
+<a href="https://jbratcher.github.io/" target="_blank">Live Demo</a>
 
