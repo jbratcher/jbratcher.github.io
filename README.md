@@ -20,3 +20,5 @@ Just type gulp from the command line.
 
 <a href="https://jbratcher.github.io/" target="_blank">Live Demo</a>
 
+Blog section is currently under constuction
+
