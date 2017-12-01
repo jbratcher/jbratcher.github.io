@@ -216,9 +216,6 @@ main {
 
 #contact {
   background: #1d1e2b; }
-  #contact h2 {
-    font-size: 4rem;
-    padding: 2rem 0; }
   #contact p {
     font-size: 2rem;
     padding-bottom: 2rem; }
@@ -304,7 +301,12 @@ footer {
   #projects .grid img {
     max-width: 80vw; }
   #blog .grid img {
-    width: 80vw; } }
+    width: 80vw; }
+  #contact p {
+    font-size: 1.5rem;
+    padding: 0 1rem 2rem; }
+  #contact textarea {
+    max-width: 90vw; } }
 
 /* Screen reader only */
 .sr-only {
