@@ -424,10 +424,16 @@ footer {
 
 @media (max-width: 50rem) {
     header {
-        padding: 0rem 1rem;
+        padding: 0;
+        
         ul {
             flex-direction: column;
         }
+        
+        .brand {
+            margin-left: 1rem;
+        }
+        
     }
     
     main {

@@ -278,9 +278,11 @@ footer {
 
 @media (max-width: 50rem) {
   header {
-    padding: 0rem 1rem; }
+    padding: 0; }
     header ul {
       flex-direction: column; }
+    header .brand {
+      margin-left: 1rem; }
   main {
     flex-direction: column; }
   .bio {
