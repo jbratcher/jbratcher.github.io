@@ -222,17 +222,24 @@ main {
   background: #1d1e2b; }
   #contact p {
     font-size: 2rem;
-    padding-bottom: 2rem; }
+    padding-bottom: 2rem;
+    position: relative;
+    z-index: 1; }
   #contact .btn {
     background: #fff;
     width: 80%;
     border-radius: 1rem;
     padding: 1rem; }
+  #contact canvas {
+    position: absolute;
+    right: 0; }
 
 #contact form {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  position: relative;
+  z-index: 1; }
 
 #contact form input, textarea {
   width: 80%;
