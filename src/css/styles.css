@@ -174,8 +174,15 @@ main {
   display: flex;
   flex: 5;
   color: #00b5f0; }
+  #projects a {
+    color: #006C90; }
   #projects h2 {
     font-size: 3rem; }
+  #projects h3 {
+    font-size: 2rem; }
+  #projects h4 {
+    font-size: 2rem;
+    padding: 3rem 1rem 0rem 1rem; }
   #projects .grid {
     width: 100%;
     display: flex;
@@ -201,7 +208,7 @@ main {
   background: #efefef;
   color: #333; }
   #blog h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     padding-bottom: 3rem; }
   #blog .grid {
     display: flex;
