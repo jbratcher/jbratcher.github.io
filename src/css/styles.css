@@ -226,7 +226,8 @@ main {
       opacity: 1; }
 
 #contact {
-  background: #1d1e2b; }
+  background: #1d1e2b;
+  background: radial-gradient(at center bottom, #333440 0%, #1d1e2b 40%); }
   #contact p {
     font-size: 2rem;
     padding-bottom: 2rem;

@@ -6,9 +6,7 @@ console.log("js connected");
 
 // Variables
 
-var numCircles = 120;
-var maxRad = 40;
-var sectionHeight = 550;
+var sectionHeight = 600;
 
 // Set up the canvas and make full screen
 
@@ -19,17 +17,6 @@ canvas.height = sectionHeight;
 // Set 2D context
 
 var ctx = canvas.getContext("2d");
-
-
-// Colors arrray for circle fill
-
-var colors = [
-    "#A7C7C5",
-    "#09504F",
-    "#172A40",
-    "#FFF7DC",
-    "#D9383A"
-    ]
 
 // Mouse coordiantes
 
@@ -65,56 +52,38 @@ function Circle(x,y,dx,dy,rad,color) {
     this.dy = dy;
     this.rad = rad;
     var minRad = rad;
+    var maxRad = (rad * 2);
     this.color = color;
     
     // Draw circle function
-    
     this.draw = function() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.rad, 0, Math.PI *2, false);
         ctx.fillStyle = this.color;
         ctx.fill();
-        ctx.strokeStyle = "black";
-        ctx.stroke();
     };
     
     // Update circle position for animation
-    
     this.update = function() {
         
-        // Left/Right Collision Detection for window
+        // Move circle to bottom once it reaches top
         
-        if (this.x + this.rad > window.innerWidth || 
-            this.x - this.rad < 0) {
-            this.dx = -this.dx;
-        } 
-        
-        // Top/Bottom Collision Detection for window
-        
-        if (this.y + this.rad > sectionHeight || 
-            this.y - this.rad < 0) {
-            this.dy = -this.dy;
+        if(this.y + this.rad > window.innerHeight) {
+            this.y = 0;
         }
         
-        // Increment position (accelerate)
-        
+        // Increment position (x,y)
         this.x += this.dx;
         this.y += this.dy;
         
         // Interactivity (mouse and circles)
-        
         // Mouse detection for circle
-        
         if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
-            
             // Limit circle grow size
-            
             if (this.rad < maxRad) {
                 this.rad += 1;   
             }
-            
-        // Limit circle shrink size  
-        
+        // Limit circle shrink size    
         } else if (this.rad > minRad) {
             this.rad -= 1;
         } else if (this.rad < this.minRad) {
@@ -122,37 +91,34 @@ function Circle(x,y,dx,dy,rad,color) {
         }
         
         // Draw Circle
-        
         this.draw();
         
     };
 }
 
 // Create circles array
-
 var circles = [];
 
 function init() {
     
     // Reset circles array
-    
     circles = [];
     
     // Randomize circle value (position, velocity, fill and stroke color, and opacity)
-    
-    for (var i = 0; i < numCircles; i++) {
+    for (var i = 0; i < 100; i++) {
         var rad = (Math.floor(Math.random() * 4)) + 1;
         var x = Math.random() * (window.innerWidth - rad * 2) + rad;
-        var y = Math.random() * (window.innerHeight -rad * 2) + rad;
-        var dx = (Math.random() - 0.5) * 3;
+        var y = window.innerHeight - (rad *2);
+        var dx = 0;
         var dy = (Math.random() - 0.5) * 3;
-        var color = colors[Math.floor(Math.random() * colors.length)];
+        var color = "white";
         circles.push(new Circle(x,y,dx,dy,rad,color));
+        
+        console.log(circles);
     }
 }
 
 //  Animation function
-
 function animation() {
     //Start loop
     requestAnimationFrame(animation);
@@ -166,6 +132,5 @@ function animation() {
 }
 
 // Run 
-
 animation();
 init();

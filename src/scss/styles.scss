@@ -349,6 +349,7 @@ main {
 #contact {
     
     background: $tertiary-color;
+    background: radial-gradient(at center bottom, #333440 0%, $tertiary-color 40%);
     
     p {
         font-size: 2rem;
