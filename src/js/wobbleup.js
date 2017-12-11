@@ -6,7 +6,7 @@ console.log("js connected");
 
 // Variables 
 
-const sectionHeight = 620;
+const sectionHeight = 600;
 
 // Set up the canvas and make full screen
 

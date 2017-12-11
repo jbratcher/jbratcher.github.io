@@ -11,5 +11,5 @@ body.onscroll = function() {
 
     document.querySelector("header").style.opacity = 0.3;
         
-    setTimeout(full, 5000);
+    setTimeout(full, 2000);
 }
