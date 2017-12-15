@@ -9,9 +9,9 @@
     <meta name="keywords" content="Landing Page Template">
     <meta name="author" content="Jeremy Bratcher">
     <title>Jeremy Bratcher | Web Developer</title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Serif+Pro" rel="preload">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="preload" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="preload" href="/src/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Serif+Pro" rel="preload" as="style">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="preload" as="style" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preload" href="/src/css/styles.css" as="style">
 </head>
 
 <body onload="init();">
@@ -72,13 +72,6 @@
                 
             </div>
             
-            <div id="side-footer">
-                
-                
-                
-            </div>
-            
-            
         </section>
         
         <hr class="divider">
@@ -102,8 +95,8 @@
                     <a href="https://github.com/jbratcher/word_translator" target="_blank"><img src="/src/img/word-translator.jpg" alt=""></a>
                 </li>
                 <li class="card">
-                    <h3>Redo.css</h3>
-                    <a href="https://github.com/jbratcher/basichtml5template" target="_blank"><img src="/src/img/reset-css.jpg" alt=""></a>
+                    <h3>Canvas Particles</h3>
+                    <a href="https://github.com/jbratcher/canvas-particles-js" target="_blank"><img src="/src/img/canvas.jpg" alt=""></a>
                 </li>
                 
             </ul>
@@ -130,7 +123,7 @@
     <section id="contact">
         
         <div>
-            <canvas></canvas>
+            <canvas id="contact"></canvas>
         </div>
         
         <p>Your next adventure starts here</p>

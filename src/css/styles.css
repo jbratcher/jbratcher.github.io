@@ -65,7 +65,7 @@ section {
   .card h3 {
     font-size: 1.33rem;
     padding: 0 0 1rem; }
-  .card img {
+  .card img, .card canvas {
     max-width: 75%;
     padding: 1rem;
     border-radius: 10%; }
