@@ -9,8 +9,8 @@
     <meta name="keywords" content="Landing Page Template">
     <meta name="author" content="Jeremy Bratcher">
     <title>Jeremy Bratcher | Web Developer</title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Serif+Pro" rel="preload" as="style">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="preload" as="style" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Serif+Pro" crossorigin="anonymous" as="style">
+    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" as="style" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="preload" href="/src/css/styles.css" as="style">
 </head>
 
@@ -52,10 +52,10 @@
         
         <section id="sidebar">
             
-            <div class="bio">
+            <div class="bio" itemscope itemtype="http://schema.org/Person">
                 <img src="/src/img/jeremybratcher.jpg"></img>
-                <h2>Jeremy Bratcher</h2>
-                <h3>Web Developer</h3>
+                <h2 itemprop="name">Jeremy Bratcher</h2>
+                <h3 itemprop="jobTitle">Web Developer</h3>
             </div>
 
             <ul>
@@ -67,7 +67,7 @@
             <div id="about">
                 
                 <h3>About</h3>
-                <p>Hi, I'm Jeremy.  I'm a designer/marketer turned web developer. I specialize in front end and back end develpment in with Node.js, Vue.js, and a few others. </p>
+                <p>I'm a full-stack web developer and UI/UX focused.  I currently use the MEAN stack for development.  I'm interested in creating progressive webspaces.</p>
                 <!--<a href="bio.html" class="btn">Read More</a>-->
                 
             </div>
@@ -148,13 +148,6 @@
         <p>Jeremy Bratcher &copy; 2017</p>
         
     </footer>
-    
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Serif+Pro" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/src/css/styles.css">
-	    <!--[if IE]>
-		    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	    <![endif]-->
     
     <script type="text/javascript" src="/src/js/index.js"></script>
     <script type="text/javascript" src="/src/js/wobbleup.js"></script>
