@@ -97,6 +97,7 @@ function Circle(x,y,dx,dy,rad,color) {
             if (this.rad < maxRad) {
                 this.rad += 1;   
             }
+            
         // Limit circle shrink size    
         } else if (this.rad > minRad) {
             this.rad -= 1;

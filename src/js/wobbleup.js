@@ -6,7 +6,7 @@ console.log("js connected");
 
 // Variables 
 
-const sectionWidth = document.getElementById("contact").clientHeight;
+const sectionWidth = document.getElementById("contact").clientWidth;
 const sectionHeight = document.getElementById("contact").clientHeight;
 
 console.log("section width: " + sectionWidth);
@@ -136,14 +136,16 @@ function init() {
     
     for (var i = 0; i < 100; i++) {
         var rad = randomIntFromRange(2,4);
-        var x = Math.random() * (window.innerWidth - rad * 2);
-        var y = Math.random() * (window.innerHeight - rad * 2);
+        var x = Math.random() * (sectionWidth - rad * 2);
+        var y = Math.random() * (sectionHeight);
         var dx = 0.2;
         var dy = -randomIntFromRange(0.2,0.3);
         var color = "white";
         var boundaryRight = x + rad;
         var boundaryLeft = x - rad;
         circles.push(new Circle(x,y,dx,dy,rad,color,boundaryRight,boundaryLeft));
+        
+        console.log(circles[i])
     }
     
 

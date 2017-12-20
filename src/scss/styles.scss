@@ -187,14 +187,17 @@ main {
         display: flex;
         transition: 0.5s ease-in-out;
         opacity: 0.85;
+        -webkit-box-shadow: 3px 3px 4px #636363;
+        -moz-box-shadow: 3px 3px 4px #636363;
+        box-shadow: 0.1rem 0.1rem 0.25rem #636363;
     }
     
     img:hover {
         transform: scale(1.1);
         opacity: 1;
-        webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: 0 0 2rem 0 rgba(200,200,200,0.75);
+        -webkit-box-shadow: 3px 3px 4px #636363;
+        -moz-box-shadow: 3px 3px 4px #636363;
+        box-shadow: 0.5rem 0.5rem 1rem #636363;
     }
     
 }
@@ -300,18 +303,20 @@ main {
             padding: 0;
             margin: 1rem;
             max-width: 30vw;
-            border: 0.0625rem solid #ccc;
             border-radius: 5rem;
             transition: 0.5s ease-in-out;
             opacity: 0.75;
+            -webkit-box-shadow: 3px 3px 4px #636363;
+            -moz-box-shadow: 3px 3px 4px #636363;
+            box-shadow: 0.1rem 0.1rem 0.25rem #636363;
         }
         
         img:hover, #canvasPort:hover {
             transform: scale(1.1);
             opacity: 1;
-            webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-            box-shadow: 0 0 2rem 0 rgba(200,200,200,0.75);
+            -webkit-box-shadow: 3px 3px 4px #636363;
+            -moz-box-shadow: 3px 3px 4px #636363;
+            box-shadow: 0.5rem 0.5rem 1rem #636363;
         }
         
         #canvasPort {
@@ -320,6 +325,7 @@ main {
             background-image: -o-linear-gradient(top left, #52E5E7 10%, #130CB7 100%);
             background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%);
         }
+        
     }
     
 }
@@ -445,6 +451,7 @@ footer {
     background-color: $secondary-color;
     color: #fff;
     padding: 1.5rem 0;
+    position: relative;
     
     ul {
         list-style: none;
