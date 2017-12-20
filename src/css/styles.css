@@ -24,8 +24,7 @@ section {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  color: #eee;
-  padding: 3rem 0; }
+  color: #eee; }
 
 .brand {
   display: flex;
@@ -113,7 +112,7 @@ header {
 main {
   display: flex;
   justify-content: space-around;
-  padding: 5rem 0 0 0; }
+  padding: 8rem 0 5rem; }
 
 .bio {
   display: flex;
@@ -190,7 +189,7 @@ main {
     justify-content: space-around; }
     #projects .grid .card {
       margin-top: 3rem; }
-    #projects .grid img {
+    #projects .grid img, #projects .grid #canvasPort {
       width: 18.75rem;
       height: 18.75rem;
       padding: 0;
@@ -200,13 +199,22 @@ main {
       border-radius: 5rem;
       transition: 0.5s ease-in-out;
       opacity: 0.75; }
-    #projects .grid img:hover {
+    #projects .grid img:hover, #projects .grid #canvasPort:hover {
       transform: scale(1.1);
-      opacity: 1; }
+      opacity: 1;
+      webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0 0 2rem 0 rgba(200, 200, 200, 0.75); }
+    #projects .grid #canvasPort {
+      background-image: -webkit-linear-gradient(top left, #52E5E7 10%, #130CB7 100%);
+      background-image: -moz-linear-gradient(top left, #52E5E7 10%, #130CB7 100%);
+      background-image: -o-linear-gradient(top left, #52E5E7 10%, #130CB7 100%);
+      background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%); }
 
 #blog {
   background: #efefef;
-  color: #333; }
+  color: #333;
+  padding: 5rem 0; }
   #blog h2 {
     font-size: 2rem;
     padding-bottom: 3rem; }
@@ -227,7 +235,8 @@ main {
 
 #contact {
   background: #1d1e2b;
-  background: radial-gradient(at center bottom, #333440 0%, #1d1e2b 40%); }
+  background: radial-gradient(at center bottom, #333440 0%, #1d1e2b 40%);
+  padding: 5rem 1rem; }
   #contact p {
     font-size: 2rem;
     padding-bottom: 2rem;
@@ -238,9 +247,11 @@ main {
     width: 80%;
     border-radius: 1rem;
     padding: 1rem; }
+  #contact div {
+    display: flex;
+    justify-content: center; }
   #contact canvas {
-    position: absolute;
-    right: 0; }
+    position: absolute; }
 
 #contact form {
   display: flex;
@@ -274,7 +285,7 @@ footer {
   align-items: center;
   background-color: #006C90;
   color: #fff;
-  padding: 1.25rem 0; }
+  padding: 3rem 0; }
   footer ul {
     list-style: none;
     display: flex; }
@@ -319,7 +330,7 @@ footer {
     order: 1; }
   #projects .grid {
     flex-direction: column; }
-  #projects .grid img {
+  #projects .grid img, #projects .grid #canvasPort {
     max-width: 80vw; }
   #blog .grid img {
     width: 80vw; }

@@ -4,15 +4,23 @@
 
 console.log("js connected");
 
+// variables
+
+var elementlWidth = document.getElementById("canvasPort").clientWidth;
+var elementHeight = document.getElementById("canvasPort").clientHeight;
+
+console.log("element width: " + elementlWidth);
+console.log("element height: " + elementHeight);
+
 // Set up the canvas and make full screen
 
-var canvas = document.querySelector("canvas");
-canvas.width = 300;
-canvas.height = 300;
+var canvasPort = document.getElementById("canvasPort");
+canvasPort.width = elementlWidth;
+canvasPort.height = elementHeight;
 
 // Set 2D context
 
-var ctx = canvas.getContext("2d");
+var ctx = canvasPort.getContext("2d");
 
 // Mouse coordiantes
 
@@ -40,8 +48,8 @@ window.addEventListener("mousemove",
 // Responsive Canvas
 
 window.addEventListener("resize", function() {
-    canvas.width = 300;
-    canvas.height = 300;
+    canvasPort.width = elementlWidth;
+    canvasPort.height = elementHeight;
     init();
 })
 
@@ -70,11 +78,11 @@ function Circle(x,y,dx,dy,rad,color) {
         
         // Loop circle when it hits the side of the window
         
-        if(this.x + this.rad > 300) {
+        if(this.x + this.rad > elementlWidth) {
             this.x = 0;
         }
         
-        if(this.y + this.rad > 300) {
+        if(this.y + this.rad > elementHeight) {
             this.y = 0;
         }
         
@@ -84,7 +92,7 @@ function Circle(x,y,dx,dy,rad,color) {
         
         // Interactivity (mouse and circles)
         // Mouse detection for circle
-        if (mouse.x - this.x < 5 && mouse.x - this.x > -5 && mouse.y - this.y < 5 && mouse.y - this.y > -5) {
+        if (mouse.x - this.x < 1 && mouse.x - this.x > -1 && mouse.y - this.y < 1 && mouse.y - this.y > -1) {
             // Limit circle grow size
             if (this.rad < maxRad) {
                 this.rad += 1;   
@@ -113,14 +121,13 @@ function init() {
     // Randomize circle value (position, velocity, fill and stroke color, and opacity)
     for (var i = 0; i < 100; i++) {
         var rad = randomIntFromRange(2,4);
-        var x = Math.random() * (300 - rad * 2) + rad;
-        var y = Math.random() * (300 - rad *2) + rad;
-        var dx = rad * 2;
-        var dy = randomIntFromRange(1,3);
-        var color = "blue";
+        var x = Math.random() * (elementlWidth - rad * 2) + rad;
+        var y = Math.random() * (elementHeight - rad *2) + rad;
+        var dx = rad * 0.1;
+        var dy = randomIntFromRange(0.5,1);
+        var color = "white";
         circles.push(new Circle(x,y,dx,dy,rad,color));
         
-        console.log(circles);
     }
 }
 

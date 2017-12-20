@@ -6,12 +6,16 @@ console.log("js connected");
 
 // Variables 
 
-const sectionHeight = 600;
+const sectionWidth = document.getElementById("contact").clientHeight;
+const sectionHeight = document.getElementById("contact").clientHeight;
+
+console.log("section width: " + sectionWidth);
+console.log("section height: " + sectionHeight);
 
 // Set up the canvas and make full screen
 
-var canvas = document.querySelector("canvas");
-canvas.width = window.innerWidth;
+var canvas = document.getElementById("canvas");
+canvas.width = sectionWidth;
 canvas.height = sectionHeight;
 
 // Set 2D context
@@ -38,7 +42,7 @@ window.addEventListener("mousemove",
 // Responsive Canvas
 
 window.addEventListener("resize", function() {
-    canvas.width = window.innerWidth;
+    canvas.width = sectionWidth;
     canvas.height = sectionHeight;
     init();
 });
@@ -76,13 +80,13 @@ function Circle(x,y,dx,dy,rad,color, boundaryRight, boundaryLeft) {
     
     this.update = function() {
         
-        // Move circle to top once it reaches bottom
+        // Move circle to bottom once it reaches top
         
-        if(this.y + this.rad < 0) {
+        if(this.y < 0) {
             this.y = sectionHeight;
         }
         
-        if(this.x > boundaryRight || this.x < boundaryLeft) {
+        if(this.x > this.boundaryRight || this.x < this.boundaryLeft) {
             this.dx = -this.dx;
         }
         
@@ -155,7 +159,7 @@ function animation() {
     
     // Clear window after drawing circle
     
-    ctx.clearRect(0,0,window.innerWidth, window.innerHeight);
+    ctx.clearRect(0,0,sectionWidth, sectionHeight);
     
     // Draw the circles
     
