@@ -17,9 +17,6 @@ a {
 ul {
   list-style: none; }
 
-textarea {
-  width: auto; }
-
 section {
   display: flex;
   flex-flow: column nowrap;
@@ -47,12 +44,13 @@ section {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
+  border: 0.2rem solid #00b5f0;
   transition: 0.3s ease-in-out; }
 
 .btn:hover {
-  border: 0.3rem solid #00b5f0;
-  color: #00b5f0;
-  transform: scale(1.1); }
+  border: 0.2rem solid #fff;
+  background: #00b5f0;
+  color: #fff; }
 
 .card {
   display: flex;
@@ -134,7 +132,10 @@ main {
     opacity: 0.85; }
   .bio img:hover {
     transform: scale(1.1);
-    opacity: 1; }
+    opacity: 1;
+    webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 2rem 0 rgba(200, 200, 200, 0.75); }
 
 #sidebar {
   display: flex;
@@ -175,13 +176,16 @@ main {
   color: #00b5f0; }
   #projects a {
     color: #006C90; }
+  #projects a:hover {
+    color: #00b5f0; }
   #projects h2 {
     font-size: 3rem; }
   #projects h3 {
     font-size: 2rem; }
   #projects h4 {
     font-size: 2rem;
-    padding: 3rem 1rem 0rem 1rem; }
+    padding: 3rem 1rem 0rem 1rem;
+    transition: 0.3s all ease-out; }
   #projects .grid {
     width: 100%;
     display: flex;
@@ -250,7 +254,7 @@ main {
   #contact div {
     display: flex;
     justify-content: center; }
-  #contact canvas {
+  #contact #canvas {
     position: absolute; }
 
 #contact form {
@@ -277,7 +281,18 @@ main {
   border: 0.2rem solid #00b5f0; }
 
 #contact form .btn {
-  width: 80%; }
+  width: 80%;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border: 0.2rem solid #00b5f0;
+  transition: 0.3s ease-in-out; }
+
+#contact form .btn:hover {
+  background: #00b5f0;
+  color: #fff;
+  border: 0.2rem solid #006C90; }
 
 footer {
   display: flex;
@@ -285,12 +300,12 @@ footer {
   align-items: center;
   background-color: #006C90;
   color: #fff;
-  padding: 3rem 0; }
+  padding: 1.5rem 0; }
   footer ul {
     list-style: none;
     display: flex; }
   footer ul li {
-    margin-left: 1rem; }
+    padding: 0 1rem; }
   footer p {
     text-transform: uppercase;
     font-size: 0.875rem;
