@@ -175,20 +175,32 @@ main {
 
 #projects {
   display: flex;
-  flex: 5;
-  color: #00b5f0; }
-  #projects a {
-    color: #006C90; }
-  #projects a:hover {
-    color: #00b5f0; }
+  flex: 5; }
   #projects h2 {
+    color: #00b5f0;
     font-size: 3rem; }
-  #projects h3 {
-    font-size: 2rem; }
   #projects h4 {
+    position: relative;
+    top: 0;
+    color: #00b5f0;
     font-size: 2rem;
-    padding: 3rem 1rem 0rem 1rem;
+    margin-top: 3rem;
+    padding: 1rem;
+    border: 0.25rem solid #00b5f0;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 0 4px #999;
+    -moz-box-shadow: 0 0 4px #999;
+    box-shadow: 0 0.25rem 0.25rem #999;
     transition: 0.3s all ease-out; }
+    #projects h4 a {
+      color: #00b5f0; }
+  #projects h4:hover {
+    top: 0.3rem;
+    -webkit-box-shadow: 0 0 4px #636363;
+    -moz-box-shadow: 0 0 4px #636363;
+    box-shadow: 0 0.5rem 1rem #636363; }
+    #projects h4:hover a {
+      color: #fff; }
   #projects .grid {
     width: 100%;
     display: flex;
@@ -197,6 +209,8 @@ main {
     #projects .grid .card {
       margin-top: 3rem; }
     #projects .grid img, #projects .grid #canvasPort {
+      position: relative;
+      top: 0;
       width: 18.75rem;
       height: 18.75rem;
       padding: 0;
@@ -209,6 +223,7 @@ main {
       -moz-box-shadow: 3px 3px 4px #636363;
       box-shadow: 0.1rem 0.1rem 0.25rem #636363; }
     #projects .grid img:hover, #projects .grid #canvasPort:hover {
+      top: 1rem;
       transform: scale(1.1);
       opacity: 1;
       -webkit-box-shadow: 3px 3px 4px #636363;
@@ -274,7 +289,7 @@ main {
   margin: 1rem;
   padding: 1rem;
   font-size: 1.125rem;
-  color: #555;
+  color: #333;
   border-radius: 1rem; }
 
 #contact form textarea {
@@ -286,18 +301,22 @@ main {
   border: 0.2rem solid #00b5f0; }
 
 #contact form .btn {
+  position: relative;
+  top: 0;
   width: 80%;
   background-color: #fff;
+  color: #00b5f0;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   border: 0.2rem solid #00b5f0;
-  transition: 0.3s ease-in-out; }
+  transition: 0.5s ease-in-out; }
 
 #contact form .btn:hover {
+  top: 0.3rem;
   background: #00b5f0;
   color: #fff;
-  border: 0.2rem solid #006C90; }
+  border: 0.2rem solid #00b5f0; }
 
 footer {
   display: flex;
@@ -342,7 +361,8 @@ footer {
     align-self: center;
     width: 80vw;
     background: #333;
-    border: 0.0625rem solid #333; }
+    border: 0.0625rem solid #333;
+    margin: 3rem 0; }
   #about .btn {
     font-size: 0.7rem; }
   #about {
