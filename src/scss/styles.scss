@@ -156,6 +156,8 @@ header {
     
 }
 
+// Main 
+
 main {
     display: flex;
     justify-content: space-around;
@@ -362,9 +364,10 @@ main {
         padding-bottom: 3rem;
     }
     
-    .grid {
+    .blog-grid {
+        width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         justify-content: space-around;
         
         li {
@@ -372,9 +375,9 @@ main {
         }
         
         img {
-            max-width: 90vw;
             width: 40vw;
-            height: 50vh;
+            height: 30vw;
+            max-width: 90vw;
             border-radius: 3rem;
             opacity: 0.6;
             transition: 0.5s ease-in-out;
@@ -508,6 +511,7 @@ footer {
 // Media Queries
 
 @media (max-width: 50rem) {
+    
     header {
         padding: 0;
         
@@ -555,9 +559,9 @@ footer {
         order: 1;
         
         h4 {
-            max-width: 70vw;
-            font-size: 1.5rem;
-            padding: 0.5rem;
+            max-width: 50vw;
+            font-size: 1rem;
+            padding: 0.25rem;
         }
     }
     
@@ -569,8 +573,9 @@ footer {
         max-width: 80vw;
     }
     
-    #blog .grid img {
+    #blog .blog-grid img {
         width: 80vw;
+        height: 50vh;
     }
     
     #contact p {

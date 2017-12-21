@@ -245,20 +245,21 @@ main {
   #blog h2 {
     font-size: 2rem;
     padding-bottom: 3rem; }
-  #blog .grid {
+  #blog .blog-grid {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-around; }
-    #blog .grid li {
+    #blog .blog-grid li {
       margin: 1rem; }
-    #blog .grid img {
-      max-width: 90vw;
+    #blog .blog-grid img {
       width: 40vw;
-      height: 50vh;
+      height: 30vw;
+      max-width: 90vw;
       border-radius: 3rem;
       opacity: 0.6;
       transition: 0.5s ease-in-out; }
-    #blog .grid img:hover {
+    #blog .blog-grid img:hover {
       opacity: 1; }
 
 #contact {
@@ -374,15 +375,16 @@ footer {
   #projects {
     order: 1; }
     #projects h4 {
-      max-width: 70vw;
-      font-size: 1.5rem;
-      padding: 0.5rem; }
+      max-width: 50vw;
+      font-size: 1rem;
+      padding: 0.25rem; }
   #projects .grid {
     flex-direction: column; }
   #projects .grid img, #projects .grid #canvasPort {
     max-width: 80vw; }
-  #blog .grid img {
-    width: 80vw; }
+  #blog .blog-grid img {
+    width: 80vw;
+    height: 50vh; }
   #contact p {
     font-size: 1.5rem;
     padding: 0 1rem 2rem; }
