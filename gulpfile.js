@@ -58,11 +58,15 @@ gulp.task('sass', function() {
 
 // Watch Sass, JS && Serve
 
+// Generate random port between 8080 and 8082
+
+var randomPort = Math.floor(Math.random()*(8082-8080+1)+8080);
+
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
         server: "./",
-        port: 8082     // Change port as needed, 8082 is for Cloud 9 workspace
+        port: randomPort     // Change port as needed, 8082 is for Cloud 9 workspace
     });
 
     gulp.watch(['src/scss/*.scss'], ['sass']);
