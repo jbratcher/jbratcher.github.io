@@ -32,10 +32,6 @@ ul {
     list-style: none;
 }
 
-// button {
-    
-// }
-
 section {
     display: flex;
     flex-flow: column nowrap;
@@ -273,6 +269,11 @@ main {
         font-size: 3rem;
     }
     
+    h3 {
+        color: $secondary-color;
+        font-size: 1.67rem;
+    }
+    
     h4 {
         position: relative;
         top: 0;
@@ -371,9 +372,10 @@ main {
         }
         
         img {
+            max-width: 90vw;
             width: 40vw;
             height: 50vh;
-            border-radius: 0.5rem;
+            border-radius: 3rem;
             opacity: 0.6;
             transition: 0.5s ease-in-out;
         }
@@ -447,7 +449,7 @@ main {
 
 #contact form .btn {
     position: relative;
-    top: 0;
+    top: 0.3rem;
     width: 80%;
     background-color: #fff;
     color: $primary-color;
@@ -459,7 +461,7 @@ main {
 }
 
 #contact form .btn:hover {
-    top: 0.3rem;
+    top: 0;
     background: $primary-color;
     color: #fff;
     border: 0.2rem solid $primary-color;
@@ -551,6 +553,12 @@ footer {
     
     #projects {
         order: 1;
+        
+        h4 {
+            max-width: 70vw;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+        }
     }
     
     #projects .grid {
@@ -572,6 +580,14 @@ footer {
     
     #contact textarea {
         max-width: 90vw;
+    }
+    
+    footer {
+        
+        i.fa {
+            font-size: 1.5rem;
+            padding: 0;
+        }
     }
 
 }

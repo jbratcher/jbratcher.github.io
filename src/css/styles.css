@@ -179,6 +179,9 @@ main {
   #projects h2 {
     color: #00b5f0;
     font-size: 3rem; }
+  #projects h3 {
+    color: #006C90;
+    font-size: 1.67rem; }
   #projects h4 {
     position: relative;
     top: 0;
@@ -249,9 +252,10 @@ main {
     #blog .grid li {
       margin: 1rem; }
     #blog .grid img {
+      max-width: 90vw;
       width: 40vw;
       height: 50vh;
-      border-radius: 0.5rem;
+      border-radius: 3rem;
       opacity: 0.6;
       transition: 0.5s ease-in-out; }
     #blog .grid img:hover {
@@ -302,7 +306,7 @@ main {
 
 #contact form .btn {
   position: relative;
-  top: 0;
+  top: 0.3rem;
   width: 80%;
   background-color: #fff;
   color: #00b5f0;
@@ -313,7 +317,7 @@ main {
   transition: 0.5s ease-in-out; }
 
 #contact form .btn:hover {
-  top: 0.3rem;
+  top: 0;
   background: #00b5f0;
   color: #fff;
   border: 0.2rem solid #00b5f0; }
@@ -369,6 +373,10 @@ footer {
     order: 0; }
   #projects {
     order: 1; }
+    #projects h4 {
+      max-width: 70vw;
+      font-size: 1.5rem;
+      padding: 0.5rem; }
   #projects .grid {
     flex-direction: column; }
   #projects .grid img, #projects .grid #canvasPort {
@@ -379,7 +387,10 @@ footer {
     font-size: 1.5rem;
     padding: 0 1rem 2rem; }
   #contact textarea {
-    max-width: 90vw; } }
+    max-width: 90vw; }
+  footer i.fa {
+    font-size: 1.5rem;
+    padding: 0; } }
 
 /* Screen reader only */
 .sr-only {
