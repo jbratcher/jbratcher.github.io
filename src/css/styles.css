@@ -77,7 +77,7 @@ section {
 
 header {
   position: fixed;
-  background: linear-gradient(to bottom, #45484d 0%, black 100%);
+  background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%);
   color: #fff;
   width: 100vw;
   display: flex;
@@ -101,14 +101,18 @@ header {
     font-size: 1.33rem;
     opacity: 0.75;
     color: #fff;
-    border: 0.0625rem solid #555;
+    border: 0.125rem solid #555;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
     transition: 0.5s ease-in-out; }
   header li:hover {
     opacity: 1;
     color: #00b5f0;
     background: #000; }
   header li:last-of-type {
-    margin-right: 3rem; }
+    margin-right: 3rem;
+    border-right: 0.125rem solid #555; }
 
 main {
   display: flex;
@@ -271,7 +275,7 @@ main {
 
 #contact {
   background: #1d1e2b;
-  background: radial-gradient(at center bottom, #333440 0%, #1d1e2b 40%);
+  background: radial-gradient(at center bottom, #333440 0%, #1d1e2b 60%);
   padding: 5rem 1rem; }
   #contact p {
     font-size: 2rem;
@@ -286,8 +290,6 @@ main {
   #contact div {
     display: flex;
     justify-content: center; }
-  #contact #canvas {
-    position: absolute; }
 
 #contact form {
   display: flex;
