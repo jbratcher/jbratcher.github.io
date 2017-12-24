@@ -1,15 +1,27 @@
 var body = document.querySelector("body");
-var header = document.querySelector("header")
+var header = document.querySelector("header");
 
 var navOpacity = function() {
     
-    document.querySelector("header").style.opacity = 1;
+    header.style.opacity = 1;
     
-}
+};
 
 body.onscroll = function() {
+    
+    var y = window.pageYOffset;
 
-    document.querySelector("header").style.opacity = 0.3;
+    console.log(y);
+    
+    if (y <= 1200) {
         
-    setTimeout(navOpacity, 2000);
-}
+        header.style.opacity = 0.3;
+        
+        setTimeout(navOpacity, 2000);
+        
+    } else if (y > 1200) {
+        header.style.opacity = 0;
+    }
+
+};
+
