@@ -3,6 +3,7 @@
 $primary-color: #00b5f0;
 $secondary-color: #006C90;
 $tertiary-color: #1d1e2b;
+$tert-opac: rgba(29,30,43, 0.7);
 $header-bg: linear-gradient(to bottom, rgba(49,52,57,1) 0%, $tertiary-color 100%);
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
@@ -145,7 +146,7 @@ header {
         box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
         min-height: 100%;
         width: 12.5rem;
-        background: $tertiary-color;
+        background: $header-bg;
     }
 
     li {
@@ -620,7 +621,7 @@ footer {
 
 // Mobile Menu
 
-    /* Screen reader only */
+    // Screen reader only
     
     .sr-only {
         position: absolute;
@@ -631,9 +632,10 @@ footer {
         overflow: hidden;
         clip: rect(0,0,0,0);
         border: 0;
+        opacity: 0;
     }
 
-    /* Button styling */
+    // Toggle Button styling
     
     .menu-toggle {
         display: inline-block;
@@ -648,10 +650,7 @@ footer {
         color: $primary-color;
     }
 
-    /*
-     Default styles + Mobile first
-     Offscreen menu style
-    */
+    // Default styles & Offscreen menu style
     
     .main-menu {
         position: absolute;
@@ -679,11 +678,7 @@ footer {
         top: 0;
     }
 
-    /*
-     On small devices, allow it to toggle...
-     :target for non-JavaScript
-     aria-expanded="true/false" will be for JavaScript
-    */
+    // Small devices toggling, :target for no JS (aria-expanded="true/false")
     
     .main-menu:target,
     .main-menu[aria-expanded="true"] {
@@ -704,11 +699,8 @@ footer {
       position: relative;
       z-index: 1000;
     }
-
-    /* 
-     We could use `.main-menu:target:after`, but
-     it wouldn't be clickable.
-    */
+    
+    // Menu backdrop
     
     .main-menu:target + .backdrop,
     .main-menu[aria-expanded="true"] + .backdrop {
@@ -720,8 +712,7 @@ footer {
       width: 100%;
       height: 100%;
       z-index: 998;
-      background: $tertiary-color;
-      background: rgba(29, 30, 43,.85);
+      background: $tert-opac;
       cursor: default;
     }
 
@@ -733,18 +724,13 @@ footer {
       }
     }
 
-    /*
-     Larger screen styling
-     Horizontal menu
-    */
+    // Larger screen styling, reset to horizontal menu bar
 
     @media (min-width: 50rem) {
         .menu-toggle,
         .main-menu .menu-close {
           display: none;
         }
-  
-        /* Undo positioning of off-canvas menu */
       
         .main-menu {
             position: relative;
@@ -755,9 +741,6 @@ footer {
       
         .main-menu ul {
             display: flex;
-    
-            /* Undo off-canvas styling */
-            
             padding: 0;
             -webkit-box-shadow: none;
                -moz-box-shadow: none;
@@ -769,12 +752,12 @@ footer {
   
         .main-menu a {
             color: #fff;
-            border: 0 !important; /* Remove borders from off-canvas styling */
+            border: 0;
         }
   
         .main-menu a:hover,
         .main-menu a:focus {
-            background: none; /* Remove background from off-canvas styling */
+            background: #000;
             color: $primary-color;
           }
           
@@ -783,11 +766,7 @@ footer {
     @media (max-width: 50rem) {
             
         .main-menu {
-            right: -12.5rem;
+            right: -12.6rem;
         }    
-        
-        .main-menu li:last-child {
-            border-right: none;
-        }
                 
     }

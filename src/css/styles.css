@@ -102,7 +102,7 @@ header {
     box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
     min-height: 100%;
     width: 12.5rem;
-    background: #1d1e2b; }
+    background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%); }
   header li {
     padding: 0.5rem;
     font-size: 1.33rem;
@@ -412,7 +412,6 @@ footer {
     font-size: 1.5rem;
     padding: 0; } }
 
-/* Screen reader only */
 .sr-only {
   position: absolute;
   width: 0.625rem;
@@ -421,9 +420,9 @@ footer {
   margin: -0.625rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  border: 0; }
+  border: 0;
+  opacity: 0; }
 
-/* Button styling */
 .menu-toggle {
   display: inline-block;
   padding: .75rem 1rem;
@@ -435,10 +434,6 @@ footer {
 .menu-toggle:focus {
   color: #00b5f0; }
 
-/*
-     Default styles + Mobile first
-     Offscreen menu style
-    */
 .main-menu {
   position: absolute;
   right: 0;
@@ -458,11 +453,6 @@ footer {
   right: 0;
   top: 0; }
 
-/*
-     On small devices, allow it to toggle...
-     :target for non-JavaScript
-     aria-expanded="true/false" will be for JavaScript
-    */
 .main-menu:target,
 .main-menu[aria-expanded="true"] {
   right: 0;
@@ -480,10 +470,6 @@ footer {
   position: relative;
   z-index: 1000; }
 
-/* 
-     We could use `.main-menu:target:after`, but
-     it wouldn't be clickable.
-    */
 .main-menu:target + .backdrop,
 .main-menu[aria-expanded="true"] + .backdrop {
   position: absolute;
@@ -494,8 +480,7 @@ footer {
   width: 100%;
   height: 100%;
   z-index: 998;
-  background: #1d1e2b;
-  background: rgba(29, 30, 43, 0.85);
+  background: rgba(29, 30, 43, 0.7);
   cursor: default; }
 
 @supports (position: fixed) {
@@ -504,15 +489,10 @@ footer {
   .main-menu[aria-expanded="true"] + .backdrop {
     position: fixed; } }
 
-/*
-     Larger screen styling
-     Horizontal menu
-    */
 @media (min-width: 50rem) {
   .menu-toggle,
   .main-menu .menu-close {
     display: none; }
-  /* Undo positioning of off-canvas menu */
   .main-menu {
     position: relative;
     right: auto;
@@ -520,7 +500,6 @@ footer {
     height: auto; }
   .main-menu ul {
     display: flex;
-    /* Undo off-canvas styling */
     padding: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -530,16 +509,12 @@ footer {
     background: none; }
   .main-menu a {
     color: #fff;
-    border: 0 !important;
-    /* Remove borders from off-canvas styling */ }
+    border: 0; }
   .main-menu a:hover,
   .main-menu a:focus {
-    background: none;
-    /* Remove background from off-canvas styling */
+    background: #000;
     color: #00b5f0; } }
 
 @media (max-width: 50rem) {
   .main-menu {
-    right: -12.5rem; }
-  .main-menu li:last-child {
-    border-right: none; } }
+    right: -12.6rem; } }
