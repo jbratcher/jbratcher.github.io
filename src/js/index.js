@@ -9,19 +9,18 @@ var navOpacity = function() {
 
 body.onscroll = function() {
     
-    var y = window.pageYOffset;
-
-    console.log(y);
-    
-    if (y <= 1200) {
+    if (window.pageYOffset <= 1200) {
         
         header.style.opacity = 0.3;
+    
         
-        setTimeout(navOpacity, 2000);
+    } else if (window.pageYOffset > 1200) {
         
-    } else if (y > 1200) {
-        header.style.opacity = 0;
+        header.style.display = "none";
+        
     }
+    
+    setTimeout(navOpacity, 2000);
 
 };
 

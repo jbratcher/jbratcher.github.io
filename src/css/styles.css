@@ -88,12 +88,21 @@ header {
     font-size: 1rem; }
   header a {
     color: #fff;
+    padding: 1rem;
     transition: color 0.5s ease; }
   header a:hover {
     color: #00b5f0; }
   header ul {
     display: flex;
-    list-style: none; }
+    list-style: none;
+    margin: 0;
+    /* Hide shadow w/ -0.5rem while 'closed' */
+    -webkit-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
+    -moz-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
+    box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
+    min-height: 100%;
+    width: 12.5rem;
+    background: #1d1e2b; }
   header li {
     padding: 0.5rem;
     font-size: 1.33rem;
@@ -434,33 +443,15 @@ footer {
   position: absolute;
   right: 0;
   top: 0;
-  height: 100%;
   overflow-y: scroll;
   overflow-x: visible;
   transition: left 0.3s ease, box-shadow 0.3s ease;
   z-index: 999; }
-
-.main-menu ul {
-  list-style: none;
-  margin: 0;
-  /* Hide shadow w/ -0.5rem while 'closed' */
-  -webkit-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
-  -moz-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
-  box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
-  min-height: 100%;
-  width: 12.5rem;
-  background: #1d1e2b; }
-
-.main-menu a {
-  display: block;
-  padding: 1rem;
-  line-height: 1rem;
-  color: #fff;
-  text-decoration: none; }
-
-.main-menu a:hover,
-.main-menu a:focus {
-  background: #1d1e2b; }
+  .main-menu ul {
+    padding: 3.5rem 0 0.5rem;
+    height: auto; }
+    .main-menu ul li {
+      width: 100%; }
 
 .main-menu .menu-close {
   position: absolute;
@@ -469,8 +460,6 @@ footer {
 
 /*
      On small devices, allow it to toggle...
-    */
-/*
      :target for non-JavaScript
      aria-expanded="true/false" will be for JavaScript
     */
