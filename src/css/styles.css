@@ -47,7 +47,7 @@ section {
   border: 0.2rem solid #00b5f0;
   transition: 0.3s ease-in-out; }
 
-.btn:hover {
+.btn:hover, .btn:focus, .btn:active, .btn:target {
   border: 0.2rem solid #fff;
   background: #00b5f0;
   color: #fff; }
@@ -136,7 +136,8 @@ main {
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
-    padding: 0.7rem 0; }
+    padding: 0.7rem 0;
+    margin-top: -3rem; }
   .bio h3 {
     font-size: 1.5rem; }
   .bio img {
@@ -161,6 +162,7 @@ main {
   text-align: center;
   border: 0.0625rem solid #000;
   border-radius: 3rem;
+  padding: 0.3rem;
   margin: 6rem 2rem 0;
   height: 55%;
   -webkit-box-shadow: 0 0 8px #000;
@@ -187,10 +189,6 @@ main {
     font-size: 1.33rem;
     padding: 1rem 2rem;
     line-height: 1.5; }
-  #about .btn {
-    font-size: 0.8rem;
-    width: 30%;
-    align-self: center; }
 
 #projects {
   display: flex;
@@ -338,7 +336,7 @@ main {
   border: 0.2rem solid #00b5f0;
   transition: 0.5s ease-in-out; }
 
-#contact form .btn:hover {
+#contact form .btn:hover, #contact form .btn:focus, #contact form .btn:active, #contact form .btn:target {
   top: 0;
   background: #00b5f0;
   color: #fff;
@@ -376,12 +374,17 @@ footer {
     header .brand {
       margin-left: 1rem; }
   main {
-    flex-direction: column; }
-  .bio {
-    margin-top: 0.5rem; }
-  #sidebar img {
-    width: 30%;
+    flex-direction: column;
+    align-items: center; }
+  .bio h2 {
+    margin-top: -7rem; }
+  .bio img {
+    top: -11rem;
+    width: 40%;
     height: 30%; }
+  #sidebar {
+    padding: 6rem 0;
+    max-width: 75vw; }
   .divider {
     display: flex;
     align-self: center;
@@ -389,10 +392,9 @@ footer {
     background: #333;
     border: 0.0625rem solid #333;
     margin: 3rem 0; }
-  #about .btn {
-    font-size: 0.7rem; }
   #about {
-    order: 0; }
+    order: 0;
+    padding: 1rem 2rem; }
   #projects {
     order: 1; }
     #projects h4 {
