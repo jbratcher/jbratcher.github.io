@@ -87,7 +87,7 @@ section {
     align-items: center;
     color: #666;
     font-size: 1rem;
-    margin: 0 1rem;
+    margin: 0 1rem 1rem;
     
     h3 {
         font-size: 1.33rem;
@@ -185,7 +185,7 @@ header {
 main {
     display: flex;
     justify-content: space-around;
-    padding: 6rem 0 5rem;
+    padding: 4rem 0;
 }
 
 // Sidebar
@@ -297,7 +297,7 @@ main {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 3rem;
-        padding: 2rem;
+        padding-top: 1rem;
     }
     
     h3 {
@@ -342,7 +342,7 @@ main {
         justify-content: space-around;
         
         .card {
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
         
         img, #canvasPort {
@@ -598,9 +598,9 @@ footer {
         order: 1;
         
         h4 {
-            max-width: 50vw;
-            font-size: 1rem;
-            padding: 0.25rem;
+            max-width: 70vw;
+            font-size: 1.5rem;
+            padding: 0.5rem;
         }
     }
     

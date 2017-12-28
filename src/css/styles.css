@@ -58,7 +58,7 @@ section {
   align-items: center;
   color: #666;
   font-size: 1rem;
-  margin: 0 1rem; }
+  margin: 0 1rem 1rem; }
   .card h3 {
     font-size: 1.33rem;
     padding: 0 0 1rem; }
@@ -126,7 +126,7 @@ header {
 main {
   display: flex;
   justify-content: space-around;
-  padding: 6rem 0 5rem; }
+  padding: 4rem 0; }
 
 #sidebar {
   background: radial-gradient(at center bottom, #333440 0%, #1d1e2b 60%);
@@ -200,7 +200,7 @@ main {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3rem;
-    padding: 2rem; }
+    padding-top: 1rem; }
   #projects h3 {
     color: #006C90;
     font-size: 1.67rem; }
@@ -232,7 +232,7 @@ main {
     flex-flow: row wrap;
     justify-content: space-around; }
     #projects .grid .card {
-      margin-top: 3rem; }
+      margin-top: 2rem; }
     #projects .grid img, #projects .grid #canvasPort {
       position: relative;
       top: 0;
@@ -398,9 +398,9 @@ footer {
   #projects {
     order: 1; }
     #projects h4 {
-      max-width: 50vw;
-      font-size: 1rem;
-      padding: 0.25rem; }
+      max-width: 70vw;
+      font-size: 1.5rem;
+      padding: 0.5rem; }
   #projects .grid {
     flex-direction: column; }
     #projects .grid img, #projects .grid #canvasPort {
