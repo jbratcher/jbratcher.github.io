@@ -1,7 +1,7 @@
 {
-  "name": "gulp_wf",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "Gulp Workflow",
+  "description": "Portfolio",
   "main": "index.js",
   "scripts": {
     "start": "gulp"
