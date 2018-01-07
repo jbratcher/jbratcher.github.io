@@ -88,7 +88,7 @@ gulp.task('browserSync', gulp.parallel('sass', function() {
 // Bundle JS,CSS and minify
 
 gulp.task('useref', () =>
-  gulp.src('dist/*.html')
+  gulp.src('*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
