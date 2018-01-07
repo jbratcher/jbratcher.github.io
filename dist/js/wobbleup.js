@@ -1,3 +1,5 @@
+"use strict";
+
 // Drawing and animating circles with random velocity and color
 
 // Report JS file connected
@@ -6,12 +8,16 @@ console.log("js connected");
 
 // Variables 
 
-const sectionHeight = 600;
+var sectionWidth = document.getElementById("contact").clientWidth;
+var sectionHeight = document.getElementById("contact").clientHeight;
+
+console.log("section width: " + sectionWidth);
+console.log("section height: " + sectionHeight);
 
 // Set up the canvas and make full screen
 
-var canvas = document.querySelector("canvas");
-canvas.width = window.innerWidth;
+var canvas = document.getElementById("canvas");
+canvas.width = sectionWidth;
 canvas.height = sectionHeight;
 
 // Set 2D context
@@ -29,16 +35,15 @@ var mouse = {
 
 // Capture Mouse movement
 
-window.addEventListener("mousemove", 
-    function(event) {
+window.addEventListener("mousemove", function (event) {
     mouse.x = event.x;
     mouse.y = event.y;
 });
 
 // Responsive Canvas
 
-window.addEventListener("resize", function() {
-    canvas.width = window.innerWidth;
+window.addEventListener("resize", function () {
+    canvas.width = sectionWidth;
     canvas.height = sectionHeight;
     init();
 });
@@ -51,7 +56,7 @@ function randomIntFromRange(min, max) {
 
 // Create Circle function
 
-function Circle(x,y,dx,dy,rad,color, boundaryRight, boundaryLeft) {
+function Circle(x, y, dx, dy, rad, color, boundaryRight, boundaryLeft) {
     this.x = x;
     this.y = y;
     this.dx = dx;
@@ -60,62 +65,59 @@ function Circle(x,y,dx,dy,rad,color, boundaryRight, boundaryLeft) {
     this.boundaryRight = boundaryRight;
     this.boundaryLeft = boundaryLeft;
     var minRad = rad;
-    var maxRad = (rad * 2);
+    var maxRad = rad * 2;
     this.color = color;
-    
+
     // Draw circle function
-    
-    this.draw = function() {
+
+    this.draw = function () {
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.rad, 0, Math.PI *2, false);
+        ctx.arc(this.x, this.y, this.rad, 0, Math.PI * 2, false);
         ctx.fillStyle = this.color;
         ctx.fill();
     };
-    
+
     // Update circle position for animation
-    
-    this.update = function() {
-        
-        // Move circle to top once it reaches bottom
-        
-        if(this.y + this.rad < 0) {
+
+    this.update = function () {
+
+        // Move circle to bottom once it reaches top
+
+        if (this.y < 0) {
             this.y = sectionHeight;
         }
-        
-        if(this.x > boundaryRight || this.x < boundaryLeft) {
+
+        if (this.x > this.boundaryRight || this.x < this.boundaryLeft) {
             this.dx = -this.dx;
         }
-        
+
         // Increment position (x,y)
-        
+
         this.x += this.dx;
         this.y += this.dy;
-        
+
         // Interactivity (mouse and circles)
-        
+
         // Mouse detection for circle
-        
+
         if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
-            
+
             // Limit circle grow size
             if (this.rad < maxRad) {
-                this.rad += 1;   
+                this.rad += 1;
             }
-            
-        // Limit circle shrink size  
-        
+
+            // Limit circle shrink size  
         } else if (this.rad > minRad) {
             this.rad -= 1;
         } else if (this.rad < this.minRad) {
             this.rad += 1;
         }
-        
-        // Draw Circle
-        
-        this.draw();
-        
-    };
 
+        // Draw Circle
+
+        this.draw();
+    };
 }
 
 // Create circles array
@@ -123,46 +125,45 @@ function Circle(x,y,dx,dy,rad,color, boundaryRight, boundaryLeft) {
 var circles = [];
 
 function init() {
-    
+
     // Reset circles array
-    
+
     circles = [];
-    
+
     // Randomize circle value (position, velocity, fill and stroke color, and opacity)
-    
+
     for (var i = 0; i < 100; i++) {
-        var rad = randomIntFromRange(2,4);
-        var x = Math.random() * (window.innerWidth - rad * 2);
-        var y = Math.random() * (window.innerHeight - rad * 2);
+        var rad = randomIntFromRange(2, 4);
+        var x = Math.random() * (sectionWidth - rad * 2);
+        var y = Math.random() * sectionHeight;
         var dx = 0.2;
-        var dy = -randomIntFromRange(0.2,0.3);
+        var dy = -randomIntFromRange(0.2, 0.3);
         var color = "white";
         var boundaryRight = x + rad;
         var boundaryLeft = x - rad;
-        circles.push(new Circle(x,y,dx,dy,rad,color,boundaryRight,boundaryLeft));
-    }
-    
+        circles.push(new Circle(x, y, dx, dy, rad, color, boundaryRight, boundaryLeft));
 
+        console.log(circles[i]);
+    }
 }
 
 //  Animation function
 
 function animation() {
-    
+
     //Start loop
-    
+
     requestAnimationFrame(animation);
-    
+
     // Clear window after drawing circle
-    
-    ctx.clearRect(0,0,window.innerWidth, window.innerHeight);
-    
+
+    ctx.clearRect(0, 0, sectionWidth, sectionHeight);
+
     // Draw the circles
-    
+
     for (var i = 0; i < circles.length; i++) {
         circles[i].update();
     }
-    
 }
 
 // Run
