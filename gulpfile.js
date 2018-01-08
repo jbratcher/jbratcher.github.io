@@ -77,7 +77,7 @@ gulp.task('img', () =>
 
 gulp.task('browserSync', gulp.parallel('sass', function() {
   browserSync.init({
-      server: "./",
+      server: "./src",
       port: 8082     // Change port as needed, 8082 is for Cloud 9 workspace
 }),
     gulp.watch("src/scss/*.scss", gulp.parallel('sass')),
@@ -88,7 +88,7 @@ gulp.task('browserSync', gulp.parallel('sass', function() {
 // Bundle JS,CSS and minify
 
 gulp.task('useref', () =>
-  gulp.src('*.html')
+  gulp.src('dist/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
@@ -98,7 +98,7 @@ gulp.task('useref', () =>
 // Move src files to dist
 
 gulp.task('build:dist', () =>
-    gulp.src(["src/**"])
+    gulp.src(["src/**", "!src/css/*.css", "!src/js/**/*.js"])
         .pipe(gulp.dest("dist"))
 );
 
@@ -110,6 +110,6 @@ gulp.task('clean:dist', () =>
 
 // Gulp default tasks
 
-gulp.task('default', gulp.parallel('sass', 'fonts', 'fa', 'img', 'browserSync'));
+gulp.task('default', gulp.parallel('sass', 'fonts', 'fa', 'browserSync'));
 
 gulp.task('build', gulp.series('clean:dist', 'build:dist', 'sass', 'fonts', 'fa', 'img', 'autoprefix', 'compilejs', 'useref'));
