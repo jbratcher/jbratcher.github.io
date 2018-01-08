@@ -404,6 +404,8 @@ footer {
   #projects .grid {
     flex-direction: column; }
     #projects .grid img, #projects .grid #canvasPort {
+      width: 25rem;
+      height: 25rem;
       max-width: 80vw; }
   #blog .blog-grid img {
     width: 80vw;
@@ -439,7 +441,12 @@ footer {
     padding: 1rem 0;
     max-width: 90vw; }
     #sidebar i.fa {
-      font-size: 2rem; } }
+      font-size: 2rem; }
+  #projects .grid {
+    flex-direction: column; }
+    #projects .grid img, #projects .grid #canvasPort {
+      max-width: 85vw;
+      height: auto; } }
 
 .sr-only {
   position: absolute;
