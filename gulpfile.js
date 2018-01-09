@@ -51,16 +51,6 @@ gulp.task('autoprefix', () =>
         .pipe(gulp.dest('dist/css'))
 );
 
-// Compile ES6 to ES5 with Babel
-
-gulp.task('compilejs', () =>
-    gulp.src('dist/js/*.js')
-        .pipe(babel({
-            presets: ['env']
-        }))
-        .pipe(gulp.dest('dist/js'))
-);
-
 // Optimize Images and cache (Watched)
 
 gulp.task('img', () =>
@@ -85,12 +75,16 @@ gulp.task('browserSync', gulp.parallel('sass', function() {
     gulp.watch("src/js/*.js").on('change', browserSync.reload);
 }));
 
-// Bundle JS,CSS and minify
+// Bundle JS, complie and minify
+// Bundle CSS and minify (prefix in 'autoprefix' task)
 
 gulp.task('useref', () =>
   gulp.src('*.html')
     .pipe(useref())
-    .pipe(gulpIf(['*.js', 'main.min.js'], uglify()))
+    .pipe(gulpIf('*.js', babel({
+            presets: ['env']
+          })))
+    .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 );
@@ -108,8 +102,12 @@ gulp.task('clean:dist', () =>
   del('dist')
 );
 
+gulp.task('clean:files', () =>
+  del(['dist/css/styles.css', 'dist/js/index.js', 'dist/js/weather-right.js', 'dist/js/wobbleup.js'])
+);
+
 // Gulp default tasks
 
 gulp.task('default', gulp.parallel('sass', 'fonts', 'fa', 'browserSync'));
 
-gulp.task('build', gulp.series('clean:dist', 'build:dist', 'img', 'autoprefix', 'compilejs', 'useref'));
+gulp.task('build', gulp.series('clean:dist', 'build:dist', 'img', 'autoprefix', 'useref', 'clean:files'));
