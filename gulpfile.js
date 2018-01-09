@@ -54,7 +54,7 @@ gulp.task('autoprefix', () =>
 // Compile ES6 to ES5 with Babel
 
 gulp.task('compilejs', () =>
-    gulp.src('src/js/*.js')
+    gulp.src('dist/js/*.js')
         .pipe(babel({
             presets: ['env']
         }))
@@ -81,16 +81,16 @@ gulp.task('browserSync', gulp.parallel('sass', function() {
       port: 8082     // Change port as needed, 8082 is for Cloud 9 workspace
 }),
     gulp.watch("src/scss/*.scss", gulp.parallel('sass')),
-    gulp.watch("src/*.html").on('change', browserSync.reload),
+    gulp.watch("*.html").on('change', browserSync.reload),
     gulp.watch("src/js/*.js").on('change', browserSync.reload);
 }));
 
 // Bundle JS,CSS and minify
 
 gulp.task('useref', () =>
-  gulp.src('dist/*.html')
+  gulp.src('*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf(['*.js', 'main.min.js'], uglify()))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 );
@@ -98,7 +98,7 @@ gulp.task('useref', () =>
 // Move src files to dist
 
 gulp.task('build:dist', () =>
-    gulp.src(["src/**", "!src/css/*.css", "!src/js/**/*.js"])
+    gulp.src(["src/**", "index.html"])
         .pipe(gulp.dest("dist"))
 );
 
@@ -112,4 +112,4 @@ gulp.task('clean:dist', () =>
 
 gulp.task('default', gulp.parallel('sass', 'fonts', 'fa', 'browserSync'));
 
-gulp.task('build', gulp.series('clean:dist', 'build:dist', 'sass', 'fonts', 'fa', 'img', 'autoprefix', 'compilejs', 'useref'));
+gulp.task('build', gulp.series('clean:dist', 'build:dist', 'img', 'autoprefix', 'compilejs', 'useref'));
