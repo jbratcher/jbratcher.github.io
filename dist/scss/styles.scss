@@ -348,11 +348,11 @@ main {
         img, #canvasPort {
             position: relative;
             top: 0;
-            width: 18.75rem;
-            height: 18.75rem;
+            width: 20vw;
+            height: 20vw;
+            max-width: 90vw;
             padding: 0;
             margin: 1rem;
-            max-width: 30vw;
             border-radius: 5rem;
             transition: 0.5s ease-in-out;
             opacity: 0.75;
@@ -608,9 +608,8 @@ footer {
         flex-direction: column;
         
         img, #canvasPort {
-            width: 25rem;
-            height: 25rem;
-            max-width: 80vw;
+            width: 75vw;
+            height: 50vh;;
         }
         
     }
