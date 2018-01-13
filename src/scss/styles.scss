@@ -183,10 +183,73 @@ header {
 // Main 
 
 main {
+    position: relative;
+    z-index: 1;
     background: radial-gradient(circle at center, #fff 0%, #eee 70%, #ddd 100%);
     display: flex;
     justify-content: space-around;
     padding: 4rem 0;
+}
+
+#rect1 {
+    position: absolute;
+    z-index: -99;
+    bottom: 100vh;
+    left: 0;
+    margin: 0;
+    width: 62vw;
+    transform: skewY(-20deg);
+    background: linear-gradient(90deg, #eee, $primary-color 100%);
+    opacity: 0.3;
+    height: 20vh;
+    border-top-right-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+}
+
+#rect2 {
+    position: absolute;
+    z-index: -99;
+    bottom: 100vh;
+    left: 0;
+    margin: 0;
+    width: 97vw;
+    transform: skewY(-10deg);
+    background: linear-gradient(90deg, #eee, $primary-color 100%);
+    opacity: 0.3;
+    height: 20vh;
+    border-top-right-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+}
+
+#rect3 {
+    position: absolute;
+    z-index: -99;
+    bottom: 60vh;
+    left: 0;
+    margin: 0;
+    width: 97vw;
+    transform: skewY(10deg);
+    background: linear-gradient(90deg, #eee, $primary-color 100%);
+    opacity: 0.3;
+    height: 20vh;
+    border-top-right-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+}
+
+
+#rect4 {
+    position: absolute;
+    z-index: -99;
+    bottom: 60vh;
+    left: 0;
+    margin: 0;
+    width: 62vw;
+    transform: skewY(20deg);
+    background: linear-gradient(90deg, #eee, $primary-color 100%);
+    opacity: 0.3;
+    height: 20vh;
+    border-top-right-radius: 50rem;
+    border-bottom-right-radius: 50rem;
 }
 
 // Sidebar
@@ -354,10 +417,10 @@ main {
             margin: 1rem;
             border-radius: 5rem;
             transition: 0.5s ease-in-out;
-            opacity: 0.75;
             -webkit-box-shadow: 3px 3px 4px #636363;
             -moz-box-shadow: 3px 3px 4px #636363;
             box-shadow: 0.1rem 0.1rem 0.25rem #636363;
+            z-index: 100;
         }
         
         img:hover, #canvasPort:hover {
