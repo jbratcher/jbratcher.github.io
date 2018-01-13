@@ -131,63 +131,39 @@ main {
   justify-content: space-around;
   padding: 4rem 0; }
 
-#rect1 {
+.rect {
   position: absolute;
   z-index: -99;
-  bottom: 100vh;
   left: 0;
   margin: 0;
-  width: 62vw;
-  transform: skewY(-20deg);
   background: linear-gradient(90deg, #eee, #00b5f0 100%);
   opacity: 0.3;
   height: 20vh;
   border-top-right-radius: 50rem;
   border-bottom-right-radius: 50rem; }
+
+#rect1 {
+  top: 60vh;
+  width: 62vw;
+  transform: skewY(-15deg); }
 
 #rect2 {
-  position: absolute;
-  z-index: -99;
   bottom: 100vh;
-  left: 0;
-  margin: 0;
   width: 97vw;
-  transform: skewY(-10deg);
-  background: linear-gradient(90deg, #eee, #00b5f0 100%);
-  opacity: 0.3;
-  height: 20vh;
-  border-top-right-radius: 50rem;
-  border-bottom-right-radius: 50rem; }
+  transform: skewY(-10deg); }
 
 #rect3 {
-  position: absolute;
-  z-index: -99;
   bottom: 60vh;
-  left: 0;
-  margin: 0;
   width: 97vw;
-  transform: skewY(10deg);
-  background: linear-gradient(90deg, #eee, #00b5f0 100%);
-  opacity: 0.3;
-  height: 20vh;
-  border-top-right-radius: 50rem;
-  border-bottom-right-radius: 50rem; }
+  transform: skewY(10deg); }
 
 #rect4 {
-  position: absolute;
-  z-index: -99;
   bottom: 60vh;
-  left: 0;
-  margin: 0;
   width: 62vw;
-  transform: skewY(20deg);
-  background: linear-gradient(90deg, #eee, #00b5f0 100%);
-  opacity: 0.3;
-  height: 20vh;
-  border-top-right-radius: 50rem;
-  border-bottom-right-radius: 50rem; }
+  transform: skewY(15deg); }
 
 #sidebar {
+  position: relative;
   background: radial-gradient(at center bottom, #333440 0%, #1d1e2b 60%);
   color: #fff;
   display: flex;
@@ -251,6 +227,7 @@ main {
     line-height: 1.5; }
 
 #projects {
+  position: relative;
   display: flex;
   flex: 5; }
   #projects h2 {
@@ -421,6 +398,31 @@ footer {
     color: #00b5f0;
     transform: scale(1.5); }
 
+@media (max-width: 80rem) {
+  .rect {
+    height: 15vh; }
+  #rect1 {
+    transform: skewY(-10deg); }
+  #rect2 {
+    transform: skewY(-5deg); }
+  #rect3 {
+    transform: skewY(10deg); }
+  #rect4 {
+    transform: skewY(15deg); } }
+
+@media (max-width: 70rem) {
+  .rect {
+    height: 10vh; }
+  #rect1 {
+    transform: skewY(-15deg); }
+  #rect2 {
+    bottom: 85vh;
+    transform: skewY(-12.5deg); }
+  #rect3 {
+    transform: skewY(12.5deg); }
+  #rect4 {
+    transform: skewY(17.5deg); } }
+
 @media (max-width: 50rem) {
   header {
     padding: 0; }
@@ -455,6 +457,8 @@ footer {
     background: #333;
     border: 0.0625rem solid #333;
     margin: 3rem 0 0; }
+  .rect, #rect1, #rect2, #rect3, #rect4 {
+    display: none; }
   #projects {
     order: 1; }
     #projects h4 {
