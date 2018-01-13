@@ -11,7 +11,7 @@ $font-serif: 'Source Serif Pro', serif;
 
 //Global
 
-* {
+*, *:before, *:after {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -183,6 +183,7 @@ header {
 // Main 
 
 main {
+    background: radial-gradient(circle at center, #fff 0%, #eee 70%, #ddd 100%);
     display: flex;
     justify-content: space-around;
     padding: 4rem 0;
@@ -314,9 +315,9 @@ main {
         padding: 1rem;
         border: 0.25rem solid $primary-color;
         border-radius: 1rem;
-        -webkit-box-shadow: 0 0 4px #999;
-        -moz-box-shadow: 0 0 4px #999;
-        box-shadow: 0 0.25rem 0.25rem #999;
+        -webkit-box-shadow: 0 0 4px #636363;
+        -moz-box-shadow: 0 0 4px #636363;
+        box-shadow: 0 0.5rem 1rem #636363;
         transition: 0.3s all ease-out;
         
         a {
@@ -326,9 +327,7 @@ main {
     
     h4:hover {
         top: 0.25rem;
-        -webkit-box-shadow: 0 0 4px #636363;
-        -moz-box-shadow: 0 0 4px #636363;
-        box-shadow: 0 0.5rem 1rem #636363;
+        box-shadow: none;
         
         a {
             color: #fff;
@@ -692,6 +691,19 @@ footer {
         img, #canvasPort {
             max-width: 85vw;
             height: auto;
+        }
+        
+    }
+    
+    footer {
+        
+        p {
+            font-size: 0.625rem;
+        }
+        
+        ul li {
+            font-size: 0.625rem;
+            padding: 0 0.33rem;
         }
         
     }
