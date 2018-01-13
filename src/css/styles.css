@@ -220,7 +220,7 @@ main {
     #projects h4 a {
       color: #00b5f0; }
   #projects h4:hover {
-    top: 0.5rem;
+    top: 0.25rem;
     -webkit-box-shadow: 0 0 4px #636363;
     -moz-box-shadow: 0 0 4px #636363;
     box-shadow: 0 0.5rem 1rem #636363; }
@@ -248,7 +248,7 @@ main {
       -moz-box-shadow: 3px 3px 4px #636363;
       box-shadow: 0.1rem 0.1rem 0.25rem #636363; }
     #projects .grid img:hover, #projects .grid #canvasPort:hover {
-      top: 1rem;
+      top: -0.75rem;
       transform: scale(1.1);
       opacity: 1;
       -webkit-box-shadow: 3px 3px 4px #636363;
@@ -343,13 +343,16 @@ footer {
   align-items: center;
   background-color: #006C90;
   color: #fff;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   position: relative; }
   footer ul {
     list-style: none;
     display: flex; }
   footer ul li {
     padding: 0 1rem; }
+  footer #location {
+    display: flex;
+    flex-direction: column; }
   footer p {
     text-transform: uppercase;
     font-size: 0.875rem;

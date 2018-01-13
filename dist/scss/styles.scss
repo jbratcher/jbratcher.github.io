@@ -325,7 +325,7 @@ main {
     }
     
     h4:hover {
-        top: 0.5rem;
+        top: 0.25rem;
         -webkit-box-shadow: 0 0 4px #636363;
         -moz-box-shadow: 0 0 4px #636363;
         box-shadow: 0 0.5rem 1rem #636363;
@@ -362,7 +362,7 @@ main {
         }
         
         img:hover, #canvasPort:hover {
-            top: 1rem;
+            top: -0.75rem;
             transform: scale(1.1);
             opacity: 1;
             -webkit-box-shadow: 3px 3px 4px #636363;
@@ -503,7 +503,7 @@ footer {
     align-items: center;
     background-color: $secondary-color;
     color: #fff;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     position: relative;
     
     ul {
@@ -513,6 +513,11 @@ footer {
     
     ul li {
         padding: 0 1rem;
+    }
+    
+    #location {
+        display: flex;
+        flex-direction: column;
     }
     
     p {
