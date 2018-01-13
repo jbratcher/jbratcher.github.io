@@ -126,10 +126,19 @@ header {
 main {
   position: relative;
   z-index: 1;
-  background: radial-gradient(circle at center, #fff 0%, #eee 70%, #ddd 100%);
   display: flex;
   justify-content: space-around;
   padding: 4rem 0; }
+  main .main-bg-clip {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background: linear-gradient(#fff 0%, #eee 70%, #ddd 100%);
+    transform: skewY(-6deg); }
 
 .rect {
   position: absolute;
@@ -143,24 +152,24 @@ main {
   border-bottom-right-radius: 50rem; }
 
 #rect1 {
-  top: 60vh;
-  width: 62vw;
-  transform: skewY(-15deg); }
-
-#rect2 {
-  bottom: 100vh;
-  width: 97vw;
+  top: 25%;
+  width: 60vw;
   transform: skewY(-10deg); }
 
-#rect3 {
-  bottom: 60vh;
+#rect2 {
+  top: 30%;
   width: 97vw;
-  transform: skewY(10deg); }
+  transform: skewY(-5deg); }
+
+#rect3 {
+  top: 70%;
+  width: 95vw;
+  transform: skewY(15deg); }
 
 #rect4 {
-  bottom: 60vh;
-  width: 62vw;
-  transform: skewY(15deg); }
+  top: 80%;
+  width: 60vw;
+  transform: skewY(20deg); }
 
 #sidebar {
   position: relative;
@@ -295,13 +304,29 @@ main {
       background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%); }
 
 #blog {
-  background: #efefef;
+  position: relative;
+  background: #1d1e2b;
   color: #333;
-  padding: 5rem 0; }
+  padding: 10rem 0 5rem; }
+  #blog .blog-bg-clip {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: skewY(-6deg); }
   #blog h2 {
-    font-size: 2rem;
-    padding-bottom: 3rem; }
+    margin-top: 3rem;
+    position: absolute;
+    z-index: 1;
+    font-size: 2rem; }
   #blog .blog-grid {
+    margin-top: 8rem;
+    position: relative;
+    z-index: 99;
     width: 100%;
     display: flex;
     flex-flow: row wrap;
