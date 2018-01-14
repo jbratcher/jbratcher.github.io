@@ -72,7 +72,7 @@ section {
     font-weight: bold;
     text-align: center;
     border: 0.2rem solid $primary-color;
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .btn:hover, .btn:focus, .btn:active, .btn:target {
@@ -130,7 +130,7 @@ header {
     a {
         color: #fff;
         padding: 1rem;
-        transition: color 0.5s ease;
+        transition: 0.5s ease;
     }
 
     a:hover {
@@ -335,7 +335,7 @@ main {
         -webkit-box-shadow: 0 0 4px #636363;
         -moz-box-shadow: 0 0 4px #636363;
         box-shadow: 0 0.5rem 1rem #636363;
-        transition: 0.3s all ease-out;
+        transition: 0.5s ease-out;
         
         a {
             color: $primary-color;
@@ -839,8 +839,7 @@ footer {
         top: 0;
         overflow-y: scroll;
         overflow-x: visible;
-        transition: left 0.3s ease,
-        box-shadow 0.3s ease;
+        transition: 0.5s ease-in-out;
         z-index: 999;
         
         ul {

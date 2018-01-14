@@ -45,7 +45,7 @@ section {
   font-weight: bold;
   text-align: center;
   border: 0.2rem solid #00b5f0;
-  transition: 0.3s ease-in-out; }
+  transition: 0.5s ease-in-out; }
 
 .btn:hover, .btn:focus, .btn:active, .btn:target {
   border: 0.2rem solid #fff;
@@ -89,7 +89,7 @@ header {
   header a {
     color: #fff;
     padding: 1rem;
-    transition: color 0.5s ease; }
+    transition: 0.5s ease; }
   header a:hover {
     color: #00b5f0; }
   header ul {
@@ -230,7 +230,7 @@ main {
     -webkit-box-shadow: 0 0 4px #636363;
     -moz-box-shadow: 0 0 4px #636363;
     box-shadow: 0 0.5rem 1rem #636363;
-    transition: 0.3s all ease-out; }
+    transition: 0.5s ease-out; }
     #projects h4 a {
       color: #00b5f0; }
   #projects h4:hover {
@@ -538,7 +538,7 @@ footer {
   top: 0;
   overflow-y: scroll;
   overflow-x: visible;
-  transition: left 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.5s ease-in-out;
   z-index: 999; }
   .main-menu ul {
     padding: 3.5rem 0 0.5rem;
