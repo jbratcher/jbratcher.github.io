@@ -21,7 +21,7 @@ const del           = require('del');
 
 gulp.task('fonts', () =>
   gulp.src('node_modules/font-awesome/fonts/*')
-    .pipe(gulp.dest('src/fonts'))
+    .pipe(gulp.dest('src/css/fonts'))
 );
 
 // Move Font Awesome Icons CSS to src/css/vendor
@@ -58,7 +58,7 @@ gulp.task('img', () =>
     .pipe(cache(imagemin({
           interlaced: true
         })))
-  .pipe(gulp.dest('dist/images'))
+  .pipe(gulp.dest('dist/img'))
 );
 
 // Live Reload function

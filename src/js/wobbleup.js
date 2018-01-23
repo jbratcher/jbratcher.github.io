@@ -2,15 +2,12 @@
 
 // Report JS file connected
 
-console.log("js connected");
+console.log("wobble-up.js connected");
 
 // Variables 
 
 const sectionWidth = document.getElementById("contact").clientWidth;
 const sectionHeight = document.getElementById("contact").clientHeight;
-
-console.log("section width: " + sectionWidth);
-console.log("section height: " + sectionHeight);
 
 // Set up the canvas and make full screen
 

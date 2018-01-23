@@ -2,20 +2,17 @@
 
 // Report JS file connected
 
-console.log("js connected");
+console.log("weather-right.js connected");
 
 // variables
 
-var elementlWidth = document.getElementById("canvasPort").clientWidth;
+var elementwidth = document.getElementById("canvasPort").clientWidth;
 var elementHeight = document.getElementById("canvasPort").clientHeight;
-
-console.log("element width: " + elementlWidth);
-console.log("element height: " + elementHeight);
 
 // Set up the canvas and make full screen
 
 var canvasPort = document.getElementById("canvasPort");
-canvasPort.width = elementlWidth;
+canvasPort.width = elementwidth;
 canvasPort.height = elementHeight;
 
 // Set 2D context
@@ -48,7 +45,7 @@ window.addEventListener("mousemove",
 // Responsive Canvas
 
 window.addEventListener("resize", function() {
-    canvasPort.width = elementlWidth;
+    canvasPort.width = elementwidth;
     canvasPort.height = elementHeight;
     init();
 })
@@ -78,7 +75,7 @@ function Circle(x,y,dx,dy,rad,color) {
         
         // Loop circle when it hits the side of the window
         
-        if(this.x + this.rad > elementlWidth) {
+        if(this.x + this.rad > elementwidth) {
             this.x = 0;
         }
         
@@ -122,7 +119,7 @@ function init() {
     // Randomize circle value (position, velocity, fill and stroke color, and opacity)
     for (var i = 0; i < 100; i++) {
         var rad = randomIntFromRange(2,4);
-        var x = Math.random() * (elementlWidth - rad * 2) + rad;
+        var x = Math.random() * (elementwidth - rad * 2) + rad;
         var y = Math.random() * (elementHeight - rad *2) + rad;
         var dx = rad * 0.1;
         var dy = randomIntFromRange(0.5,1);
