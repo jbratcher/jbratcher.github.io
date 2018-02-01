@@ -131,10 +131,10 @@ section {
     
     .main-menu {
         position: absolute;
-        right: -12.5rem;
+        right: -12.75rem;
         top: 0;
         overflow-y: scroll;
-        overflow-x: visible;
+        overflow-x: hidden;
         transition: 0.5s ease-in-out;
         z-index: 999;
         
@@ -149,7 +149,7 @@ section {
     
     .main-menu .menu-close {
         position: absolute;
-        right: 0;
+        right: 1rem;
         top: 0;
     }
 
@@ -157,7 +157,7 @@ section {
     
     .main-menu:target,
     .main-menu[aria-expanded="true"] {
-      right: 0;
+      right: -1rem;
       outline: none;
       box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
     }
@@ -228,7 +228,6 @@ header {
         margin: 0;
         box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
         height: 100%;
-        width: 12.5rem;
         background: $header-bg;
     }
 
@@ -671,7 +670,7 @@ footer {
         flex-direction: row;
         
         #sidebar {
-            margin-top: -15rem;
+            // margin-top: -15rem;
         }
     }
     
@@ -716,10 +715,6 @@ footer {
     
     main {
         flex-direction: row;
-        
-        #sidebar {
-            margin-top: -15rem;
-        }
     }
     
     #projects { 
@@ -748,7 +743,6 @@ footer {
         
     }
     
-    
 }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
@@ -769,44 +763,42 @@ footer {
     
 }
 
-    // Larger screen styling, reset to horizontal menu bar
-
-    @media (min-width: 40rem) {
-        .menu-toggle,
-        .main-menu .menu-close {
-          display: none;
-        }
-      
-        .main-menu {
-            position: relative;
-            right: auto;
-            top: auto;
-            height: auto;
-        }
-      
-        .main-menu ul {
-            display: flex;
-            padding: 0;
-            box-shadow: none;
-            height: auto;
-            width: auto;
-            background: none;
-        }
-  
-        .main-menu a {
-            color: #fff;
-            border: 0;
-        }
-  
-        .main-menu a:hover,
-        .main-menu a:focus {
-            background: #000;
-            color: $primary-color;
-        }
-            
-        .main-menu {
-            right: -12.6rem;
-                
-        }
-          
+@media (min-width: 40rem) {
+    .menu-toggle,
+    .main-menu .menu-close {
+      display: none;
     }
+  
+    .main-menu {
+        position: relative;
+        right: auto;
+        top: auto;
+        height: auto;
+    }
+  
+    .main-menu ul {
+        display: flex;
+        padding: 0;
+        box-shadow: none;
+        height: auto;
+        width: auto;
+        background: none;
+    }
+
+    .main-menu a {
+        color: #fff;
+        border: 0;
+    }
+
+    .main-menu a:hover,
+    .main-menu a:focus {
+        background: #000;
+        color: $primary-color;
+    }
+        
+    .main-menu {
+        right: -12.6rem;
+            
+    }
+      
+}

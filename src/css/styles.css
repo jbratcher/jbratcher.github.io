@@ -87,10 +87,10 @@ section {
 
 .main-menu {
   position: absolute;
-  right: -12.5rem;
+  right: -12.75rem;
   top: 0;
   overflow-y: scroll;
-  overflow-x: visible;
+  overflow-x: hidden;
   transition: 0.5s ease-in-out;
   z-index: 999; }
   .main-menu ul {
@@ -100,12 +100,12 @@ section {
 
 .main-menu .menu-close {
   position: absolute;
-  right: 0;
+  right: 1rem;
   top: 0; }
 
 .main-menu:target,
 .main-menu[aria-expanded="true"] {
-  right: 0;
+  right: -1rem;
   outline: none;
   box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85); }
 
@@ -161,7 +161,6 @@ header {
     margin: 0;
     box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
     height: 100%;
-    width: 12.5rem;
     background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%); }
   header li {
     padding: 1rem;
@@ -458,8 +457,6 @@ footer {
     margin-right: 12.5rem; }
   main {
     flex-direction: row; }
-    main #sidebar {
-      margin-top: -15rem; }
   #projects .grid {
     flex-flow: row wrap;
     justify-content: space-around; }
@@ -479,8 +476,6 @@ footer {
     margin-right: 12.5rem; }
   main {
     flex-direction: row; }
-    main #sidebar {
-      margin-top: -15rem; }
   #projects .grid {
     flex-flow: row wrap;
     justify-content: space-around; }
