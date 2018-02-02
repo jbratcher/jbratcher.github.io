@@ -22,17 +22,23 @@ section {
   align-items: center;
   color: #eee; }
 
-.brand {
+main {
+  position: relative;
+  z-index: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin-left: 3rem; }
-  .brand a {
-    display: flex;
-    transition: 0.5s ease-in-out; }
-  .brand a:hover {
-    transform: scale(1.3); }
+  padding: 0 0 20rem; }
+  main .main-bg-clip {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#fff 0%, #eee 70%, #ddd 100%);
+    transform: skewY(-3deg); }
 
 .btn {
   background-color: #fff;
@@ -66,26 +72,16 @@ section {
     padding: 1rem;
     border-radius: 10%; }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%; }
-
-.divider {
-  display: none; }
-
-.menu-toggle {
+header a .menu-toggle {
   display: inline-block;
   padding: .75rem 1rem;
   line-height: 1rem;
   font-size: 1rem;
   color: #fff; }
+  header a .menu-toggle:hover, header a .menu-toggle:focus {
+    color: #00b5f0; }
 
-.menu-toggle:hover,
-.menu-toggle:focus {
-  color: #00b5f0; }
-
-.main-menu {
+nav {
   position: absolute;
   right: -12.75rem;
   top: 0;
@@ -93,33 +89,31 @@ section {
   overflow-x: hidden;
   transition: 0.5s ease-in-out;
   z-index: 999; }
-  .main-menu ul {
+  nav ul {
     padding: 3.5rem 0; }
-    .main-menu ul li {
+    nav ul li {
       width: 100%; }
+  nav:target, nav[aria-expanded="true"] {
+    right: -1.5rem;
+    outline: none;
+    box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85); }
 
-.main-menu .menu-close {
+nav .menu-close {
   position: absolute;
   right: 1rem;
   top: 0; }
 
-.main-menu:target,
-.main-menu[aria-expanded="true"] {
-  right: -1rem;
-  outline: none;
-  box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85); }
-
-.main-menu:target .menu-close,
-.main-menu[aria-expanded="true"] .menu-close {
+nav:target .menu-close,
+nav[aria-expanded="true"] .menu-close {
   z-index: 1001; }
 
-.main-menu:target ul,
-.main-menu[aria-expanded="true"] ul {
+nav:target ul,
+nav[aria-expanded="true"] ul {
   position: relative;
   z-index: 1000; }
 
-.main-menu:target + .backdrop,
-.main-menu[aria-expanded="true"] + .backdrop {
+nav:target + .backdrop,
+nav[aria-expanded="true"] + .backdrop {
   position: absolute;
   display: block;
   content: "";
@@ -132,9 +126,9 @@ section {
   cursor: default; }
 
 @supports (position: fixed) {
-  .main-menu,
-  .main-menu:target + .backdrop,
-  .main-menu[aria-expanded="true"] + .backdrop {
+  nav,
+  nav:target + .backdrop,
+  nav[aria-expanded="true"] + .backdrop {
     position: fixed; } }
 
 header {
@@ -146,8 +140,18 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 99; }
-  header h1 {
+  header .brand {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
     font-size: 1rem; }
+    header .brand h1 {
+      font-size: 1rem; }
+    header .brand a {
+      display: flex;
+      transition: 0.5s ease-in-out; }
+    header .brand a:hover {
+      transform: scale(1.3); }
   header a {
     color: #fff;
     padding: 1rem;
@@ -192,26 +196,9 @@ header {
     border: 0;
     opacity: 0; }
 
-main {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4rem 0; }
-  main .main-bg-clip {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#fff 0%, #eee 70%, #ddd 100%);
-    transform: skewY(-3deg); }
-
 #sidebar {
   position: relative;
+  top: 30vh;
   background: radial-gradient(at center bottom, #333440 0%, #1d1e2b 60%);
   color: #fff;
   display: flex;
@@ -222,7 +209,7 @@ main {
   border: 0.0625rem solid #000;
   border-radius: 3rem;
   padding-bottom: 0.5rem;
-  margin: 6rem 2rem 0;
+  margin: 0 2rem;
   height: 55%;
   box-shadow: 0 0 0.5rem #000; }
   #sidebar ul {
@@ -263,8 +250,7 @@ main {
 
 #about {
   display: flex;
-  flex-flow: column nowrap;
-  padding: 2rem 0; }
+  flex-flow: column nowrap; }
   #about h3 {
     font-size: 2rem; }
   #about p {
@@ -274,6 +260,7 @@ main {
 
 #projects {
   position: relative;
+  top: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -452,17 +439,24 @@ footer {
     transform: scale(1.5); }
 
 @media (min-width: 80rem) {
+  header .brand {
+    margin-left: 3rem; }
   header ul {
     flex-direction: row;
     margin-right: 12.5rem; }
   main {
-    flex-direction: row; }
-  #projects .grid {
-    flex-flow: row wrap;
-    justify-content: space-around; }
-    #projects .grid img, #projects .grid #canvasPort {
-      width: 20vw;
-      height: 40vh; }
+    flex-direction: row;
+    padding-bottom: 10rem; }
+    main #sidebar {
+      top: 0; }
+  #projects {
+    top: 6rem; }
+    #projects .grid {
+      flex-flow: row wrap;
+      justify-content: space-around; }
+      #projects .grid img, #projects .grid #canvasPort {
+        width: 20vw;
+        height: 40vh; }
   #blog .blog-grid {
     flex-flow: row wrap;
     justify-content: space-around; }
@@ -471,17 +465,24 @@ footer {
       height: 50vh; } }
 
 @media (min-width: 60rem) and (max-width: 80rem) {
+  header .brand {
+    margin-left: 2rem; }
   header ul {
     flex-direction: row;
     margin-right: 12.5rem; }
   main {
-    flex-direction: row; }
-  #projects .grid {
-    flex-flow: row wrap;
-    justify-content: space-around; }
-    #projects .grid img, #projects .grid #canvasPort {
-      width: 20vw;
-      height: 30vh; }
+    flex-direction: row;
+    padding-bottom: 10rem; }
+    main #sidebar {
+      top: 0; }
+  #projects {
+    top: 6rem; }
+    #projects .grid {
+      flex-flow: row wrap;
+      justify-content: space-around; }
+      #projects .grid img, #projects .grid #canvasPort {
+        width: 20vw;
+        height: 30vh; }
   #blog .blog-grid {
     flex-flow: row wrap;
     justify-content: space-around; }
@@ -499,26 +500,26 @@ footer {
 
 @media (min-width: 40rem) {
   .menu-toggle,
-  .main-menu .menu-close {
+  nav .menu-close {
     display: none; }
-  .main-menu {
+  nav {
     position: relative;
     right: auto;
     top: auto;
     height: auto; }
-  .main-menu ul {
+  nav ul {
     display: flex;
     padding: 0;
     box-shadow: none;
     height: auto;
     width: auto;
     background: none; }
-  .main-menu a {
+  nav a {
     color: #fff;
     border: 0; }
-  .main-menu a:hover,
-  .main-menu a:focus {
+  nav a:hover,
+  nav a:focus {
     background: #000;
     color: #00b5f0; }
-  .main-menu {
+  nav {
     right: -12.6rem; } }
