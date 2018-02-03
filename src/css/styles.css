@@ -72,65 +72,6 @@ main {
     padding: 1rem;
     border-radius: 10%; }
 
-header a .menu-toggle {
-  display: inline-block;
-  padding: .75rem 1rem;
-  line-height: 1rem;
-  font-size: 1rem;
-  color: #fff; }
-  header a .menu-toggle:hover, header a .menu-toggle:focus {
-    color: #00b5f0; }
-
-nav {
-  position: absolute;
-  right: -12.75rem;
-  top: 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  transition: 0.5s ease-in-out;
-  z-index: 999; }
-  nav ul {
-    padding: 3.5rem 0; }
-    nav ul li {
-      width: 100%; }
-  nav:target, nav[aria-expanded="true"] {
-    right: -1.5rem;
-    outline: none;
-    box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85); }
-
-nav .menu-close {
-  position: absolute;
-  right: 1rem;
-  top: 0; }
-
-nav:target .menu-close,
-nav[aria-expanded="true"] .menu-close {
-  z-index: 1001; }
-
-nav:target ul,
-nav[aria-expanded="true"] ul {
-  position: relative;
-  z-index: 1000; }
-
-nav:target + .backdrop,
-nav[aria-expanded="true"] + .backdrop {
-  position: absolute;
-  display: block;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 998;
-  background: rgba(29, 30, 43, 0.7);
-  cursor: default; }
-
-@supports (position: fixed) {
-  nav,
-  nav:target + .backdrop,
-  nav[aria-expanded="true"] + .backdrop {
-    position: fixed; } }
-
 header {
   position: fixed;
   background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%);
@@ -195,6 +136,65 @@ header {
     clip: rect(0, 0, 0, 0);
     border: 0;
     opacity: 0; }
+
+header a .menu-toggle {
+  display: inline-block;
+  padding: .75rem 1rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  color: #fff; }
+  header a .menu-toggle:hover, header a .menu-toggle:focus {
+    color: #00b5f0; }
+
+nav {
+  position: absolute;
+  right: -12.75rem;
+  top: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: 0.5s ease-in-out;
+  z-index: 999; }
+  nav ul {
+    padding: 3.5rem 0; }
+    nav ul li {
+      width: 100%; }
+  nav:target, nav[aria-expanded="true"] {
+    right: -1.5rem;
+    outline: none;
+    box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85); }
+
+nav .menu-close {
+  position: absolute;
+  right: 1rem;
+  top: 0; }
+
+nav:target .menu-close,
+nav[aria-expanded="true"] .menu-close {
+  z-index: 1001; }
+
+nav:target ul,
+nav[aria-expanded="true"] ul {
+  position: relative;
+  z-index: 1000; }
+
+nav:target + .backdrop,
+nav[aria-expanded="true"] + .backdrop {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: rgba(29, 30, 43, 0.7);
+  cursor: default; }
+
+@supports (position: fixed) {
+  nav,
+  nav:target + .backdrop,
+  nav[aria-expanded="true"] + .backdrop {
+    position: fixed; } }
 
 #sidebar {
   position: relative;

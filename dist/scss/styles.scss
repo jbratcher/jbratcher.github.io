@@ -114,85 +114,6 @@ main {
 
 // Header Section
 
-header a .menu-toggle {
-    display: inline-block;
-    padding: .75rem 1rem;
-    line-height: 1rem;
-    font-size: 1rem;
-    color: #fff;
-    
-    &:hover,
-    &:focus {
-        color: $primary-color;
-    }
-    
-}
-
-nav {
-    position: absolute;
-    right: -12.75rem;
-    top: 0;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    transition: 0.5s ease-in-out;
-    z-index: 999;
-    
-    ul {
-        padding: 3.5rem 0;
-        
-        li {
-            width: 100%;
-        }
-    }
-    
-    &:target,
-    &[aria-expanded="true"] {
-      right: -1.5rem;
-      outline: none;
-      box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
-    }
-}
-
-nav .menu-close {
-    position: absolute;
-    right: 1rem;
-    top: 0;
-}
-
-nav:target .menu-close,
-nav[aria-expanded="true"] .menu-close {
-  z-index: 1001;
-}
-
-nav:target ul,
-nav[aria-expanded="true"] ul {
-  position: relative;
-  z-index: 1000;
-}
-
-nav:target + .backdrop,
-nav[aria-expanded="true"] + .backdrop {
-  position: absolute;
-  display: block;  
-  content: "";
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 998;
-  background: $tert-opac;
-  cursor: default;
-}
-
-@supports (position: fixed) {
-    nav,
-    nav:target + .backdrop,
-    nav[aria-expanded="true"] + .backdrop {
-        position: fixed;
-  }
-  
-}
-
 header {
     position: fixed;
     background: $header-bg;
@@ -283,6 +204,86 @@ header {
         opacity: 0;
     }
     
+}
+
+header a .menu-toggle {
+    display: inline-block;
+    padding: .75rem 1rem;
+    line-height: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+    
+}
+
+nav {
+    position: absolute;
+    right: -12.75rem;
+    top: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: 0.5s ease-in-out;
+    z-index: 999;
+    
+    ul {
+        padding: 3.5rem 0;
+        
+        li {
+            width: 100%;
+        }
+    }
+    
+    &:target,
+    &[aria-expanded="true"] {
+      right: -1.5rem;
+      outline: none;
+      box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
+    }
+}
+
+nav .menu-close {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+}
+
+nav:target .menu-close,
+nav[aria-expanded="true"] .menu-close {
+    z-index: 1001;
+}
+
+nav:target ul,
+nav[aria-expanded="true"] ul {
+    position: relative;
+    z-index: 1000;
+}
+
+nav:target + .backdrop,
+nav[aria-expanded="true"] + .backdrop {
+    position: absolute;
+    display: block;  
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: $tert-opac;
+    cursor: default;
+}
+
+@supports (position: fixed) {
+    
+    nav,
+    nav:target + .backdrop,
+    nav[aria-expanded="true"] + .backdrop {
+        position: fixed;
+  }
+  
 }
 
 
