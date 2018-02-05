@@ -318,11 +318,12 @@ nav[aria-expanded="true"] + .backdrop {
     i.fa {
         color: #fff;
         transition: 0.5s ease-in-out;
-    }
-    
-    i.fa:hover {
-        color: $primary-color;
-        transform: scale(1.3);
+        
+        &:hover {
+            color: $primary-color;
+            transform: scale(1.3);
+        }
+        
     }
     
 }
@@ -356,12 +357,12 @@ nav[aria-expanded="true"] + .backdrop {
         border: 0.25rem solid $tertiary-color;
         border-radius: 50%;
         transition: 0.5s ease-in-out;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+        
     }
-    
-    img:hover {
-        transform: scale(1.1);
-    }
-    
 }
 
 // About
@@ -422,18 +423,19 @@ nav[aria-expanded="true"] + .backdrop {
         a {
             color: $secondary-color;
         }
-    }
-    
-    h4:hover {
-        top: 0.25rem;
-        background: $secondary-color;
-        box-shadow: none;
         
-        a {
-            color: #fff;
+        &:hover {
+            top: 0.25rem;
+            background: $secondary-color;
+            box-shadow: none;
+            
+            a {
+                color: #fff;
+            }
         }
+        
     }
-    
+
     .grid {
         display: flex;
         flex-direction: column;
