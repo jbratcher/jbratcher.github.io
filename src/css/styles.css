@@ -46,17 +46,16 @@ main {
   color: #333;
   padding: 1rem;
   border: 0.1rem solid #666;
-  border-radius: 0.3rem;
+  border-radius: 1rem;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   border: 0.2rem solid #00b5f0;
   transition: 0.5s ease-in-out; }
-
-.btn:hover, .btn:focus, .btn:active, .btn:target {
-  border: 0.2rem solid #fff;
-  background: #00b5f0;
-  color: #fff; }
+  .btn:hover, .btn:focus, .btn:active, .btn:target {
+    border: 0.2rem solid #fff;
+    background: #00b5f0;
+    color: #fff; }
 
 .card {
   display: flex;
@@ -205,7 +204,7 @@ nav[aria-expanded="true"] + .backdrop {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 2;
+  flex: 1;
   text-align: center;
   border: 0.0625rem solid #000;
   border-radius: 3rem;
@@ -265,7 +264,7 @@ nav[aria-expanded="true"] + .backdrop {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 5; }
+  flex: 3; }
   #projects h2 {
     color: #006C90;
     background: linear-gradient(to bottom, #006C90 0%, #1d1e2b 10%, #006C90 20%, #1d1e2b 60%, #006C90 100%);
@@ -304,8 +303,8 @@ nav[aria-expanded="true"] + .backdrop {
     #projects .grid img, #projects .grid #canvasPort {
       position: relative;
       top: 0;
-      width: 60vw;
-      height: 60vw;
+      width: 80vw;
+      height: 50vh;
       max-width: 90vw;
       padding: 0;
       margin: 1rem;
@@ -313,11 +312,11 @@ nav[aria-expanded="true"] + .backdrop {
       transition: 0.5s ease-in-out;
       box-shadow: 0.1rem 0.1rem 0.25rem #636363;
       z-index: 100; }
-    #projects .grid img:hover, #projects .grid #canvasPort:hover {
-      top: -0.75rem;
-      transform: scale(1.1);
-      opacity: 1;
-      box-shadow: 0.5rem 0.5rem 1rem #636363; }
+      #projects .grid img:hover, #projects .grid #canvasPort:hover {
+        top: -0.75rem;
+        transform: scale(1.1);
+        opacity: 1;
+        box-shadow: 0.5rem 0.5rem 1rem #636363; }
     #projects .grid #canvasPort {
       background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%); }
 
@@ -340,9 +339,9 @@ nav[aria-expanded="true"] + .backdrop {
     margin-top: 3rem;
     position: absolute;
     z-index: 1;
-    font-size: 2rem; }
+    font-size: 3rem; }
   #blog .blog-grid {
-    margin-top: 8rem;
+    margin-top: 11rem;
     position: relative;
     z-index: 99;
     display: flex;
@@ -357,23 +356,18 @@ nav[aria-expanded="true"] + .backdrop {
       border-radius: 3rem;
       opacity: 0.6;
       transition: 0.5s ease-in-out; }
-    #blog .blog-grid img:hover {
-      opacity: 1; }
+      #blog .blog-grid img:hover {
+        opacity: 1; }
 
 #contact {
   background: #1d1e2b;
   background: radial-gradient(at center bottom, #333440 0%, #1d1e2b 60%);
-  padding: 5rem 1rem; }
+  padding: 7rem 1rem; }
   #contact p {
     font-size: 2rem;
     padding-bottom: 2rem;
     position: relative;
     z-index: 1; }
-  #contact .btn {
-    background: #fff;
-    width: 80%;
-    border-radius: 1rem;
-    padding: 1rem; }
   #contact div {
     display: flex;
     justify-content: center; }
@@ -390,12 +384,12 @@ nav[aria-expanded="true"] + .backdrop {
       font-size: 1.125rem;
       color: #333;
       border-radius: 1rem; }
+      #contact form input:focus, #contact form textarea:focus {
+        border: 0.2rem solid #00b5f0; }
     #contact form textarea {
       width: 100%;
       resize: both;
       overflow: auto; }
-    #contact form input:focus, #contact form textarea:focus {
-      border: 0.2rem solid #00b5f0; }
     #contact form .btn {
       position: relative;
       top: 0.3rem;
@@ -407,11 +401,11 @@ nav[aria-expanded="true"] + .backdrop {
       text-align: center;
       border: 0.2rem solid #00b5f0;
       transition: 0.5s ease-in-out; }
-    #contact form .btn:hover, #contact form #contact form .btn:focus, #contact form #contact form .btn:active, #contact form #contact form .btn:target {
-      top: 0;
-      background: #00b5f0;
-      color: #fff;
-      border: 0.2rem solid #00b5f0; }
+      #contact form .btn:hover, #contact form .btn:focus, #contact form .btn:active, #contact form .btn:target {
+        top: 0;
+        background: #00b5f0;
+        color: #fff;
+        border: 0.2rem solid #00b5f0; }
 
 footer {
   display: flex;
@@ -424,8 +418,8 @@ footer {
   footer ul {
     list-style: none;
     display: flex; }
-  footer ul li {
-    padding: 0 1rem; }
+    footer ul li {
+      padding: 0 1rem; }
   footer #location {
     display: flex;
     flex-direction: column; }
@@ -436,9 +430,9 @@ footer {
   footer i.fa {
     color: #fff;
     transition: 0.5s ease-in-out; }
-  footer i.fa:hover {
-    color: #00b5f0;
-    transform: scale(1.5); }
+    footer i.fa:hover {
+      color: #00b5f0;
+      transform: scale(1.5); }
 
 @media (min-width: 80rem) {
   header .brand {

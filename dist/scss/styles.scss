@@ -75,7 +75,7 @@ main {
     color: #333;
     padding: 1rem;
     border: 0.1rem solid #666;
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -85,12 +85,13 @@ main {
 
 .btn {
     @include btn;
-}
-
-.btn:hover, .btn:focus, .btn:active, .btn:target {
-    border: 0.2rem solid #fff;
-    background: $primary-color;
-    color: #fff;
+    
+    &:hover, &:focus, &:active, &:target {
+        border: 0.2rem solid #fff;
+        background: $primary-color;
+        color: #fff;
+    }
+    
 }
 
 .card {
@@ -287,7 +288,6 @@ nav[aria-expanded="true"] + .backdrop {
   
 }
 
-
 // Sidebar
 
 #sidebar {
@@ -298,7 +298,7 @@ nav[aria-expanded="true"] + .backdrop {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 2;
+    flex: 1;
     text-align: center;
     border: 0.0625rem solid #000;
     border-radius: 3rem;
@@ -318,11 +318,12 @@ nav[aria-expanded="true"] + .backdrop {
     i.fa {
         color: #fff;
         transition: 0.5s ease-in-out;
-    }
-    
-    i.fa:hover {
-        color: $primary-color;
-        transform: scale(1.3);
+        
+        &:hover {
+            color: $primary-color;
+            transform: scale(1.3);
+        }
+        
     }
     
 }
@@ -356,12 +357,12 @@ nav[aria-expanded="true"] + .backdrop {
         border: 0.25rem solid $tertiary-color;
         border-radius: 50%;
         transition: 0.5s ease-in-out;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+        
     }
-    
-    img:hover {
-        transform: scale(1.1);
-    }
-    
 }
 
 // About
@@ -391,7 +392,7 @@ nav[aria-expanded="true"] + .backdrop {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 5;
+    flex: 3;
     
     h2 {
         color: $secondary-color;
@@ -422,18 +423,19 @@ nav[aria-expanded="true"] + .backdrop {
         a {
             color: $secondary-color;
         }
-    }
-    
-    h4:hover {
-        top: 0.25rem;
-        background: $secondary-color;
-        box-shadow: none;
         
-        a {
-            color: #fff;
+        &:hover {
+            top: 0.25rem;
+            background: $secondary-color;
+            box-shadow: none;
+            
+            a {
+                color: #fff;
+            }
         }
+        
     }
-    
+
     .grid {
         display: flex;
         flex-direction: column;
@@ -446,8 +448,8 @@ nav[aria-expanded="true"] + .backdrop {
         img, #canvasPort {
             position: relative;
             top: 0;
-            width: 60vw;
-            height: 60vw;
+            width: 80vw;
+            height: 50vh;
             max-width: 90vw;
             padding: 0;
             margin: 1rem;
@@ -455,13 +457,13 @@ nav[aria-expanded="true"] + .backdrop {
             transition: 0.5s ease-in-out;
             box-shadow: 0.1rem 0.1rem 0.25rem #636363;
             z-index: 100;
-        }
-        
-        img:hover, #canvasPort:hover {
-            top: -0.75rem;
-            transform: scale(1.1);
-            opacity: 1;
-            box-shadow: 0.5rem 0.5rem 1rem #636363;
+            
+            &:hover {
+                top: -0.75rem;
+                transform: scale(1.1);
+                opacity: 1;
+                box-shadow: 0.5rem 0.5rem 1rem #636363;
+            }
         }
         
         #canvasPort {
@@ -496,11 +498,11 @@ nav[aria-expanded="true"] + .backdrop {
         margin-top: 3rem;
         position: absolute;
         z-index: 1;
-        font-size: 2rem;
+        font-size: 3rem;
     }
     
     .blog-grid {
-        margin-top: 8rem;
+        margin-top: 11rem;
         position: relative;
         z-index: 99;
         display: flex;
@@ -518,12 +520,14 @@ nav[aria-expanded="true"] + .backdrop {
             border-radius: 3rem;
             opacity: 0.6;
             transition: 0.5s ease-in-out;
+            
+            &:hover {
+                opacity: 1;
+            }
         }
         
-        img:hover {
-            opacity: 1;
-        }
     }
+    
 }
 
 // Contact
@@ -532,20 +536,13 @@ nav[aria-expanded="true"] + .backdrop {
     
     background: $tertiary-color;
     background: radial-gradient(at center bottom, #333440 0%, $tertiary-color 60%);
-    padding: 5rem 1rem;
+    padding: 7rem 1rem;
     
     p {
         font-size: 2rem;
         padding-bottom: 2rem;
         position: relative;
         z-index: 1;
-    }
-    
-    .btn {
-        background: #fff;
-        width: 80%;
-        border-radius: 1rem;
-        padding: 1rem;
     }
     
     div {
@@ -567,16 +564,17 @@ nav[aria-expanded="true"] + .backdrop {
             font-size: 1.125rem;
             color: #333;
             border-radius: 1rem;
+            
+            &:focus {
+                border: 0.2rem solid $primary-color;
+            }
+            
         }
         
         textarea {
             width: 100%;
             resize: both;
             overflow: auto;
-        }
-        
-        input:focus, textarea:focus  {
-            border: 0.2rem solid $primary-color;
         }
         
         .btn {
@@ -590,13 +588,14 @@ nav[aria-expanded="true"] + .backdrop {
             text-align: center;
             border: 0.2rem solid $primary-color;
             transition: 0.5s ease-in-out;
-        }
-        
-        .btn:hover, #contact form .btn:focus, #contact form .btn:active, #contact form .btn:target {
-            top: 0;
-            background: $primary-color;
-            color: #fff;
-            border: 0.2rem solid $primary-color;
+            
+            &:hover, &:focus, &:active, &:target {
+                top: 0;
+                background: $primary-color;
+                color: #fff;
+                border: 0.2rem solid $primary-color;
+            }
+            
         }
         
     }
@@ -617,10 +616,11 @@ footer {
     ul {
         list-style: none;
         display: flex;
-    }
-    
-    ul li {
-        padding: 0 1rem;
+        
+        li {
+            padding: 0 1rem;
+        }
+        
     }
     
     #location {
@@ -637,13 +637,14 @@ footer {
     i.fa {
         color: #fff;
         transition: 0.5s ease-in-out;
+        
+        &:hover {
+            color: $primary-color;
+            transform: scale(1.5);
+        }
+        
     }
     
-    i.fa:hover {
-        color: $primary-color;
-        transform: scale(1.5);
-    }
-
 }
 
 // Media Queries
