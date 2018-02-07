@@ -419,20 +419,21 @@ footer {
     list-style: none;
     display: flex; }
     footer ul li {
-      padding: 0 1rem; }
+      font-size: 0.8rem;
+      padding: 0 0.5rem; }
   footer #location {
     display: flex;
     flex-direction: column; }
   footer p {
     text-transform: uppercase;
     font-size: 0.875rem;
-    align-self: center; }
+    text-align: center; }
   footer i.fa {
     color: #fff;
     transition: 0.5s ease-in-out; }
     footer i.fa:hover {
       color: #00b5f0;
-      transform: scale(1.5); }
+      transform: scale(1.25); }
 
 @media (min-width: 80rem) {
   header .brand {
@@ -502,20 +503,18 @@ footer {
     position: relative;
     right: auto;
     top: auto;
-    height: auto; }
-  nav ul {
-    display: flex;
-    padding: 0;
-    box-shadow: none;
     height: auto;
-    width: auto;
-    background: none; }
-  nav a {
-    color: #fff;
-    border: 0; }
-  nav a:hover,
-  nav a:focus {
-    background: #000;
-    color: #00b5f0; }
-  nav {
-    right: -12.6rem; } }
+    right: -12.6rem; }
+    nav ul {
+      display: flex;
+      padding: 0;
+      box-shadow: none;
+      height: auto;
+      width: auto;
+      background: none; }
+    nav a {
+      color: #fff;
+      border: 0; }
+      nav a:hover, nav a:focus {
+        background: #000;
+        color: #00b5f0; } }

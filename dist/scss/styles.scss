@@ -618,7 +618,8 @@ footer {
         display: flex;
         
         li {
-            padding: 0 1rem;
+            font-size: 0.8rem;
+            padding: 0 0.5rem;
         }
         
     }
@@ -631,7 +632,7 @@ footer {
     p {
         text-transform: uppercase;
         font-size: 0.875rem;
-        align-self: center; 
+        text-align: center;
     }
     
     i.fa {
@@ -640,7 +641,7 @@ footer {
         
         &:hover {
             color: $primary-color;
-            transform: scale(1.5);
+            transform: scale(1.25);
         }
         
     }
@@ -773,6 +774,7 @@ footer {
 }
 
 @media (min-width: 40rem) {
+    
     .menu-toggle,
     nav .menu-close {
       display: none;
@@ -783,31 +785,29 @@ footer {
         right: auto;
         top: auto;
         height: auto;
-    }
-  
-    nav ul {
-        display: flex;
-        padding: 0;
-        box-shadow: none;
-        height: auto;
-        width: auto;
-        background: none;
-    }
-
-    nav a {
-        color: #fff;
-        border: 0;
-    }
-
-    nav a:hover,
-    nav a:focus {
-        background: #000;
-        color: $primary-color;
-    }
-        
-    nav {
         right: -12.6rem;
+        
+        ul {
+            display: flex;
+            padding: 0;
+            box-shadow: none;
+            height: auto;
+            width: auto;
+            background: none;
+        }
+        
+        a {
+            color: #fff;
+            border: 0;
             
+            &:hover,
+            &:focus {
+                background: #000;
+                color: $primary-color;
+            }
+            
+        }
+  
     }
       
 }
