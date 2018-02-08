@@ -448,7 +448,7 @@ nav[aria-expanded="true"] + .backdrop {
         img, #canvasPort {
             position: relative;
             top: 0;
-            width: 80vw;
+            width: 50vw;
             height: 50vh;
             max-width: 90vw;
             padding: 0;
@@ -699,6 +699,23 @@ footer {
         
     }
     
+    footer {
+        
+        p {
+            font-size: 1.25rem;
+        }
+        
+        ul {
+            
+            li {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+        }
+        
+    }
+    
 }
 
 @media (min-width: 60rem) and (max-width: 80rem) {
@@ -735,7 +752,7 @@ footer {
             
             img, #canvasPort {
                 width: 20vw;
-                height: 30vh;
+                height: 40vh;
             }
             
         }
@@ -749,6 +766,23 @@ footer {
         img {
             width: 40vw;
             height: 50vh;
+        }
+        
+    }
+    
+    footer {
+        
+        p {
+            font-size: 1.25rem;
+        }
+        
+        ul {
+            
+            li {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
         }
         
     }
@@ -767,6 +801,15 @@ footer {
             flex-direction: row;
             justify-content: center;
             margin-right: 12.5rem;
+        }
+        
+    }
+    
+    #projects .grid {
+        
+        img, #canvasPort {
+            width: 50vw;
+            height: 70vh;
         }
         
     }
