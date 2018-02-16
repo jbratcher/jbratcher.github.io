@@ -3,11 +3,9 @@
   padding: 0;
   box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth; }
-
-body {
+html, body {
   font-family: "Source Sans Pro", sans-serif;
+  scroll-behavior: smooth;
   overflow-x: hidden; }
 
 a {
@@ -19,16 +17,16 @@ ul {
 
 section {
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   align-items: center;
   color: #eee; }
 
 main {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
   padding: 0 0 25rem; }
   main .main-bg-clip {
     position: absolute;
@@ -59,7 +57,7 @@ main {
 
 .card {
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   align-items: center;
   color: #666;
   font-size: 1rem;
@@ -77,6 +75,7 @@ header {
   background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%);
   color: #fff;
   width: 100vw;
+  border-bottom: 0.5rem solid #006C90;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -197,13 +196,13 @@ nav[aria-expanded="true"] + .backdrop {
     position: fixed; } }
 
 #sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   top: 30vh;
   background: radial-gradient(at center bottom, #333440 0%, #1d1e2b 60%);
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   flex: 1;
   text-align: center;
   border: 0.0625rem solid #000;
@@ -239,7 +238,6 @@ nav[aria-expanded="true"] + .backdrop {
   .bio img {
     position: relative;
     top: -4.5rem;
-    display: flex;
     width: 40%;
     opacity: 1;
     border: 0.25rem solid #1d1e2b;
@@ -250,7 +248,8 @@ nav[aria-expanded="true"] + .backdrop {
 
 #about {
   display: flex;
-  flex-flow: column nowrap; }
+  flex-direction: column;
+  align-items: center; }
   #about h3 {
     font-size: 2rem; }
   #about p {
@@ -259,11 +258,11 @@ nav[aria-expanded="true"] + .backdrop {
     line-height: 1.5; }
 
 #projects {
-  position: relative;
-  top: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: 20rem;
   flex: 3; }
   #projects h2 {
     color: #006C90;
@@ -341,12 +340,12 @@ nav[aria-expanded="true"] + .backdrop {
     z-index: 1;
     font-size: 3rem; }
   #blog .blog-grid {
-    margin-top: 11rem;
-    position: relative;
-    z-index: 99;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    margin-top: 11rem;
+    position: relative;
+    z-index: 99; }
     #blog .blog-grid li {
       margin: 1rem; }
     #blog .blog-grid img {
@@ -451,9 +450,6 @@ nav[aria-expanded="true"] + .backdrop {
     padding-bottom: 2rem;
     position: relative;
     z-index: 1; }
-  #contact div {
-    display: flex;
-    justify-content: center; }
   #contact form {
     display: flex;
     flex-direction: column;
