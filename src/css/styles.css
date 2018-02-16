@@ -240,7 +240,8 @@ nav[aria-expanded="true"] + .backdrop {
     top: -4.5rem;
     width: 40%;
     opacity: 1;
-    border: 0.25rem solid #1d1e2b;
+    border: 0.25rem double #006C90;
+    border-bottom: 0.25rem solid #1d1e2b;
     border-radius: 50%;
     transition: 0.5s ease-in-out; }
     .bio img:hover {
