@@ -240,7 +240,7 @@ nav[aria-expanded="true"] + .backdrop {
     top: -4.5rem;
     width: 40%;
     opacity: 1;
-    border: 0.25rem double #006C90;
+    border: 0.25rem double #1d1e2b;
     border-bottom: 0.25rem solid #1d1e2b;
     border-radius: 50%;
     transition: 0.5s ease-in-out; }
@@ -274,7 +274,7 @@ nav[aria-expanded="true"] + .backdrop {
     padding: 1rem 0; }
   #projects h3 {
     color: #006C90;
-    font-size: 2.67rem; }
+    font-size: 2.25rem; }
   #projects h4 {
     position: relative;
     top: 0;
@@ -364,46 +364,45 @@ nav[aria-expanded="true"] + .backdrop {
   color: #333; }
   #blog-post h1, #blog-post h3, #blog-post p {
     line-height: 1.5;
-    padding: 1rem 5rem; }
+    padding: 1rem 2rem; }
 
 /* Container for the code block and header */
 .code-container {
   background: rgba(0, 0, 0, 0.85);
   color: #fff;
   border-radius: 0.5rem;
-  width: 75vw;
-  margin: 2rem; }
+  width: 85vw; }
 
 /* HTML Header */
 .html {
-  background: #ff9800;
   margin: 0;
-  padding: 0.25rem 2rem;
+  padding: 0.25rem 0;
   border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem; }
+  border-top-left-radius: 0.5rem;
+  background: #ff9800; }
 
 /* CSS Header */
 .css {
-  background: #399cbd;
   margin: 0;
-  padding: 0.25rem 2rem;
+  padding: 0.25rem 0;
   border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem; }
+  border-top-left-radius: 0.5rem;
+  background: #399cbd; }
 
 /* JS Header */
 .js {
-  background: #ffdb58;
   margin: 0;
-  padding: 0.25rem 2rem;
+  padding: 0.25rem 0;
   border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem; }
+  border-top-left-radius: 0.5rem;
+  background: #ffdb58; }
 
 #css p, #js p {
   line-height: 0.5; }
 
 /* Code on black background */
 .code-block {
-  padding: 1rem 3rem; }
+  padding: 1rem; }
 
 .tag {
   color: #ab875d; }

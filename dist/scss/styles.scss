@@ -355,7 +355,7 @@ nav[aria-expanded="true"] + .backdrop {
         top: -4.5rem;
         width: 40%;
         opacity: 1;
-        border: 0.25rem double $secondary-color;
+        border: 0.25rem double $tertiary-color;
         border-bottom: 0.25rem solid $tertiary-color;
         border-radius: 50%;
         transition: 0.5s ease-in-out;
@@ -405,7 +405,7 @@ nav[aria-expanded="true"] + .backdrop {
     
     h3 {
         color: $secondary-color;
-        font-size: 2.67rem;
+        font-size: 2.25rem;
     }
     
     h4 {
@@ -534,7 +534,7 @@ nav[aria-expanded="true"] + .backdrop {
     
     h1, h3, p {
         line-height: 1.5;
-        padding: 1rem 5rem;
+        padding: 1rem 2rem;
     }
     
 }
@@ -547,38 +547,36 @@ nav[aria-expanded="true"] + .backdrop {
   background: rgba(0,0,0,0.85);
   color: #fff;
   border-radius: 0.5rem;
-  width: 75vw;
-  margin: 2rem;
+  width: 85vw;
+}
+
+@mixin code-box {
+    margin: 0;
+    padding: 0.25rem 0;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem; 
 }
 
 /* HTML Header */
 
 .html {
-  background: #ff9800;
-  margin: 0;
-  padding: 0.25rem 2rem;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
+    @include code-box;
+    background: #ff9800;
+  
 }
 
 /* CSS Header */
 
 .css {
-  background: #399cbd;
-  margin: 0;
-  padding: 0.25rem 2rem;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
+    @include code-box;
+    background: #399cbd;
 }
 
 /* JS Header */
 
 .js {
-  background: #ffdb58;
-  margin: 0;
-  padding: 0.25rem 2rem;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
+    @include code-box;
+    background: #ffdb58;
 }
 
 // Small line-height for CSS and JS boxes
@@ -594,7 +592,7 @@ nav[aria-expanded="true"] + .backdrop {
 /* Code on black background */
 
 .code-block {
-  padding: 1rem 3rem;
+  padding: 1rem;
 }
 
 .tag {
