@@ -4,9 +4,9 @@ $primary-color: #00b5f0;
 $secondary-color: #006C90;
 $tertiary-color: #1d1e2b;
 $tert-opac: rgba(29,30,43, 0.7);
+$primary-bg: radial-gradient(at center bottom, #333440 0%, $tertiary-color 60%);
 $header-bg: linear-gradient(to bottom, rgba(49,52,57,1) 0%, $tertiary-color 100%);
 $border-bg: linear-gradient(to bottom, $secondary-color 0%, $tertiary-color 100%);
-$primary-bg: radial-gradient(at center bottom, #333440 0%, $tertiary-color 60%);
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
 
@@ -37,6 +37,13 @@ $font-serif: 'Source Serif Pro', serif;
     transition: 0.5s ease-in-out;
 }
 
+@mixin code-box {
+    margin: 0;
+    padding: 0.25rem 0;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem; 
+}
+
 //Global
 
 *, *:before, *:after {
@@ -63,29 +70,6 @@ ul {
 section {
     @include column;
     color: #eee;
-}
-
-// Main 
-
-main {
-    @include column;
-    position: relative;
-    z-index: 1;
-    padding: 0 0 25rem;
-    
-    .main-bg-clip {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#fff 0%, #eee 70%, #ddd 100%);
-        transform: skewY(-3deg);
-        
-    }
-    
 }
 
 // Classes
@@ -294,21 +278,41 @@ nav[aria-expanded="true"] + .backdrop {
   
 }
 
+// Main 
+
+main {
+    @include column;
+    position: relative;
+    z-index: 1;
+    padding: 0 0 25rem;
+    
+    .main-bg-clip {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#fff 0%, #eee 70%, #ddd 100%);
+        transform: skewY(-3deg);
+    }
+}
+
 // Sidebar
 
 #sidebar {
     @include column;
     position: relative;
     top: 30vh;
-    background: $primary-bg;
+    background: $header-bg;
     color: #fff;
     flex: 1;
     text-align: center;
     border: 0.0625rem solid #000;
-    border-radius: 3rem;
+    border-radius: 1rem;
     padding-bottom: 0.5rem;
     margin: 0 2rem;
-    height: 55%;
     box-shadow: 0 0 0.5rem #000;
     
     ul {
@@ -325,7 +329,7 @@ nav[aria-expanded="true"] + .backdrop {
         
         &:hover {
             color: $primary-color;
-            transform: scale(1.3);
+            transform: scale(1.2);
         }
         
     }
@@ -378,7 +382,7 @@ nav[aria-expanded="true"] + .backdrop {
     }
     
     p {
-        font-size: 1.33rem;
+        font-size: 1.25rem;
         padding: 1rem 2rem;
         line-height: 1.5;
     }
@@ -548,13 +552,6 @@ nav[aria-expanded="true"] + .backdrop {
   color: #fff;
   border-radius: 0.5rem;
   width: 85vw;
-}
-
-@mixin code-box {
-    margin: 0;
-    padding: 0.25rem 0;
-    border-top-right-radius: 0.5rem;
-    border-top-left-radius: 0.5rem; 
 }
 
 /* HTML Header */
