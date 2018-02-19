@@ -45,8 +45,11 @@ section {
   font-size: 1rem;
   margin: 0 1rem 1rem; }
   .card h3 {
+    text-align: center;
     font-size: 1.33rem;
     padding: 0 0 1rem; }
+  .card p {
+    width: 50%; }
   .card img, .card canvas {
     max-width: 75%;
     padding: 1rem;
@@ -57,7 +60,7 @@ header {
   background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%);
   color: #fff;
   width: 100vw;
-  border-bottom: 0.5rem solid #006C90;
+  border-bottom: 0.25rem solid #006C90;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,25 +91,27 @@ header {
     box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
     height: 100%;
     background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%); }
-  header li {
-    padding: 1rem;
-    font-size: 1.33rem;
-    opacity: 0.75;
-    border: 0.125rem solid #555;
-    border-bottom: none;
-    border-top: none;
-    transition: 0.5s ease-in-out; }
-  header li:hover {
-    color: #00b5f0;
-    background: #000;
-    opacity: 1;
-    border: 0.125rem solid #00b5f0;
-    border-bottom: none;
-    border-top: none; }
-    header li:hover a {
-      color: #00b5f0; }
-  header li:last-of-type {
-    margin-right: 3rem; }
+    header ul li {
+      padding: 1rem;
+      font-size: 1.33rem;
+      opacity: 0.75;
+      border-right: 0.125rem solid #555;
+      border-bottom: none;
+      border-top: none;
+      transition: 0.5s ease-in-out; }
+      header ul li:hover {
+        color: #00b5f0;
+        background: #000;
+        opacity: 1;
+        border: 0.125rem solid #00b5f0;
+        border-bottom: none;
+        border-top: none; }
+        header ul li:hover a {
+          color: #00b5f0; }
+      header ul li:first-of-type {
+        border-left: 0.125rem solid #555; }
+      header ul li:last-of-type {
+        margin-right: 3rem; }
   header .sr-only {
     position: absolute;
     width: 0.625rem;
@@ -298,7 +303,8 @@ main {
     flex-direction: column;
     align-items: center; }
     #projects .grid .card {
-      margin-top: 2rem; }
+      margin-top: 2rem;
+      max-width: 30vw; }
     #projects .grid img, #projects .grid #canvasPort {
       position: relative;
       top: 0;

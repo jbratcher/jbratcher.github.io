@@ -92,8 +92,13 @@ section {
     margin: 0 1rem 1rem;
     
     h3 {
+        text-align: center;
         font-size: 1.33rem;
         padding: 0 0 1rem;
+    }
+    
+    p {
+        width: 50%;
     }
     
     img, canvas {
@@ -110,7 +115,7 @@ header {
     background: $header-bg;
     color: #fff;
     width: 100vw;
-    border-bottom: 0.5rem solid $secondary-color;
+    border-bottom: 0.25rem solid $secondary-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -154,34 +159,40 @@ header {
         box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
         height: 100%;
         background: $header-bg;
-    }
-
-    li {
-        padding: 1rem;
-        font-size: 1.33rem;
-        opacity: 0.75;
-        border: 0.125rem solid #555;
-        border-bottom: none;
-        border-top: none;
-        transition: 0.5s ease-in-out;
-    }
-    
-    li:hover {
-        color: $primary-color;
-        background: #000;
-        opacity: 1;
-        border: 0.125rem solid $primary-color;
-        border-bottom: none;
-        border-top: none;
         
-        a {
-            color: $primary-color;
+        li {
+            padding: 1rem;
+            font-size: 1.33rem;
+            opacity: 0.75;
+            border-right: 0.125rem solid #555;
+            border-bottom: none;
+            border-top: none;
+            transition: 0.5s ease-in-out;
+            
+            &:hover {
+                color: $primary-color;
+                background: #000;
+                opacity: 1;
+                border: 0.125rem solid $primary-color;
+                border-bottom: none;
+                border-top: none;
+                
+                a {
+                    color: $primary-color;
+                }
+                
+            }
+            
+            &:first-of-type {
+                border-left: 0.125rem solid #555;
+            }
+            
+            &:last-of-type {
+                margin-right: 3rem;
+            }
+            
         }
-    }
-    
-    
-    li:last-of-type {
-        margin-right: 3rem;
+        
     }
     
     .sr-only {
@@ -445,6 +456,7 @@ main {
         
         .card {
             margin-top: 2rem;
+            max-width: 30vw;
         }
         
         img, #canvasPort {
