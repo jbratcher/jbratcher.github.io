@@ -41,15 +41,16 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #666;
+  color: #333;
   font-size: 1rem;
   margin: 0 1rem 1rem; }
   .card h3 {
     text-align: center;
     font-size: 1.33rem;
-    padding: 0 0 1rem; }
+    padding: 0 0 0.5rem; }
   .card p {
-    width: 50%; }
+    width: 50%;
+    padding-bottom: 0.5rem; }
   .card img, .card canvas {
     max-width: 75%;
     padding: 1rem;
@@ -76,13 +77,11 @@ header {
       display: flex;
       transition: 0.5s ease-in-out; }
     header .brand a:hover {
-      transform: scale(1.3); }
+      transform: scale(1.2); }
   header a {
     color: #fff;
     padding: 1rem;
     transition: 0.5s ease; }
-  header a:hover {
-    color: #00b5f0; }
   header ul {
     display: flex;
     flex-direction: column;
@@ -103,7 +102,7 @@ header {
         color: #00b5f0;
         background: #000;
         opacity: 1;
-        border: 0.125rem solid #00b5f0;
+        border: 0.0625rem solid #00b5f0;
         border-bottom: none;
         border-top: none; }
         header ul li:hover a {
@@ -144,37 +143,33 @@ nav {
     padding: 3.5rem 0; }
     nav ul li {
       width: 100%; }
+  nav .menu-close {
+    position: absolute;
+    right: 1rem;
+    top: 0; }
   nav:target, nav[aria-expanded="true"] {
     right: -1.5rem;
     outline: none;
     box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85); }
-
-nav .menu-close {
-  position: absolute;
-  right: 1rem;
-  top: 0; }
-
-nav:target .menu-close,
-nav[aria-expanded="true"] .menu-close {
-  z-index: 1001; }
-
-nav:target ul,
-nav[aria-expanded="true"] ul {
-  position: relative;
-  z-index: 1000; }
-
-nav:target + .backdrop,
-nav[aria-expanded="true"] + .backdrop {
-  position: absolute;
-  display: block;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 998;
-  background: rgba(29, 30, 43, 0.7);
-  cursor: default; }
+  nav:target .menu-close,
+  nav[aria-expanded="true"] .menu-close {
+    z-index: 1001; }
+  nav:target ul,
+  nav[aria-expanded="true"] ul {
+    position: relative;
+    z-index: 1000; }
+  nav:target + .backdrop,
+  nav[aria-expanded="true"] + .backdrop {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: rgba(29, 30, 43, 0.7);
+    cursor: default; }
 
 @supports (position: fixed) {
   nav,
@@ -205,7 +200,7 @@ main {
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 30vh;
+  top: 35vh;
   background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%);
   color: #fff;
   flex: 1;
@@ -213,7 +208,7 @@ main {
   border: 0.0625rem solid #000;
   border-radius: 1rem;
   padding-bottom: 0.5rem;
-  margin: 0 2rem;
+  margin: 0 2rem 0;
   box-shadow: 0 0 0.5rem #000; }
   #sidebar ul {
     display: flex; }

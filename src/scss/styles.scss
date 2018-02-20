@@ -87,18 +87,19 @@ section {
 
 .card {
     @include column;
-    color: #666;
+    color: #333;
     font-size: 1rem;
     margin: 0 1rem 1rem;
     
     h3 {
         text-align: center;
         font-size: 1.33rem;
-        padding: 0 0 1rem;
+        padding: 0 0 0.5rem;
     }
     
     p {
         width: 50%;
+        padding-bottom: 0.5rem;
     }
     
     img, canvas {
@@ -137,7 +138,7 @@ header {
         }
         
         a:hover {
-            transform: scale(1.3);
+            transform: scale(1.2);
         }
     }
     
@@ -145,10 +146,6 @@ header {
         color: #fff;
         padding: 1rem;
         transition: 0.5s ease;
-    }
-
-    a:hover {
-        color: $primary-color;
     }
     
     ul {
@@ -173,7 +170,7 @@ header {
                 color: $primary-color;
                 background: #000;
                 opacity: 1;
-                border: 0.125rem solid $primary-color;
+                border: 0.0625rem solid $primary-color;
                 border-bottom: none;
                 border-top: none;
                 
@@ -240,43 +237,44 @@ nav {
         }
     }
     
+    .menu-close {
+        position: absolute;
+        right: 1rem;
+        top: 0;
+    }
+    
     &:target,
     &[aria-expanded="true"] {
       right: -1.5rem;
       outline: none;
       box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
     }
-}
-
-nav .menu-close {
-    position: absolute;
-    right: 1rem;
-    top: 0;
-}
-
-nav:target .menu-close,
-nav[aria-expanded="true"] .menu-close {
-    z-index: 1001;
-}
-
-nav:target ul,
-nav[aria-expanded="true"] ul {
-    position: relative;
-    z-index: 1000;
-}
-
-nav:target + .backdrop,
-nav[aria-expanded="true"] + .backdrop {
-    position: absolute;
-    display: block;  
-    content: "";
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 998;
-    background: $tert-opac;
-    cursor: default;
+    
+    &:target .menu-close,
+    &[aria-expanded="true"] .menu-close {
+        z-index: 1001;
+    }
+    
+    &:target ul,
+    &[aria-expanded="true"] ul {
+        position: relative;
+        z-index: 1000;
+    }
+    
+    &:target + .backdrop,
+    &[aria-expanded="true"] + .backdrop {
+        position: absolute;
+        display: block;  
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 998;
+        background: $tert-opac;
+        cursor: default;
+    }
+        
 }
 
 @supports (position: fixed) {
@@ -315,7 +313,7 @@ main {
 #sidebar {
     @include column;
     position: relative;
-    top: 30vh;
+    top: 35vh;
     background: $header-bg;
     color: #fff;
     flex: 1;
@@ -323,7 +321,7 @@ main {
     border: 0.0625rem solid #000;
     border-radius: 1rem;
     padding-bottom: 0.5rem;
-    margin: 0 2rem;
+    margin: 0 2rem 0;
     box-shadow: 0 0 0.5rem #000;
     
     ul {
