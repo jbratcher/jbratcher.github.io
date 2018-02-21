@@ -300,6 +300,14 @@ main {
     #projects .grid .card {
       margin-top: 2rem;
       max-width: 30vw; }
+      #projects .grid .card figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        #projects .grid .card figure figcaption {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
     #projects .grid img, #projects .grid #canvasPort {
       position: relative;
       top: 0;

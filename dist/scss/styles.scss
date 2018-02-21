@@ -455,6 +455,15 @@ main {
         .card {
             margin-top: 2rem;
             max-width: 30vw;
+            
+            figure {
+                @include column;
+                
+                figcaption {
+                    @include column;
+                }
+            }
+            
         }
         
         img, #canvasPort {
@@ -741,7 +750,7 @@ footer {
         
     }
     
-    #location {
+    address {
         display: flex;
         flex-direction: column;
     }
