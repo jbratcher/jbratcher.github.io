@@ -500,7 +500,7 @@ footer {
     footer ul li {
       font-size: 0.8rem;
       padding: 0 0.5rem; }
-  footer #location {
+  footer address {
     display: flex;
     flex-direction: column; }
   footer p {

@@ -22,3 +22,8 @@ Just type gulp from the command line.
 
 Blog section is currently under constuction
 
+#Todo List
+
+* fig and figcaption for figures
+* more semantic markup
+* 
