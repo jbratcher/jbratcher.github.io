@@ -6,7 +6,8 @@
 html, body {
   font-family: "Source Sans Pro", sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  line-height: 1.5; }
 
 a {
   text-decoration: none;
@@ -201,7 +202,7 @@ main {
   align-items: center;
   position: relative;
   top: 35vh;
-  background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%);
+  background: linear-gradient(to bottom right, #313439 0%, #1d1e2b 100%);
   color: #fff;
   flex: 1;
   text-align: center;
@@ -254,8 +255,7 @@ main {
     font-size: 2rem; }
   #about p {
     font-size: 1.25rem;
-    padding: 1rem 2rem;
-    line-height: 1.5; }
+    padding: 1rem 2rem; }
 
 #projects {
   display: flex;
@@ -329,6 +329,9 @@ main {
       background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%); }
 
 #blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   background: #1d1e2b;
   color: #333;
@@ -368,7 +371,7 @@ main {
         opacity: 1; }
 
 #blog-post {
-  padding-top: 5rem;
+  padding: 5rem 0;
   color: #333; }
   #blog-post h1, #blog-post h3, #blog-post p {
     line-height: 1.5;

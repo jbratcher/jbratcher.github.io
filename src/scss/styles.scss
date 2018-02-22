@@ -6,6 +6,7 @@ $tertiary-color: #1d1e2b;
 $tert-opac: rgba(29,30,43, 0.7);
 $primary-bg: radial-gradient(at center bottom, #333440 0%, $tertiary-color 60%);
 $header-bg: linear-gradient(to bottom, rgba(49,52,57,1) 0%, $tertiary-color 100%);
+$about-bg: linear-gradient(to bottom right, rgba(49,52,57,1) 0%, $tertiary-color 100%);
 $border-bg: linear-gradient(to bottom, $secondary-color 0%, $tertiary-color 100%);
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
@@ -56,6 +57,7 @@ html, body {
     font-family: $font-sans;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    line-height: 1.5;
 }
 
 a {
@@ -314,7 +316,7 @@ main {
     @include column;
     position: relative;
     top: 35vh;
-    background: $header-bg;
+    background: $about-bg;
     color: #fff;
     flex: 1;
     text-align: center;
@@ -393,7 +395,6 @@ main {
     p {
         font-size: 1.25rem;
         padding: 1rem 2rem;
-        line-height: 1.5;
     }
 
 }
@@ -498,6 +499,7 @@ main {
 // Blog
 
 #blog {
+    @include column;
     position: relative;
     background: $tertiary-color;
     color: #333;
@@ -552,7 +554,7 @@ main {
 // Blog Post
 
 #blog-post {
-    padding-top: 5rem;
+    padding: 5rem 0;
     color: #333;
     
     h1, h3, p {
