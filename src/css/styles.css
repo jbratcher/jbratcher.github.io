@@ -4,10 +4,9 @@
   box-sizing: border-box; }
 
 html, body {
-  font-family: "Source Sans Pro", sans-serif;
+  font: normal 1rem/1.5 "Source Sans Pro", sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  line-height: 1.5; }
+  overflow-x: hidden; }
 
 a {
   text-decoration: none;
@@ -22,16 +21,24 @@ section {
   align-items: center;
   color: #eee; }
 
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  figure figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
 .btn {
   background-color: #fff;
   color: #333;
   padding: 1rem;
-  border: 0.1rem solid #666;
+  border: 0.2rem solid #00b5f0;
   border-radius: 1rem;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  border: 0.2rem solid #00b5f0;
   transition: 0.5s ease-in-out; }
   .btn:hover, .btn:focus, .btn:active, .btn:target {
     border: 0.2rem solid #fff;
@@ -83,21 +90,31 @@ header {
     color: #fff;
     padding: 1rem;
     transition: 0.5s ease; }
+    header a .menu-toggle {
+      display: inline-block;
+      padding: .75rem 1rem;
+      line-height: 1rem;
+      font-size: 1rem;
+      color: #fff; }
+      header a .menu-toggle:hover, header a .menu-toggle:focus {
+        color: #00b5f0; }
   header ul {
     display: flex;
     flex-direction: column;
+    background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%);
+    height: 100%;
     list-style: none;
     margin: 0;
-    box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
-    height: 100%;
-    background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%); }
+    padding: 3.5rem 0;
+    box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85); }
     header ul li {
-      padding: 1rem;
+      width: 100%;
       font-size: 1.33rem;
       opacity: 0.75;
       border-right: 0.125rem solid #555;
       border-bottom: none;
       border-top: none;
+      padding: 1rem;
       transition: 0.5s ease-in-out; }
       header ul li:hover {
         color: #00b5f0;
@@ -123,15 +140,6 @@ header {
     border: 0;
     opacity: 0; }
 
-header a .menu-toggle {
-  display: inline-block;
-  padding: .75rem 1rem;
-  line-height: 1rem;
-  font-size: 1rem;
-  color: #fff; }
-  header a .menu-toggle:hover, header a .menu-toggle:focus {
-    color: #00b5f0; }
-
 nav {
   position: absolute;
   right: -12.75rem;
@@ -140,10 +148,6 @@ nav {
   overflow-x: hidden;
   transition: 0.5s ease-in-out;
   z-index: 999; }
-  nav ul {
-    padding: 3.5rem 0; }
-    nav ul li {
-      width: 100%; }
   nav .menu-close {
     position: absolute;
     right: 1rem;
@@ -200,11 +204,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
   position: relative;
   top: 35vh;
   background: linear-gradient(to bottom right, #313439 0%, #1d1e2b 100%);
   color: #fff;
-  flex: 1;
   text-align: center;
   border: 0.0625rem solid #000;
   border-radius: 1rem;
@@ -239,7 +243,6 @@ main {
     position: relative;
     top: -4.5rem;
     width: 40%;
-    opacity: 1;
     border: 0.25rem double #1d1e2b;
     border-bottom: 0.25rem solid #1d1e2b;
     border-radius: 50%;
@@ -266,14 +269,11 @@ main {
   flex: 3; }
   #projects h2 {
     color: #006C90;
-    background: linear-gradient(to bottom, #006C90 0%, #1d1e2b 10%, #006C90 20%, #1d1e2b 60%, #006C90 100%);
+    background: linear-gradient(to bottom, #006C90 0%, #1d1e2b 20%, #006C90 30%, #1d1e2b 60%, #006C90 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3.33rem;
     padding: 1rem 0; }
-  #projects h3 {
-    color: #006C90;
-    font-size: 2.25rem; }
   #projects h4 {
     position: relative;
     top: 0;
@@ -300,14 +300,9 @@ main {
     #projects .grid .card {
       margin-top: 2rem;
       max-width: 30vw; }
-      #projects .grid .card figure {
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        #projects .grid .card figure figcaption {
-          display: flex;
-          flex-direction: column;
-          align-items: center; }
+      #projects .grid .card h3 {
+        color: #006C90;
+        font-size: 2.25rem; }
     #projects .grid img, #projects .grid #canvasPort {
       position: relative;
       top: 0;
