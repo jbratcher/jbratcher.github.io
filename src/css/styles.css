@@ -554,7 +554,8 @@ footer {
   footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; }
+    justify-content: space-around;
+    padding-bottom: 1rem; }
     footer p {
       font-size: 1.25rem; }
     footer ul li {
@@ -578,7 +579,7 @@ footer {
       flex-flow: row wrap;
       justify-content: space-around; }
       #projects .grid img, #projects .grid #canvasPort {
-        width: 30vw;
+        width: 20vw;
         height: 40vh; }
   #blog .blog-grid {
     flex-flow: row wrap;
@@ -589,7 +590,8 @@ footer {
   footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; }
+    justify-content: space-around;
+    padding-bottom: 1rem; }
     footer p {
       font-size: 1.25rem; }
     footer ul li {
@@ -609,7 +611,8 @@ footer {
   footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; } }
+    justify-content: space-around;
+    padding-bottom: 1rem; } }
 
 @media (min-width: 40rem) {
   .menu-toggle,

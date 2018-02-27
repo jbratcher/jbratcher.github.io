@@ -837,6 +837,7 @@ footer {
     
     footer {
         @include row;
+        padding-bottom: 1rem;
         
         p {
             font-size: 1.25rem;
@@ -888,7 +889,7 @@ footer {
             justify-content: space-around;
             
             img, #canvasPort {
-                width: 30vw;
+                width: 20vw;
                 height: 40vh;
             }
             
@@ -909,6 +910,7 @@ footer {
     
     footer {
         @include row;
+        padding-bottom: 1rem;
         
         p {
             font-size: 1.25rem;
@@ -954,6 +956,7 @@ footer {
     
     footer {
         @include row;
+        padding-bottom: 1rem;
     }
     
 }
