@@ -307,6 +307,7 @@ main {
         color: #006C90;
         font-size: 2.25rem; }
     #projects .grid img, #projects .grid #canvasPort {
+      background: #ccc;
       position: relative;
       top: 0;
       width: 80vw;
@@ -512,7 +513,7 @@ footer {
   padding: 1rem 0 3rem;
   position: relative; }
   footer address {
-    padding: 1rem 0.5rem 3rem; }
+    padding: 3rem 0.5rem 3rem; }
   footer p {
     text-transform: uppercase;
     text-align: center;
@@ -546,7 +547,7 @@ footer {
       flex-flow: row wrap;
       justify-content: space-around; }
       #projects .grid img, #projects .grid #canvasPort {
-        width: 30vw;
+        width: 20vw;
         height: 40vh; }
   #blog .blog-grid {
     flex-flow: row wrap;
