@@ -182,6 +182,7 @@ header {
         flex-direction: column;
         background: $header-bg;
         height: 100%;
+        border-bottom-left-radius: 1rem;
         list-style: none;
         margin: 0;
         padding: 3.5rem 0;
