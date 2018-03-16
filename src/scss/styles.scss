@@ -424,11 +424,11 @@ main {
         padding: 1rem 0;
     }
     
-    h4 {
+    #githubBtn {
         position: relative;
         top: 0;
-        font-size: 1.5rem;
-        max-width: 90vw;
+        font-size: 1rem;
+        max-width: 60vw;
         margin: 3rem 0;
         padding: 1rem;
         border: 0.25rem solid $secondary-color;
@@ -456,7 +456,7 @@ main {
         @include column;
         
         .card {
-            margin-top: 2rem;
+            margin: 2rem 1rem 0;
             max-width: 30vw;
             
             h3 {
@@ -470,8 +470,8 @@ main {
             background: #ccc;
             position: relative;
             top: 0;
-            width: 80vw;
-            height: 50vh;
+            width: 70vw;
+            height: 35vh;
             max-width: 90vw;
             padding: 0;
             margin: 1rem;
@@ -700,6 +700,7 @@ main {
         z-index: 1;
         
         input, textarea {
+            max-width: 80vw;
             width: 80%;
             margin: 1rem;
             padding: 1rem;
