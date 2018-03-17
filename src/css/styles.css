@@ -72,10 +72,10 @@ header {
   background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%);
   color: #fff;
   width: 100vw;
-  border-bottom: 0.25rem solid #006C90;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 0.5rem solid #006C90;
   z-index: 99; }
   header .brand {
     display: flex;
@@ -632,12 +632,12 @@ footer {
     height: auto;
     right: -12.6rem; }
     nav ul {
+      background: none;
       display: flex;
       padding: 0;
       box-shadow: none;
       height: auto;
-      width: auto;
-      background: none; }
+      width: auto; }
     nav a {
       color: #fff;
       border: 0; }

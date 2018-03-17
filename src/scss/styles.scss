@@ -129,10 +129,10 @@ header {
     background: $header-bg;
     color: #fff;
     width: 100vw;
-    border-bottom: 0.25rem solid $secondary-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 0.5rem solid $secondary-color;
     z-index: 99;
     
     .brand {
@@ -982,12 +982,12 @@ footer {
         right: -12.6rem;
         
         ul {
+            background: none;
             display: flex;
             padding: 0;
             box-shadow: none;
             height: auto;
             width: auto;
-            background: none;
         }
         
         a {
