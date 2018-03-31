@@ -530,8 +530,13 @@ main {
         position: relative;
         z-index: 99;
         
-        li {
-            margin: 1rem;
+        li figure {
+            @include column;
+            
+            a {
+                color: #333;
+                @include column;
+            }
             
             h3 {
                 color: $secondary-color;

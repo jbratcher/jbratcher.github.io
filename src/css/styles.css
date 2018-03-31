@@ -358,13 +358,20 @@ main {
     margin-top: 11rem;
     position: relative;
     z-index: 99; }
-    #blog .blog-grid li {
-      margin: 1rem; }
-      #blog .blog-grid li h3 {
+    #blog .blog-grid li figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      #blog .blog-grid li figure a {
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      #blog .blog-grid li figure h3 {
         color: #006C90; }
-      #blog .blog-grid li h5 {
+      #blog .blog-grid li figure h5 {
         font-size: 0.75rem; }
-      #blog .blog-grid li p {
+      #blog .blog-grid li figure p {
         padding: 1rem 0; }
     #blog .blog-grid img {
       width: 80vw;
