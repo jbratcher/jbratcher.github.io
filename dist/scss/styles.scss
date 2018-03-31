@@ -470,8 +470,8 @@ main {
             background: #ccc;
             position: relative;
             top: 0;
-            width: 70vw;
-            height: 35vh;
+            width: 50vw;
+            height: 40vh;
             max-width: 90vw;
             padding: 0;
             margin: 1rem;
@@ -815,7 +815,7 @@ footer {
         padding-bottom: 10rem;
         
         #sidebar {
-            top: -25vh;
+            top: -20vh;
         }
     }
     
@@ -827,8 +827,8 @@ footer {
             justify-content: space-around;
             
             img, #canvasPort {
-                width: 20vw;
-                height: 40vh;
+                width: 25vw;
+                height: 30vh;
             }
             
         }
@@ -901,7 +901,7 @@ footer {
             
             img, #canvasPort {
                 width: 20vw;
-                height: 40vh;
+                height: 30vh;
             }
             
         }
@@ -959,8 +959,8 @@ footer {
     #projects .grid {
         
         img, #canvasPort {
-            width: 70vw;
-            height: 70vh;
+            width: 40vw;
+            height: 50vh;
         }
         
     }
@@ -1009,4 +1009,17 @@ footer {
   
     }
       
+}
+
+@media (max-width: 25rem) {
+    
+    #projects .grid {
+            
+        img, #canvasPort {
+            width: 70vw;
+            height: 30vh;
+        }
+
+    }
+    
 }

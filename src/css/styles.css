@@ -311,8 +311,8 @@ main {
       background: #ccc;
       position: relative;
       top: 0;
-      width: 70vw;
-      height: 35vh;
+      width: 50vw;
+      height: 40vh;
       max-width: 90vw;
       padding: 0;
       margin: 1rem;
@@ -550,15 +550,15 @@ footer {
     flex-direction: row;
     padding-bottom: 10rem; }
     main #sidebar {
-      top: -25vh; }
+      top: -20vh; }
   #projects {
     top: 6rem; }
     #projects .grid {
       flex-flow: row wrap;
       justify-content: space-around; }
       #projects .grid img, #projects .grid #canvasPort {
-        width: 20vw;
-        height: 40vh; }
+        width: 25vw;
+        height: 30vh; }
   #blog .blog-grid {
     flex-flow: row wrap;
     justify-content: space-around; }
@@ -594,7 +594,7 @@ footer {
       justify-content: space-around; }
       #projects .grid img, #projects .grid #canvasPort {
         width: 20vw;
-        height: 40vh; }
+        height: 30vh; }
   #blog .blog-grid {
     flex-flow: row wrap;
     justify-content: space-around; }
@@ -620,8 +620,8 @@ footer {
     justify-content: center;
     margin-right: 12.5rem; }
   #projects .grid img, #projects .grid #canvasPort {
-    width: 70vw;
-    height: 70vh; }
+    width: 40vw;
+    height: 50vh; }
   footer {
     display: flex;
     flex-direction: row;
@@ -651,3 +651,8 @@ footer {
       nav a:hover, nav a:focus {
         background: #000;
         color: #00b5f0; } }
+
+@media (max-width: 25rem) {
+  #projects .grid img, #projects .grid #canvasPort {
+    width: 70vw;
+    height: 30vh; } }
