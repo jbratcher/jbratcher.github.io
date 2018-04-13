@@ -756,6 +756,7 @@ main {
 footer {
     @include column
     background-color: $secondary-color;
+    border-top: 0.5rem solid $primary-color;
     color: #fff;
     padding: 1rem 0 3rem;
     position: relative;
@@ -768,8 +769,16 @@ footer {
     }
     
     address {
-        padding: 1.25rem 0.5rem;
+        @include column;
+        align-items: start;
+        padding: 1.5rem 0;
+        
+        span {
+            padding: 0.25rem 0;
+        }
+    
     }
+    
     
     ul {
         list-style: none;
@@ -827,8 +836,8 @@ footer {
             justify-content: space-around;
             
             img, #canvasPort {
-                width: 25vw;
-                height: 30vh;
+                width: 20vw;
+                height: 35vh;
             }
             
         }
@@ -919,25 +928,6 @@ footer {
         
     }
     
-    footer {
-        @include row;
-        padding-bottom: 1rem;
-        
-        p {
-            font-size: 1.25rem;
-        }
-        
-        ul {
-            
-            li {
-                font-size: 1rem;
-                padding: 0 1rem;
-            }
-            
-        }
-        
-    }
-    
 }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
@@ -972,6 +962,19 @@ footer {
     
 }
 
+@media (max-width: 25rem) {
+    
+    #projects .grid {
+            
+        img, #canvasPort {
+            width: 70vw;
+            height: 30vh;
+        }
+
+    }
+    
+}
+
 @media (min-width: 40rem) {
     
     .menu-toggle,
@@ -981,7 +984,6 @@ footer {
   
     nav {
         position: relative;
-        right: auto;
         top: auto;
         height: auto;
         right: -12.6rem;
@@ -1008,18 +1010,42 @@ footer {
         }
   
     }
-      
+    
 }
 
-@media (max-width: 25rem) {
+@media (min-width: 60rem) {
     
-    #projects .grid {
-            
-        img, #canvasPort {
-            width: 70vw;
-            height: 30vh;
+    footer {
+        @include row;
+        padding-bottom: 1rem;
+        
+        p {
+            font-size: 1.25rem;
+            padding: 0 0 1rem;
         }
-
+        
+        ul {
+            
+            li {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+        }
+        
+        address {
+            @include row;
+            
+            address {
+                
+                span {
+                    padding: 0 0.5rem;
+                }    
+                
+            }
+             
+        }
+        
     }
     
 }

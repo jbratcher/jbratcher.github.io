@@ -518,6 +518,7 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: #006C90;
+  border-top: 0.5rem solid #00b5f0;
   color: #fff;
   padding: 1rem 0 3rem;
   position: relative; }
@@ -527,7 +528,13 @@ footer {
     margin-top: 1rem;
     padding: 0 0.5rem; }
   footer address {
-    padding: 1.25rem 0.5rem; }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: start;
+    padding: 1.5rem 0; }
+    footer address span {
+      padding: 0.25rem 0; }
   footer ul {
     list-style: none;
     display: flex; }
@@ -557,8 +564,8 @@ footer {
       flex-flow: row wrap;
       justify-content: space-around; }
       #projects .grid img, #projects .grid #canvasPort {
-        width: 25vw;
-        height: 30vh; }
+        width: 20vw;
+        height: 35vh; }
   #blog .blog-grid {
     flex-flow: row wrap;
     justify-content: space-around; }
@@ -600,17 +607,7 @@ footer {
     justify-content: space-around; }
     #blog .blog-grid img {
       width: 40vw;
-      height: 50vh; }
-  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-bottom: 1rem; }
-    footer p {
-      font-size: 1.25rem; }
-    footer ul li {
-      font-size: 1rem;
-      padding: 0 1rem; } }
+      height: 50vh; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   header .brand {
@@ -628,13 +625,17 @@ footer {
     justify-content: space-around;
     padding-bottom: 1rem; } }
 
+@media (max-width: 25rem) {
+  #projects .grid img, #projects .grid #canvasPort {
+    width: 70vw;
+    height: 30vh; } }
+
 @media (min-width: 40rem) {
   .menu-toggle,
   nav .menu-close {
     display: none; }
   nav {
     position: relative;
-    right: auto;
     top: auto;
     height: auto;
     right: -12.6rem; }
@@ -652,7 +653,21 @@ footer {
         background: #000;
         color: #00b5f0; } }
 
-@media (max-width: 25rem) {
-  #projects .grid img, #projects .grid #canvasPort {
-    width: 70vw;
-    height: 30vh; } }
+@media (min-width: 60rem) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 1rem; }
+    footer p {
+      font-size: 1.25rem;
+      padding: 0 0 1rem; }
+    footer ul li {
+      font-size: 1rem;
+      padding: 0 1rem; }
+    footer address {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+      footer address address span {
+        padding: 0 0.5rem; } }
