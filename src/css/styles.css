@@ -28,6 +28,13 @@ figure {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  figure a.link-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0; }
   figure figcaption {
     display: flex;
     flex-direction: column;
@@ -63,7 +70,6 @@ figure {
     width: 50%;
     padding-bottom: 0.5rem; }
   .card img, .card canvas {
-    max-width: 75%;
     padding: 1rem;
     border-radius: 10%; }
 
@@ -303,7 +309,8 @@ main {
     align-items: center; }
     #projects .grid .card {
       margin: 2rem 1rem 0;
-      max-width: 30vw; }
+      height: auto;
+      max-width: 80vw; }
       #projects .grid .card h3 {
         color: #006C90;
         font-size: 2.25rem; }
@@ -311,11 +318,10 @@ main {
       background: #ccc;
       position: relative;
       top: 0;
-      width: 50vw;
-      height: 40vh;
-      max-width: 90vw;
+      width: 100%;
+      height: auto;
       padding: 0;
-      margin: 1rem;
+      margin: 1rem 0;
       border-radius: 3rem;
       transition: 0.5s ease-in-out;
       box-shadow: 0.1rem 0.1rem 0.25rem #636363;
@@ -599,9 +605,8 @@ footer {
     #projects .grid {
       flex-flow: row wrap;
       justify-content: space-around; }
-      #projects .grid img, #projects .grid #canvasPort {
-        width: 20vw;
-        height: 30vh; }
+      #projects .grid .card {
+        width: 30vw; }
   #blog .blog-grid {
     flex-flow: row wrap;
     justify-content: space-around; }
@@ -616,9 +621,10 @@ footer {
     flex-direction: row;
     justify-content: center;
     margin-right: 12.5rem; }
-  #projects .grid img, #projects .grid #canvasPort {
-    width: 40vw;
-    height: 50vh; }
+  #projects .grid .card p {
+    font-size: 2rem; }
+  #projects .grid #canvasPort {
+    width: 85vw; }
   footer {
     display: flex;
     flex-direction: row;
@@ -627,8 +633,7 @@ footer {
 
 @media (max-width: 25rem) {
   #projects .grid img, #projects .grid #canvasPort {
-    width: 70vw;
-    height: 30vh; } }
+    width: 70vw; } }
 
 @media (min-width: 40rem) {
   .menu-toggle,
@@ -669,5 +674,5 @@ footer {
       display: flex;
       flex-direction: row;
       justify-content: space-around; }
-      footer address address span {
-        padding: 0 0.5rem; } }
+      footer address span {
+        padding: 0 1rem; } }

@@ -79,6 +79,13 @@ section {
 figure {
     @include column;
     
+    a.link-holder {
+        @include column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
     figcaption {
         @include column;
     }
@@ -116,7 +123,6 @@ figure {
     }
     
     img, canvas {
-        max-width:75%;
         padding: 1rem;
         border-radius: 10%;
     }
@@ -457,7 +463,8 @@ main {
         
         .card {
             margin: 2rem 1rem 0;
-            max-width: 30vw;
+            height: auto;
+            max-width: 80vw;
             
             h3 {
                 color: $secondary-color;
@@ -470,11 +477,10 @@ main {
             background: #ccc;
             position: relative;
             top: 0;
-            width: 50vw;
-            height: 40vh;
-            max-width: 90vw;
+            width: 100%;
+            height: auto;
             padding: 0;
-            margin: 1rem;
+            margin: 1rem 0;
             border-radius: 3rem;
             transition: 0.5s ease-in-out;
             box-shadow: 0.1rem 0.1rem 0.25rem #636363;
@@ -908,9 +914,12 @@ footer {
             flex-flow: row wrap;
             justify-content: space-around;
             
+            .card {
+                width: 30vw;
+            }
+            
             img, #canvasPort {
-                width: 20vw;
-                height: 30vh;
+                
             }
             
         }
@@ -948,9 +957,12 @@ footer {
     
     #projects .grid {
         
-        img, #canvasPort {
-            width: 40vw;
-            height: 50vh;
+        .card p {
+            font-size: 2rem;
+        }
+        
+        #canvasPort {
+            width: 85vw;
         }
         
     }
@@ -968,7 +980,6 @@ footer {
             
         img, #canvasPort {
             width: 70vw;
-            height: 30vh;
         }
 
     }
@@ -1035,14 +1046,10 @@ footer {
         
         address {
             @include row;
-            
-            address {
                 
                 span {
-                    padding: 0 0.5rem;
+                    padding: 0 1rem;
                 }    
-                
-            }
              
         }
         
