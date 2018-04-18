@@ -569,15 +569,8 @@ footer {
     #projects .grid {
       flex-flow: row wrap;
       justify-content: space-around; }
-      #projects .grid img, #projects .grid #canvasPort {
-        width: 20vw;
-        height: 35vh; }
-  #blog .blog-grid {
-    flex-flow: row wrap;
-    justify-content: space-around; }
-    #blog .blog-grid img {
-      width: 40vw;
-      height: 50vh; }
+    #projects #canvasPort {
+      height: 40vh; }
   footer {
     display: flex;
     flex-direction: row;
@@ -607,12 +600,9 @@ footer {
       justify-content: space-around; }
       #projects .grid .card {
         width: 30vw; }
-  #blog .blog-grid {
-    flex-flow: row wrap;
-    justify-content: space-around; }
-    #blog .blog-grid img {
-      width: 40vw;
-      height: 50vh; } }
+      #projects .grid #canvasPort {
+        width: 100%;
+        height: 40vh; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   header .brand {
@@ -624,7 +614,8 @@ footer {
   #projects .grid .card p {
     font-size: 2rem; }
   #projects .grid #canvasPort {
-    width: 85vw; }
+    width: 80vw;
+    height: 40vh; }
   footer {
     display: flex;
     flex-direction: row;
@@ -632,8 +623,11 @@ footer {
     padding-bottom: 1rem; } }
 
 @media (max-width: 25rem) {
-  #projects .grid img, #projects .grid #canvasPort {
-    width: 70vw; } }
+  #projects .grid img {
+    width: 70vw; }
+  #projects .grid #canvasPort {
+    width: 70vw;
+    height: 35vh; } }
 
 @media (min-width: 40rem) {
   .menu-toggle,
@@ -659,6 +653,14 @@ footer {
         color: #00b5f0; } }
 
 @media (min-width: 60rem) {
+  #projects .grid .card {
+    width: 30vw; }
+  #blog .blog-grid {
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    #blog .blog-grid img {
+      width: 40vw;
+      height: 50vh; }
   footer {
     display: flex;
     flex-direction: row;
