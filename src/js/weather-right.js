@@ -6,12 +6,12 @@ console.log("weather-right.js connected");
 
 // variables
 
-var elementwidth = document.getElementById("canvasPort").clientWidth;
-var elementHeight = document.getElementById("canvasPort").clientHeight;
+let elementwidth = document.getElementById("canvasPort").clientWidth;
+let elementHeight = document.getElementById("canvasPort").clientHeight;
 
 // Set up the canvas and make full screen
 
-var canvasPort = document.getElementById("canvasPort");
+const canvasPort = document.getElementById("canvasPort");
 canvasPort.width = elementwidth;
 canvasPort.height = elementHeight;
 
@@ -28,27 +28,26 @@ var mouse = {
 
 // Utility Functions
 
-function randomIntFromRange(min, max) {
+var randomIntFromRange = (min, max) => {
     return Math.random() * (max - min) + min;
-}
+};
 
 // Event Listeners
 
 // Capture Mouse movement
 
-window.addEventListener("mousemove", 
-    function(event) {
+window.addEventListener("mousemove", (event) => {
     mouse.x = event.x;
     mouse.y = event.y;
 });
 
 // Responsive Canvas
 
-window.addEventListener("resize", function() {
+window.addEventListener("resize", () => {
     canvasPort.width = elementwidth;
     canvasPort.height = elementHeight;
     init();
-})
+});
 
 // Create Circle function
 
@@ -63,7 +62,7 @@ function Circle(x,y,dx,dy,rad,color) {
     this.color = color;
     
     // Draw circle function
-    this.draw = function() {
+    this.draw = () => {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.rad, 0, Math.PI *2, false);
         ctx.fillStyle = this.color;
@@ -117,20 +116,20 @@ function init() {
     circles = [];
     
     // Randomize circle value (position, velocity, fill and stroke color, and opacity)
-    for (var i = 0; i < 100; i++) {
-        var rad = randomIntFromRange(2,4);
-        var x = Math.random() * (elementwidth - rad * 2) + rad;
-        var y = Math.random() * (elementHeight - rad *2) + rad;
-        var dx = rad * 0.1;
-        var dy = randomIntFromRange(0.5,1);
-        var color = "white";
+    for (let i = 0; i < 100; i++) {
+        let rad = randomIntFromRange(2,4);
+        let x = Math.random() * (elementwidth - rad * 2) + rad;
+        let y = Math.random() * (elementHeight - rad *2) + rad;
+        let dx = rad * 0.1;
+        let dy = randomIntFromRange(0.5,1);
+        let color = "white";
         circles.push(new Circle(x,y,dx,dy,rad,color));
         
     }
 }
 
 //  Animation function
-function animation() {
+var animation = () => {
     //Start loop
     requestAnimationFrame(animation);
     // Clear window after drawing circle

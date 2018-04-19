@@ -8,9 +8,9 @@ Features
 
 Mobile first design
 
-CSS only hamburger menu for mobile
+CSS only mobile menu
 
-Lots of CSS animations
+Lots of CSS animations, canvas implementation
 
 Minimal JS (sticky nav and smooth scrolling with jQuery)
 
@@ -24,6 +24,5 @@ Blog section is currently under constuction
 
 #Todo List
 
-* fig and figcaption for figures
-* more semantic markup
-* 
+* responsive images
+* blog entries
