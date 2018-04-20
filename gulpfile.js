@@ -103,7 +103,7 @@ gulp.task('clean:dist', () =>
 );
 
 gulp.task('clean:files', () =>
-  del(['dist/css/styles.css', 'dist/js/index.js', 'dist/js/weather-right.js', 'dist/js/wobbleup.js'])
+  del(['dist/css/styles.css', 'dist/js/index.js', 'dist/js/weather-right.js'])
 );
 
 // Gulp default tasks

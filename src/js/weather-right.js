@@ -17,18 +17,18 @@ canvasPort.height = elementHeight;
 
 // Set 2D context
 
-var ctx = canvasPort.getContext("2d");
+const ctx = canvasPort.getContext("2d");
 
 // Mouse coordiantes
 
-var mouse = {
+let mouse = {
     x: undefined,
     y: undefined
 };
 
 // Utility Functions
 
-var randomIntFromRange = (min, max) => {
+const randomIntFromRange = (min, max) => {
     return Math.random() * (max - min) + min;
 };
 
@@ -108,7 +108,7 @@ function Circle(x,y,dx,dy,rad,color) {
 }
 
 // Create circles array
-var circles = [];
+let circles = [];
 
 function init() {
     
@@ -129,7 +129,7 @@ function init() {
 }
 
 //  Animation function
-var animation = () => {
+const animation = () => {
     //Start loop
     requestAnimationFrame(animation);
     // Clear window after drawing circle
@@ -139,7 +139,7 @@ var animation = () => {
         circles[i].update();
     }
     
-}
+};
 
 // Run 
 animation();
