@@ -307,9 +307,9 @@ nav {
 
 main {
     @include column;
+    padding: 0 0 25rem;
     position: relative;
     z-index: 1;
-    padding: 0 0 25rem;
     
     .main-bg-clip {
         position: absolute;
@@ -340,76 +340,77 @@ main {
     margin: 0 2rem 0;
     box-shadow: 0 0 0.5rem #000;
     
+    // Bio
+
+    .bio {
+        @include column;
+        padding-bottom: 1rem;
+        
+        h2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            padding: 0.7rem 0;
+            margin-top: -3rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        img {
+            position: relative;
+            top: -4.5rem;
+            width: 40%;
+            border: 0.25rem double $tertiary-color;
+            border-bottom: 0.25rem solid $tertiary-color;
+            border-radius: 50%;
+            transition: 0.5s ease-in-out;
+            
+            &:hover {
+                transform: scale(1.1);
+            }
+            
+        }
+        
+    }
+    
     ul {
         display: flex;
-    }
-    
-    li {
-        margin: 1rem;
-    }
-    
-    i.fa {
-        color: #fff;
-        transition: 0.5s ease-in-out;
         
-        &:hover {
-            color: $primary-color;
-            transform: scale(1.2);
+        li {
+            margin: 1rem;
+        }
+        
+        i.fa {
+            color: #fff;
+            transition: 0.5s ease-in-out;
+            
+            &:hover {
+                color: $primary-color;
+                transform: scale(1.2);
+            }
+            
         }
         
     }
     
-}
+    // About
 
-// Bio
-
-.bio {
-    @include column;
-    padding-bottom: 1rem;
-    
-    h2 {
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        letter-spacing: 0.3rem;
-        padding: 0.7rem 0;
-        margin-top: -3rem;
-    }
-    
-    h3 {
-        font-size: 1.5rem;
-    }
-    
-    img {
-        position: relative;
-        top: -4.5rem;
-        width: 40%;
-        border: 0.25rem double $tertiary-color;
-        border-bottom: 0.25rem solid $tertiary-color;
-        border-radius: 50%;
-        transition: 0.5s ease-in-out;
+    #about {
+        @include column;
         
-        &:hover {
-            transform: scale(1.1);
+        h3 {
+            font-size: 2rem;
         }
         
+        p {
+            font-size: 1.25rem;
+            padding: 1rem 2rem;
+        }
+    
     }
     
-}
-
-// About
-
-#about {
-    @include column;
-    
-    h3 {
-        font-size: 2rem;
-    }
-    
-    p {
-        font-size: 1.25rem;
-        padding: 1rem 2rem;
-    }
-
 }
 
 // Projects
@@ -418,7 +419,7 @@ main {
     
     @include column;
     position: relative;
-    top: 20rem;
+    top: 50vh;
     flex: 3;
     
     h2 {
@@ -428,34 +429,6 @@ main {
         -webkit-text-fill-color: transparent;
         font-size: 3.33rem;
         padding: 1rem 0;
-    }
-    
-    #githubBtn {
-        position: relative;
-        top: 0;
-        font-size: 1rem;
-        max-width: 60vw;
-        margin: 3rem 0;
-        padding: 1rem;
-        border: 0.25rem solid $secondary-color;
-        border-radius: 1rem;
-        box-shadow: 0 0.5rem 1rem #636363;
-        transition: 0.5s ease-out;
-        
-        a {
-            color: $secondary-color;
-        }
-        
-        &:hover {
-            top: 0.25rem;
-            background: $secondary-color;
-            box-shadow: none;
-            
-            a {
-                color: #fff;
-            }
-        }
-        
     }
 
     .grid {
@@ -500,16 +473,44 @@ main {
         
     }
     
+    #githubBtn {
+        position: relative;
+        top: 0;
+        font-size: 1rem;
+        max-width: 60vw;
+        margin: 3rem 0;
+        padding: 1rem;
+        border: 0.25rem solid $secondary-color;
+        border-radius: 1rem;
+        box-shadow: 0 0.5rem 1rem #636363;
+        transition: 0.5s ease-out;
+        
+        a {
+            color: $secondary-color;
+        }
+        
+        &:hover {
+            top: 0.25rem;
+            background: $secondary-color;
+            box-shadow: none;
+            
+            a {
+                color: #fff;
+            }
+        }
+        
+    }
+    
 }
 
 // Blog
 
 #blog {
     @include column;
-    position: relative;
     background: $tertiary-color;
     color: #333;
     padding: 5rem 0;
+    position: relative;
     
     .blog-bg-clip {
         position: absolute;
@@ -559,8 +560,8 @@ main {
         }
         
         img {
-            width: 80vw;
-            height: 50vh;
+            width: 100%;
+            height: auto;
             max-width: 90vw;
             border-radius: 3rem;
             opacity: 0.6;
