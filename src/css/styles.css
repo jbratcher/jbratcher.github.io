@@ -163,9 +163,11 @@ nav {
     right: 1rem;
     top: 0; }
   nav:target, nav[aria-expanded="true"] {
-    right: -1.5rem;
+    border-bottom-left-radius: 30%;
+    border-top-left-radius: 30%;
+    box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
     outline: none;
-    box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85); }
+    right: -1.5rem; }
   nav:target .menu-close,
   nav[aria-expanded="true"] .menu-close {
     z-index: 1001; }
@@ -310,8 +312,9 @@ main {
         transform: scale(1.1);
         opacity: 1;
         box-shadow: 0.5rem 0.5rem 1rem #636363; }
-    #projects .grid #canvasPort {
-      background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%); }
+    #projects .grid canvas#canvasPort {
+      background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%);
+      height: 50vh; }
   #projects #githubBtn {
     position: relative;
     top: 0;
@@ -558,18 +561,23 @@ footer {
     flex-direction: row;
     margin-right: 12.5rem; }
   main {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas: "sidebar projects projects projects";
     padding-bottom: 10rem; }
     main #sidebar {
+      grid-area: sidebar;
       top: -20vh; }
-  #projects {
-    top: 6rem; }
-    #projects .grid {
-      flex-flow: row wrap;
-      justify-content: space-around; }
-    #projects #canvasPort {
-      height: 40vh;
-      width: 30vw; }
+    main #projects {
+      grid-area: projects;
+      top: 6rem; }
+      main #projects .grid {
+        flex-flow: row wrap;
+        justify-content: space-around; }
+      main #projects #canvasPort {
+        width: 100%;
+        height: auto; }
   footer {
     display: flex;
     flex-direction: row;
@@ -588,20 +596,23 @@ footer {
     flex-direction: row;
     margin-right: 12.5rem; }
   main {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas: "sidebar projects projects projects";
     padding-bottom: 10rem; }
     main #sidebar {
       top: -15vh; }
-  #projects {
-    top: 6rem; }
-    #projects .grid {
-      flex-flow: row wrap;
-      justify-content: space-around; }
-      #projects .grid .card {
-        width: 30vw; }
-      #projects .grid #canvasPort {
-        width: 30vw;
-        height: 30vh; } }
+    main #projects {
+      top: 6rem; }
+      main #projects .grid {
+        flex-flow: row wrap;
+        justify-content: space-around; }
+        main #projects .grid .card {
+          width: 30vw; }
+        main #projects .grid #canvasPort {
+          width: 100%;
+          height: auto; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   header .brand {
@@ -613,7 +624,8 @@ footer {
   #projects .grid .card p {
     font-size: 2rem; }
   #projects .grid .card canvas#canvasPort {
-    width: 80vw; }
+    width: 100%;
+    height: auto; }
   footer {
     display: flex;
     flex-direction: row;
@@ -625,7 +637,7 @@ footer {
     width: 70vw; }
   #projects .grid #canvasPort {
     width: 70vw;
-    height: 30vh; } }
+    height: 50vh; } }
 
 @media (min-width: 40rem) {
   .menu-toggle,
