@@ -14,7 +14,7 @@ let navOpacity = () => {
     header.style.opacity = full;
 };
 
-//  When page scrolls make header transparent, disappear below the fold, and reappear above the fold
+//  When page scrolls, make header transparent, disappear below the fold, and reappear above the fold
 
 body.onscroll = () => {
     

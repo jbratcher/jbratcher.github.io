@@ -312,9 +312,10 @@ main {
         transform: scale(1.1);
         opacity: 1;
         box-shadow: 0.5rem 0.5rem 1rem #636363; }
-    #projects .grid canvas#canvasPort {
+    #projects .grid #canvasPort {
       background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%);
-      height: 50vh; }
+      width: 30vw;
+      height: 45vh; }
   #projects #githubBtn {
     position: relative;
     top: 0;
@@ -576,8 +577,8 @@ footer {
         flex-flow: row wrap;
         justify-content: space-around; }
       main #projects #canvasPort {
-        width: 100%;
-        height: auto; }
+        width: 30vw;
+        height: 10vh; }
   footer {
     display: flex;
     flex-direction: row;
@@ -611,8 +612,8 @@ footer {
         main #projects .grid .card {
           width: 30vw; }
         main #projects .grid #canvasPort {
-          width: 100%;
-          height: auto; } }
+          width: 30vw;
+          height: 40vh; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   header .brand {
@@ -623,21 +624,26 @@ footer {
     margin-right: 12.5rem; }
   #projects .grid .card p {
     font-size: 2rem; }
-  #projects .grid .card canvas#canvasPort {
-    width: 100%;
-    height: auto; }
+  #projects .grid .card #canvasPort {
+    width: 80vw;
+    height: 80vh; }
   footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-bottom: 1rem; } }
 
+@media (min-width: 25rem) and (max-width: 40rem) {
+  #projects .grid #canvasPort {
+    width: 70vw;
+    height: 30vh; } }
+
 @media (max-width: 25rem) {
   #projects .grid img {
     width: 70vw; }
   #projects .grid #canvasPort {
     width: 70vw;
-    height: 50vh; } }
+    height: 30vh; } }
 
 @media (min-width: 40rem) {
   .menu-toggle,
