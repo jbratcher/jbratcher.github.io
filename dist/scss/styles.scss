@@ -1,5 +1,9 @@
 // Variables
 
+:root {
+    --base-font-size: 1rem;
+}
+
 $primary-color: #00b5f0;
 $secondary-color: #006C90;
 $tertiary-color: #1d1e2b;
@@ -50,10 +54,6 @@ $font-serif: 'Source Serif Pro', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root {
-    --base-font-size: 1rem;
 }
 
 html, body {
@@ -766,17 +766,17 @@ main {
 
 footer {
     @include column
+    align-items: flex-start;
     background-color: $secondary-color;
     border-top: 0.5rem solid $primary-color;
     color: #fff;
-    padding: 1rem 0 3rem;
+    padding: 1rem 0 3rem 3rem;
     position: relative;
 
     p {
         text-transform: uppercase;
         text-align: center;
         margin-top: 1rem;
-        padding: 0 0.5rem;
     }
 
     address {
@@ -785,7 +785,7 @@ footer {
         padding: 1.5rem 0;
 
         span {
-            padding: 0.25rem 0;
+            padding: 0.125rem 0;
         }
 
     }
@@ -1056,6 +1056,7 @@ footer {
 
     footer {
         @include row;
+        align-items: center;
         padding-bottom: 1rem;
 
         p {
@@ -1074,9 +1075,10 @@ footer {
 
         address {
             @include row;
+            font-size: 1.25rem;
 
                 span {
-                    padding: 0 1rem;
+                    padding: 0 0.125rem;
                 }
 
         }
