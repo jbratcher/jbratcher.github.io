@@ -112,19 +112,20 @@ figure {
     margin: 0 1rem 1rem;
 
     h3 {
-        text-align: center;
         font-size: 1.33rem;
         padding: 0 0 0.5rem;
+        text-align: center;
     }
 
     p {
-        width: 50%;
-        padding-bottom: 0.5rem;
+        font-size: 1.33rem;
+        padding: 0.5rem 1rem;
+        text-align: center;
     }
 
     img, canvas {
-        padding: 1rem;
         border-radius: 10%;
+        padding: 1rem;
     }
 }
 
@@ -554,11 +555,11 @@ main {
             }
 
             h5 {
-                font-size: 0.75rem;
+                font-size: 1rem;
             }
 
             p {
-                padding: 1rem 0;
+                padding: 1rem;
             }
 
         }
@@ -770,7 +771,7 @@ footer {
     background-color: $secondary-color;
     border-top: 0.5rem solid $primary-color;
     color: #fff;
-    padding: 1rem 0 3rem 3rem;
+    padding: 1rem 0 3rem 7rem;
     position: relative;
 
     p {
@@ -1038,6 +1039,15 @@ footer {
 }
 
 @media (min-width: 60rem) {
+    
+    header .brand h1 {
+        font-size: 1.5rem;
+    }
+    
+    #sidebar .bio h2 {
+        padding: 0.7rem 1rem;
+        white-space: pre;
+    }
 
     #projects .grid .card {
         width: 30vw;
