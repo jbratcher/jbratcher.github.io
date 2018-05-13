@@ -209,10 +209,6 @@ header {
                 border-left: 0.125rem solid #555;
             }
 
-            &:last-of-type {
-                margin-right: 3rem;
-            }
-
             &:hover {
                 color: $primary-color;
                 background: #000;
@@ -265,8 +261,9 @@ nav {
       border-bottom-left-radius: 30%;
       border-top-left-radius: 30%;
       box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
-      outline: none;
       right: -1.5rem;
+      outline: none;
+      width: 100vw;
     }
 
     &:target .menu-close,
@@ -278,6 +275,12 @@ nav {
     &[aria-expanded="true"] ul {
         position: relative;
         z-index: 1000;
+        
+        li {
+            border: none;
+            margin-left: 9rem;
+        }
+        
     }
 
     &:target + .backdrop,
@@ -813,6 +816,23 @@ footer {
         }
 
     }
+    
+    i.fa-angle-up {
+        animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
+        box-shadow: 0 0 0.0625rem transparent;
+        color: #fff;
+        display: inline-block;
+        margin: 1rem 0 0 5rem;
+        position: relative;
+        top: 0.5rem;
+        transform: perspective(0.0625rem) translateZ(0);
+        transition: all 0.5s ease-in-out;
+        
+        &:hover, &:active, &s:focus {
+            transform: scale(1.1);
+        }
+        
+    }
 
 }
 
@@ -1016,7 +1036,7 @@ footer {
         ul {
             background: none;
             display: flex;
-            padding: 0;
+            padding: 0 3rem 0 0;
             box-shadow: none;
             height: auto;
             width: auto;
@@ -1095,4 +1115,26 @@ footer {
 
     }
 
+}
+
+// Animations
+
+@keyframes bounceup {
+    
+    0% {
+        transform: translateY(-0.5rem);
+    }
+    25% {
+        transform: translateY(-1rem);
+    }
+    50% {
+        transform: translateY(-0.5rem);
+    }
+    75% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        transform: translateY(-0.5rem);
+    }
+    
 }

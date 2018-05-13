@@ -129,8 +129,6 @@ header {
       transition: 0.5s ease-in-out; }
       header ul li:first-of-type {
         border-left: 0.125rem solid #555; }
-      header ul li:last-of-type {
-        margin-right: 3rem; }
       header ul li:hover {
         color: #00b5f0;
         background: #000;
@@ -167,8 +165,9 @@ nav {
     border-bottom-left-radius: 30%;
     border-top-left-radius: 30%;
     box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
+    right: -1.5rem;
     outline: none;
-    right: -1.5rem; }
+    width: 100vw; }
   nav:target .menu-close,
   nav[aria-expanded="true"] .menu-close {
     z-index: 1001; }
@@ -176,6 +175,10 @@ nav {
   nav[aria-expanded="true"] ul {
     position: relative;
     z-index: 1000; }
+    nav:target ul li,
+    nav[aria-expanded="true"] ul li {
+      border: none;
+      margin-left: 9rem; }
   nav:target + .backdrop,
   nav[aria-expanded="true"] + .backdrop {
     position: absolute;
@@ -555,6 +558,18 @@ footer {
         footer ul li i.fa:hover {
           color: #00b5f0;
           transform: scale(1.25); }
+  footer i.fa-angle-up {
+    animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
+    box-shadow: 0 0 0.0625rem transparent;
+    color: #fff;
+    display: inline-block;
+    margin: 1rem 0 0 5rem;
+    position: relative;
+    top: 0.5rem;
+    transform: perspective(0.0625rem) translateZ(0);
+    transition: all 0.5s ease-in-out; }
+    footer i.fa-angle-up:hover, footer i.fa-angle-up:active, footer i.fa-angle-ups:focus {
+      transform: scale(1.1); }
 
 @media (min-width: 80rem) {
   header .brand {
@@ -658,7 +673,7 @@ footer {
     nav ul {
       background: none;
       display: flex;
-      padding: 0;
+      padding: 0 3rem 0 0;
       box-shadow: none;
       height: auto;
       width: auto; }
@@ -702,3 +717,15 @@ footer {
       font-size: 1.25rem; }
       footer address span {
         padding: 0 0.125rem; } }
+
+@keyframes bounceup {
+  0% {
+    transform: translateY(-0.5rem); }
+  25% {
+    transform: translateY(-1rem); }
+  50% {
+    transform: translateY(-0.5rem); }
+  75% {
+    transform: translateY(-1rem); }
+  100% {
+    transform: translateY(-0.5rem); } }
