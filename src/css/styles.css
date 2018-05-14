@@ -13,7 +13,7 @@ html, body {
 
 a {
   text-decoration: none;
-  color: #fff; }
+  color: #eee; }
 
 ul {
   list-style: none; }
@@ -599,6 +599,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     padding-bottom: 1rem; }
     footer p {
       font-size: 1.25rem; }
@@ -647,6 +648,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     padding-bottom: 1rem; } }
 
 @media (min-width: 25rem) and (max-width: 40rem) {
@@ -703,6 +705,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    align-items: center;
     padding-bottom: 1rem; }
     footer p {
       font-size: 1.25rem;
@@ -714,6 +717,7 @@ footer {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
       font-size: 1.25rem; }
       footer address span {
         padding: 0 0.125rem; } }
