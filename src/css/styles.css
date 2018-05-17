@@ -1,10 +1,10 @@
-:root {
-  --base-font-size: 1rem; }
-
 *, *:before, *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+:root {
+  --base-font-size: 1rem; }
 
 html, body {
   font: normal 1rem/1.5 "Source Sans Pro", sans-serif;
@@ -13,7 +13,7 @@ html, body {
 
 a {
   text-decoration: none;
-  color: #eee; }
+  color: #fff; }
 
 ul {
   list-style: none; }
@@ -44,7 +44,7 @@ figure {
   background-color: #fff;
   color: #333;
   padding: 1rem;
-  border: 0.2rem solid #00b5f0;
+  border: 0.2rem solid #11c3ff;
   border-radius: 1rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -52,7 +52,7 @@ figure {
   transition: 0.5s ease-in-out; }
   .btn:hover, .btn:focus, .btn:active, .btn:target {
     border: 0.2rem solid #fff;
-    background: #00b5f0;
+    background: #11c3ff;
     color: #fff; }
 
 .card {
@@ -63,20 +63,19 @@ figure {
   font-size: 1rem;
   margin: 0 1rem 1rem; }
   .card h3 {
+    text-align: center;
     font-size: 1.33rem;
-    padding: 0 0 0.5rem;
-    text-align: center; }
+    padding: 0 0 0.5rem; }
   .card p {
-    font-size: 1.33rem;
-    padding: 0.5rem 1rem;
-    text-align: center; }
+    width: 50%;
+    padding-bottom: 0.5rem; }
   .card img, .card canvas {
-    border-radius: 10%;
-    padding: 1rem; }
+    padding: 1rem;
+    border-radius: 10%; }
 
 header {
   position: fixed;
-  background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%);
+  background: linear-gradient(to bottom, #313439 0%, #000c11 100%);
   color: #fff;
   width: 100vw;
   display: flex;
@@ -107,11 +106,11 @@ header {
       font-size: 1rem;
       color: #fff; }
       header a .menu-toggle:hover, header a .menu-toggle:focus {
-        color: #00b5f0; }
+        color: #11c3ff; }
   header ul {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #313439 0%, #1d1e2b 100%);
+    background: linear-gradient(to bottom, #313439 0%, #000c11 100%);
     height: 100%;
     border-bottom-left-radius: 1rem;
     list-style: none;
@@ -129,15 +128,17 @@ header {
       transition: 0.5s ease-in-out; }
       header ul li:first-of-type {
         border-left: 0.125rem solid #555; }
+      header ul li:last-of-type {
+        margin-right: 3rem; }
       header ul li:hover {
-        color: #00b5f0;
+        color: #11c3ff;
         background: #000;
         opacity: 1;
-        border: 0.0625rem solid #00b5f0;
+        border: 0.0625rem solid #11c3ff;
         border-bottom: none;
         border-top: none; }
         header ul li:hover a {
-          color: #00b5f0; }
+          color: #11c3ff; }
   header .sr-only {
     position: absolute;
     width: 0.625rem;
@@ -165,9 +166,8 @@ nav {
     border-bottom-left-radius: 30%;
     border-top-left-radius: 30%;
     box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
-    right: -1.5rem;
     outline: none;
-    width: 100vw; }
+    right: -1.5rem; }
   nav:target .menu-close,
   nav[aria-expanded="true"] .menu-close {
     z-index: 1001; }
@@ -175,10 +175,6 @@ nav {
   nav[aria-expanded="true"] ul {
     position: relative;
     z-index: 1000; }
-    nav:target ul li,
-    nav[aria-expanded="true"] ul li {
-      border: none;
-      margin-left: 9rem; }
   nav:target + .backdrop,
   nav[aria-expanded="true"] + .backdrop {
     position: absolute;
@@ -223,7 +219,7 @@ main {
   flex: 1;
   position: relative;
   top: 40vh;
-  background: linear-gradient(to bottom right, #313439 0%, #1d1e2b 100%);
+  background: linear-gradient(to bottom right, #313439 0%, #000c11 100%);
   color: #fff;
   text-align: center;
   border: 0.0625rem solid #000;
@@ -248,8 +244,8 @@ main {
       position: relative;
       top: -4.5rem;
       width: 40%;
-      border: 0.25rem double #1d1e2b;
-      border-bottom: 0.25rem solid #1d1e2b;
+      border: 0.25rem double #000c11;
+      border-bottom: 0.25rem solid #000c11;
       border-radius: 50%;
       transition: 0.5s ease-in-out; }
       #sidebar .bio img:hover {
@@ -262,7 +258,7 @@ main {
       color: #fff;
       transition: 0.5s ease-in-out; }
       #sidebar ul i.fa:hover {
-        color: #00b5f0;
+        color: #11c3ff;
         transform: scale(1.2); }
   #sidebar #about {
     display: flex;
@@ -316,10 +312,9 @@ main {
         transform: scale(1.1);
         opacity: 1;
         box-shadow: 0.5rem 0.5rem 1rem #636363; }
-    #projects .grid #canvasPort {
+    #projects .grid canvas#canvasPort {
       background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%);
-      width: 30vw;
-      height: 45vh; }
+      height: 50vh; }
   #projects #githubBtn {
     position: relative;
     top: 0;
@@ -344,7 +339,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #1d1e2b;
+  background: #000c11;
   color: #333;
   padding: 5rem 0;
   position: relative; }
@@ -382,9 +377,9 @@ main {
       #blog .blog-grid li figure h3 {
         color: #006C90; }
       #blog .blog-grid li figure h5 {
-        font-size: 1rem; }
+        font-size: 0.75rem; }
       #blog .blog-grid li figure p {
-        padding: 1rem; }
+        padding: 1rem 0; }
     #blog .blog-grid img {
       width: 100%;
       height: auto;
@@ -478,8 +473,8 @@ main {
   margin-bottom: 2rem; }
 
 #contact {
-  background: #1d1e2b;
-  background: radial-gradient(at center bottom, #333440 0%, #1d1e2b 60%);
+  background: #000c11;
+  background: radial-gradient(at center bottom, #333440 0%, #000c11 60%);
   padding: 7rem 1rem; }
   #contact h2 {
     font-size: 2rem;
@@ -502,7 +497,7 @@ main {
       color: #333;
       border-radius: 1rem; }
       #contact form input:focus, #contact form textarea:focus {
-        border: 0.2rem solid #00b5f0; }
+        border: 0.2rem solid #11c3ff; }
     #contact form textarea {
       width: 100%;
       font-family: "Source Sans Pro", sans-serif;
@@ -513,32 +508,32 @@ main {
       top: 0.3rem;
       width: 80%;
       background-color: #fff;
-      color: #00b5f0;
+      color: #11c3ff;
       text-transform: uppercase;
       font-weight: bold;
       text-align: center;
-      border: 0.2rem solid #00b5f0;
+      border: 0.2rem solid #11c3ff;
       transition: 0.5s ease-in-out; }
       #contact form .btn:hover, #contact form .btn:focus, #contact form .btn:active, #contact form .btn:target {
         top: 0;
-        background: #00b5f0;
+        background: #11c3ff;
         color: #fff;
-        border: 0.2rem solid #00b5f0; }
+        border: 0.2rem solid #11c3ff; }
 
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-items: flex-start;
   background-color: #006C90;
-  border-top: 0.5rem solid #00b5f0;
+  border-top: 0.5rem solid #11c3ff;
   color: #fff;
-  padding: 1rem 0 3rem 7rem;
+  padding: 1rem 0 3rem;
   position: relative; }
   footer p {
     text-transform: uppercase;
     text-align: center;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    padding: 0 0.5rem; }
   footer address {
     display: flex;
     flex-direction: column;
@@ -546,7 +541,7 @@ footer {
     align-items: start;
     padding: 1.5rem 0; }
     footer address span {
-      padding: 0.125rem 0; }
+      padding: 0.25rem 0; }
   footer ul {
     list-style: none;
     display: flex; }
@@ -556,20 +551,8 @@ footer {
         color: #fff;
         transition: 0.5s ease-in-out; }
         footer ul li i.fa:hover {
-          color: #00b5f0;
+          color: #11c3ff;
           transform: scale(1.25); }
-  footer i.fa-angle-up {
-    animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
-    box-shadow: 0 0 0.0625rem transparent;
-    color: #fff;
-    display: inline-block;
-    margin: 1rem 0 0 5rem;
-    position: relative;
-    top: 0.5rem;
-    transform: perspective(0.0625rem) translateZ(0);
-    transition: all 0.5s ease-in-out; }
-    footer i.fa-angle-up:hover, footer i.fa-angle-up:active, footer i.fa-angle-ups:focus {
-      transform: scale(1.1); }
 
 @media (min-width: 80rem) {
   header .brand {
@@ -593,13 +576,12 @@ footer {
         flex-flow: row wrap;
         justify-content: space-around; }
       main #projects #canvasPort {
-        width: 30vw;
-        height: 10vh; }
+        width: 100%;
+        height: auto; }
   footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
     padding-bottom: 1rem; }
     footer p {
       font-size: 1.25rem; }
@@ -629,8 +611,8 @@ footer {
         main #projects .grid .card {
           width: 30vw; }
         main #projects .grid #canvasPort {
-          width: 30vw;
-          height: 40vh; } }
+          width: 100%;
+          height: auto; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   header .brand {
@@ -641,27 +623,21 @@ footer {
     margin-right: 12.5rem; }
   #projects .grid .card p {
     font-size: 2rem; }
-  #projects .grid .card #canvasPort {
-    width: 80vw;
-    height: 80vh; }
+  #projects .grid .card canvas#canvasPort {
+    width: 100%;
+    height: auto; }
   footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
     padding-bottom: 1rem; } }
-
-@media (min-width: 25rem) and (max-width: 40rem) {
-  #projects .grid #canvasPort {
-    width: 70vw;
-    height: 30vh; } }
 
 @media (max-width: 25rem) {
   #projects .grid img {
     width: 70vw; }
   #projects .grid #canvasPort {
     width: 70vw;
-    height: 30vh; } }
+    height: 50vh; } }
 
 @media (min-width: 40rem) {
   .menu-toggle,
@@ -675,7 +651,7 @@ footer {
     nav ul {
       background: none;
       display: flex;
-      padding: 0 3rem 0 0;
+      padding: 0;
       box-shadow: none;
       height: auto;
       width: auto; }
@@ -684,14 +660,9 @@ footer {
       border: 0; }
       nav a:hover, nav a:focus {
         background: #000;
-        color: #00b5f0; } }
+        color: #11c3ff; } }
 
 @media (min-width: 60rem) {
-  header .brand h1 {
-    font-size: 1.5rem; }
-  #sidebar .bio h2 {
-    padding: 0.7rem 1rem;
-    white-space: pre; }
   #projects .grid .card {
     width: 30vw; }
   #blog .blog-grid {
@@ -704,8 +675,6 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    align-items: center;
     padding-bottom: 1rem; }
     footer p {
       font-size: 1.25rem;
@@ -716,20 +685,6 @@ footer {
     footer address {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      font-size: 1.25rem; }
+      justify-content: space-around; }
       footer address span {
-        padding: 0 0.125rem; } }
-
-@keyframes bounceup {
-  0% {
-    transform: translateY(-0.5rem); }
-  25% {
-    transform: translateY(-1rem); }
-  50% {
-    transform: translateY(-0.5rem); }
-  75% {
-    transform: translateY(-1rem); }
-  100% {
-    transform: translateY(-0.5rem); } }
+        padding: 0 1rem; } }
