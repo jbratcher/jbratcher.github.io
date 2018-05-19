@@ -1,3 +1,15 @@
+@keyframes bounceup {
+  0% {
+    transform: translateY(-0.5rem); }
+  25% {
+    transform: translateY(-1rem); }
+  50% {
+    transform: translateY(-0.5rem); }
+  75% {
+    transform: translateY(-1rem); }
+  100% {
+    transform: translateY(-0.5rem); } }
+
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -553,6 +565,17 @@ footer {
         footer ul li i.fa:hover {
           color: #11c3ff;
           transform: scale(1.25); }
+  footer i.fa-angle-up {
+    position: relative;
+    top: 0.5rem;
+    display: inline-block;
+    transform: perspective(0.0625rem) translateZ(0);
+    box-shadow: 0 0 0.0625rem transparent;
+    color: #fff;
+    animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
+    transition: all 0.5s ease-in-out; }
+    footer i.fa-angle-up:hover, footer i.fa-angle-up:active, footer i.fa-angle-ups:focus {
+      transform: scale(1.1); }
 
 @media (min-width: 80rem) {
   header .brand {
