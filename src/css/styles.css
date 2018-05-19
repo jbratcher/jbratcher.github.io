@@ -73,7 +73,7 @@ figure {
   align-items: center;
   color: #333;
   font-size: 1rem;
-  margin: 0 1rem 1rem; }
+  margin: 1rem; }
   .card h3 {
     text-align: center;
     font-size: 1.33rem;
@@ -81,9 +81,6 @@ figure {
   .card p {
     width: 50%;
     padding-bottom: 0.5rem; }
-  .card img, .card canvas {
-    padding: 1rem;
-    border-radius: 10%; }
 
 header {
   position: fixed;
@@ -303,30 +300,40 @@ main {
     #projects .grid .card {
       margin: 2rem 1rem 0;
       height: auto;
-      max-width: 80vw; }
-      #projects .grid .card h3 {
-        color: #006C90;
-        font-size: 2.25rem; }
-    #projects .grid img, #projects .grid #canvasPort {
-      background: #ccc;
-      position: relative;
-      top: 0;
-      width: 100%;
-      height: auto;
-      padding: 0;
-      margin: 1rem 0;
-      border-radius: 3rem;
-      transition: 0.5s ease-in-out;
-      box-shadow: 0.1rem 0.1rem 0.25rem #636363;
-      z-index: 100; }
-      #projects .grid img:hover, #projects .grid #canvasPort:hover {
-        top: -0.75rem;
-        transform: scale(1.1);
-        opacity: 1;
-        box-shadow: 0.5rem 0.5rem 1rem #636363; }
-    #projects .grid canvas#canvasPort {
-      background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%);
-      height: 50vh; }
+      max-width: 90vw; }
+      #projects .grid .card figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        #projects .grid .card figure a {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          #projects .grid .card figure a h3 {
+            color: #006C90;
+            font-size: 2.25rem; }
+          #projects .grid .card figure a img, #projects .grid .card figure a #canvasPort {
+            background: #ccc;
+            position: relative;
+            top: 0;
+            width: 100%;
+            height: auto;
+            padding: 0;
+            margin: 1rem 0;
+            border-radius: 3rem;
+            transition: 0.5s ease-in-out;
+            box-shadow: 0.1rem 0.1rem 0.25rem #636363;
+            z-index: 100; }
+            #projects .grid .card figure a img:hover, #projects .grid .card figure a #canvasPort:hover {
+              top: -0.75rem;
+              transform: scale(1.1);
+              opacity: 1;
+              box-shadow: 0.5rem 0.5rem 1rem #636363; }
+          #projects .grid .card figure a canvas#canvasPort {
+            background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%);
+            width: 90vw;
+            max-width: 90vw;
+            height: 50vh; }
   #projects #githubBtn {
     position: relative;
     top: 0;
@@ -598,9 +605,11 @@ footer {
       main #projects .grid {
         flex-flow: row wrap;
         justify-content: space-around; }
-      main #projects #canvasPort {
-        width: 100%;
-        height: auto; }
+        main #projects .grid .card {
+          width: 30vw; }
+          main #projects .grid .card figure a canvas#canvasPort {
+            width: 100%;
+            height: 46vh; }
   footer {
     display: flex;
     flex-direction: row;
@@ -633,9 +642,9 @@ footer {
         justify-content: space-around; }
         main #projects .grid .card {
           width: 30vw; }
-        main #projects .grid #canvasPort {
-          width: 100%;
-          height: auto; } }
+          main #projects .grid .card figure a canvas#canvasPort {
+            width: 100%;
+            height: 40vh; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   header .brand {
@@ -646,7 +655,7 @@ footer {
     margin-right: 12.5rem; }
   #projects .grid .card p {
     font-size: 2rem; }
-  #projects .grid .card canvas#canvasPort {
+  #projects .grid .card #canvasPort {
     width: 100%;
     height: auto; }
   footer {

@@ -63,7 +63,7 @@ figure {
     @include column;
     color: #333;
     font-size: 1rem;
-    margin: 0 1rem 1rem;
+    margin: 1rem;
 
     h3 {
         text-align: center;
@@ -74,11 +74,6 @@ figure {
     p {
         width: 50%;
         padding-bottom: 0.5rem;
-    }
-
-    img, canvas {
-        padding: 1rem;
-        border-radius: 10%;
     }
 }
 
@@ -393,39 +388,51 @@ main {
         .card {
             margin: 2rem 1rem 0;
             height: auto;
-            max-width: 80vw;
-
-            h3 {
-                color: $secondary-color;
-                font-size: 2.25rem;
+            max-width: 90vw;
+            
+            figure {
+                @include column
+                
+                a {
+                    @include column
+                    
+                    h3 {
+                        color: $secondary-color;
+                        font-size: 2.25rem;
+                    }
+                    
+                    img, #canvasPort {
+                        background: #ccc;
+                        position: relative;
+                        top: 0;
+                        width: 100%;
+                        height: auto;
+                        padding: 0;
+                        margin: 1rem 0;
+                        border-radius: 3rem;
+                        transition: 0.5s ease-in-out;
+                        box-shadow: 0.1rem 0.1rem 0.25rem #636363;
+                        z-index: 100;
+            
+                        &:hover {
+                            top: -0.75rem;
+                            transform: scale(1.1);
+                            opacity: 1;
+                            box-shadow: 0.5rem 0.5rem 1rem #636363;
+                        }
+                    }
+            
+                    canvas#canvasPort {
+                        background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%);
+                        width: 90vw;
+                        max-width: 90vw;
+                        height: 50vh;
+                    }
+                    
+                }
+        
             }
 
-        }
-
-        img, #canvasPort {
-            background: #ccc;
-            position: relative;
-            top: 0;
-            width: 100%;
-            height: auto;
-            padding: 0;
-            margin: 1rem 0;
-            border-radius: 3rem;
-            transition: 0.5s ease-in-out;
-            box-shadow: 0.1rem 0.1rem 0.25rem #636363;
-            z-index: 100;
-
-            &:hover {
-                top: -0.75rem;
-                transform: scale(1.1);
-                opacity: 1;
-                box-shadow: 0.5rem 0.5rem 1rem #636363;
-            }
-        }
-
-        canvas#canvasPort {
-            background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%);
-            height: 50vh;
         }
 
     }
@@ -818,11 +825,17 @@ footer {
             .grid {
                 flex-flow: row wrap;
                 justify-content: space-around;
-            }
-
-            #canvasPort {
-                width: 100%;
-                height: auto;
+                
+                .card {
+                    width: 30vw;
+                    
+                    figure a canvas#canvasPort {
+                        width: 100%;
+                        height: 46vh;
+                    }
+                    
+                }
+                
             }
 
         }
@@ -886,12 +899,15 @@ footer {
 
                 .card {
                     width: 30vw;
+                    
+                    figure a canvas#canvasPort {
+                        width: 100%;
+                        height: 40vh;
+                    }
+                    
                 }
 
-                #canvasPort {
-                    width: 100%;
-                    height: auto;
-                }
+                
 
             }
 
@@ -925,7 +941,7 @@ footer {
                 font-size: 2rem;
             }
 
-            canvas#canvasPort {
+            #canvasPort {
                 width: 100%;
                 height: auto;
             }
