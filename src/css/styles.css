@@ -8,6 +8,7 @@
   --base-font-size: 16px; }
 
 html, body {
+  background: #fff;
   font-size: 16px;
   line-height: 1.5;
   font-family: "Source Serif Pro", "Garamond", "Georgia", "Times New Roman", serif;
@@ -17,6 +18,8 @@ html, body {
 a {
   text-decoration: none;
   color: #fff; }
+  a:hover {
+    color: #000c11; }
 
 ul {
   list-style: none; }
@@ -362,7 +365,7 @@ footer {
     flex-direction: row;
     justify-content: space-around; }
     footer address span {
-      padding: 0 1rem; } }
+      padding: 0 0.25rem; } }
 
 @media (min-width: 80rem) {
   footer p {
