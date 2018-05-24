@@ -1,0 +1,44 @@
+//////////////////////////////
+
+// Layout                   // 
+
+//////////////////////////////
+
+section {
+    @include column;
+    color: #eee;
+}
+
+figure {
+    @include column;
+
+    a.link-holder {
+        @include column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    figcaption {
+        @include column;
+    }
+
+}
+
+.card {
+    @include column;
+    color: #333;
+    font-size: 1rem;
+    margin: 1rem;
+
+    h3 {
+        text-align: center;
+        font-size: 1.33rem;
+        padding: 0 0 0.5rem;
+    }
+
+    p {
+        width: 50%;
+        padding-bottom: 0.5rem;
+    }
+}
