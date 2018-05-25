@@ -412,6 +412,7 @@ main {
   position: relative;
   z-index: 1; }
   main .main-bg-clip {
+    box-shadow: 0 0.5rem 1rem #636363;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -567,6 +568,7 @@ main {
   padding: 5rem 0;
   position: relative; }
   #blog .blog-bg-clip {
+    box-shadow: 0 -0.5rem 1rem #636363;
     position: absolute;
     top: 0;
     bottom: 0;

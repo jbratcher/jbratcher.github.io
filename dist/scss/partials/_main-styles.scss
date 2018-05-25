@@ -26,6 +26,7 @@ main {
     z-index: 1;
 
     .main-bg-clip {
+        box-shadow: 0 0.5rem 1rem #636363;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -246,6 +247,7 @@ main {
     position: relative;
 
     .blog-bg-clip {
+        box-shadow: 0 -0.5rem 1rem #636363;
         position: absolute;
         top: 0;
         bottom: 0;
