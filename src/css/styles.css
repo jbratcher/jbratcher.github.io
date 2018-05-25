@@ -535,6 +535,9 @@ main {
             width: 90vw;
             max-width: 90vw;
             height: 50vh; }
+      #projects .grid .card:first-of-type {
+        align-self: flex-start;
+        margin-top: 2rem; }
   #projects #githubBtn {
     position: relative;
     top: 0;

@@ -195,6 +195,12 @@ main {
                 }
         
             }
+            
+            &:first-of-type {
+                align-self: flex-start;
+                margin-top: 2rem;
+                
+            }
 
         }
 
