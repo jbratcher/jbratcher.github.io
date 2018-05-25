@@ -19,7 +19,7 @@ a {
   text-decoration: none;
   color: #fff; }
   a:hover {
-    color: #000c11; }
+    color: #11c3ff; }
 
 ul {
   list-style: none; }
@@ -527,7 +527,7 @@ main {
             z-index: 100; }
             #projects .grid .card figure a img:hover, #projects .grid .card figure a #canvasPort:hover {
               top: -0.75rem;
-              transform: scale(1.1);
+              transform: scale(1.05);
               opacity: 1;
               box-shadow: 0.5rem 0.5rem 1rem #636363; }
           #projects .grid .card figure a canvas#canvasPort {
@@ -759,7 +759,7 @@ main {
         main #projects .grid .card {
           width: 30vw; }
           main #projects .grid .card figure a canvas#canvasPort {
-            width: 100%;
+            width: 140%;
             height: 46vh; } }
 
 @media (min-width: 60rem) and (max-width: 80rem) {

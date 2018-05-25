@@ -4,6 +4,10 @@
 
 //////////////////////////////
 
+@import 'config';
+
+// Simple reset
+
 *, *:before, *:after {
     margin: 0;
     padding: 0;
@@ -28,7 +32,7 @@ a {
     color: #fff;
     
     &:hover {
-        color: $color-primary;
+        color: $color-tertiary;
     }
 }
 
