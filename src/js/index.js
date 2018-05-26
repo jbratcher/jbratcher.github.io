@@ -3,16 +3,17 @@ function init() {
     const body = document.querySelector("body");
     const header = document.querySelector("header");
     
-    let areaAboveFold = 1200;
+    const areaAboveFold = 1200;
     
     // Custom ratios for opactiy
     
-    let full = 1;
-    let low = 0.3;
+    const full = 1;
+    const med = 0.6;
+    const low = 0.3;
     
     // Set header opacity to 1
     
-    let navOpacity = () => {
+    const fullNavOpacity = () => {
         header.style.opacity = full;
     };
     
@@ -29,7 +30,7 @@ function init() {
         
         // Set a  delay of x seconds for navbar changes
         
-        setTimeout(navOpacity, 1000);
+        setTimeout(fullNavOpacity, 1000);
     
     };
     
