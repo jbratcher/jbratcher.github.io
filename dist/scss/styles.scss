@@ -1,12 +1,17 @@
-@import 'partials/variables',
-        'partials/config',
-        'partials/utilities',
-        'partials/base',
-        'partials/mixins',
-        'partials/helpers',
+// Import modules
+
+@import 'modules/variables',
+        'modules/utilities',
+        'modules/mixins',
+        'modules/helpers',
+        'modules/classes';
+
+// Import partials
+
+@import 'partials/base',
         'partials/global',
-        'partials/classes',
         'partials/layout',
         'partials/animations',
-        'partials/main-styles'
-        
+        'partials/main-styles';
+
+// Import 3rd party vendor
