@@ -4,6 +4,10 @@
 
 //////////////////////////////
 
+@import 'header',
+        'contact',
+        'footer';
+
 section {
     @include column;
     color: #eee;
