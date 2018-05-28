@@ -3,15 +3,14 @@
 @import 'modules/variables',
         'modules/utilities',
         'modules/mixins',
-        'modules/helpers',
-        'modules/classes';
+        'modules/helpers';
 
 // Import partials
 
 @import 'partials/base',
         'partials/global',
+        'partials/classes',
         'partials/layout',
-        'partials/animations',
-        'partials/main-styles';
+        'partials/animations';
 
 // Import 3rd party vendor
