@@ -716,16 +716,16 @@ footer {
         footer ul li i.fa:hover {
           color: #11c3ff;
           transform: scale(1.25); }
-  footer i.fa-angle-up {
+  footer i.fa-angle-up:hover {
     position: relative;
-    top: 0.5rem;
+    top: 1rem;
     display: inline-block;
     transform: perspective(0.0625rem) translateZ(0);
     box-shadow: 0 0 0.0625rem transparent;
     color: #fff;
     animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
     transition: all 0.5s ease-in-out; }
-    footer i.fa-angle-up:hover, footer i.fa-angle-up:active, footer i.fa-angle-ups:focus {
+    footer i.fa-angle-up:hover:hover, footer i.fa-angle-up:hover:active, footer i.fa-angle-up:hovers:focus {
       transform: scale(1.1); }
 
 @media (min-width: 40rem) {
@@ -733,7 +733,9 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-bottom: 1rem; } }
+    padding-bottom: 1rem; }
+    footer i.fa-angle-up:hover {
+      top: 0.5rem; } }
 
 @media (min-width: 60rem) {
   footer p {
