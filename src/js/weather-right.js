@@ -126,7 +126,7 @@ function init() {
     // Randomize circle value (position, velocity, fill and stroke color, and opacity)
 
     for (let i = 0; i < 100; i++) {
-        let rad = randomIntFromRange(2,4);
+        let rad = randomIntFromRange(2,3);
         let x = Math.random() * (elementWidth - rad * 2) + rad;
         let y = Math.random() * (elementHeight - rad *2) + rad;
         let dx = rad * 0.1;
