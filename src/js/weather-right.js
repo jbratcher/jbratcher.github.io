@@ -4,15 +4,15 @@
 
 console.log("weather-right.js connected");
 
-// variables
+// Get initial width of object
 
-let elementwidth = document.getElementById("canvasPort").clientWidth;
+let elementWidth = document.getElementById("canvasPort").clientWidth;
 let elementHeight = document.getElementById("canvasPort").clientHeight;
 
-// Set up the canvas and make full screen
+// Set canvas dimensions
 
 const canvasPort = document.getElementById("canvasPort");
-canvasPort.width = elementwidth;
+canvasPort.width = elementWidth;
 canvasPort.height = elementHeight;
 
 // Set 2D context
@@ -26,7 +26,7 @@ let mouse = {
     y: undefined
 };
 
-// Utility Functions
+// Utility Function for random integer
 
 const randomIntFromRange = (min, max) => {
     return Math.random() * (max - min) + min;
@@ -44,7 +44,7 @@ window.addEventListener("mousemove", (event) => {
 // Responsive Canvas
 
 window.addEventListener("resize", () => {
-    canvasPort.width = elementwidth;
+    canvasPort.width = elementWidth;
     canvasPort.height = elementHeight;
     init();
 });
@@ -62,6 +62,7 @@ function Circle(x,y,dx,dy,rad,color) {
     this.color = color;
     
     // Draw circle function
+    
     this.draw = () => {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.rad, 0, Math.PI *2, false);
@@ -74,7 +75,7 @@ function Circle(x,y,dx,dy,rad,color) {
         
         // Loop circle when it hits the side of the window
         
-        if(this.x + this.rad > elementwidth) {
+        if(this.x + this.rad > elementWidth) {
             this.x = 0;
         }
         
@@ -83,11 +84,14 @@ function Circle(x,y,dx,dy,rad,color) {
         }
         
         // Increment position (x,y)
+        
         this.x += this.dx;
         this.y += this.dy;
         
         // Interactivity (mouse and circles)
+        
         // Mouse detection for circle
+        
         if (mouse.x - this.x < 1 && mouse.x - this.x > -1 && mouse.y - this.y < 1 && mouse.y - this.y > -1) {
             // Limit circle grow size
             if (this.rad < maxRad) {
@@ -95,6 +99,7 @@ function Circle(x,y,dx,dy,rad,color) {
             }
             
         // Limit circle shrink size    
+        
         } else if (this.rad > minRad) {
             this.rad -= 1;
         } else if (this.rad < this.minRad) {
@@ -102,23 +107,27 @@ function Circle(x,y,dx,dy,rad,color) {
         }
         
         // Draw Circle
+        
         this.draw();
         
     };
 }
 
 // Create circles array
+
 let circles = [];
 
 function init() {
     
     // Reset circles array
+    
     circles = [];
     
     // Randomize circle value (position, velocity, fill and stroke color, and opacity)
+    
     for (let i = 0; i < 100; i++) {
         let rad = randomIntFromRange(2,4);
-        let x = Math.random() * (elementwidth - rad * 2) + rad;
+        let x = Math.random() * (elementWidth - rad * 2) + rad;
         let y = Math.random() * (elementHeight - rad *2) + rad;
         let dx = rad * 0.1;
         let dy = randomIntFromRange(0.5,1);
@@ -129,12 +138,19 @@ function init() {
 }
 
 //  Animation function
+
 const animation = () => {
-    //Start loop
+    
+    // Start animation loop
+    
     requestAnimationFrame(animation);
+    
     // Clear window after drawing circle
+    
     ctx.clearRect(0,0,window.innerWidth, window.innerHeight);
+    
     // Draw the circles
+    
     for (var i = 0; i < circles.length; i++) {
         circles[i].update();
     }
@@ -142,5 +158,6 @@ const animation = () => {
 };
 
 // Run 
+
 animation();
 init();
