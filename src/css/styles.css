@@ -394,7 +394,7 @@ main {
               opacity: 1;
               box-shadow: 0.5rem 0.5rem 1rem #636363; }
           #projects .grid .card figure a canvas#canvasPort {
-            background-image: linear-gradient(to bottom right, #52E5E7 10%, #130CB7 100%);
+            background-image: radial-gradient(circle at top left, #52E5E7 10%, #130CB7 100%);
             width: 90vw;
             max-width: 90vw;
             height: 40vh; }
