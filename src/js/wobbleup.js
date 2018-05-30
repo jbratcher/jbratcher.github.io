@@ -6,17 +6,17 @@ console.log("wobbleup connected");
 
 // Set up the canvas and make full screen
 
-var contactCanvas = document.querySelector("#contact-canvas");
+const contactCanvas = document.querySelector("#contact-canvas");
 contactCanvas.width = window.innerWidth;
 contactCanvas.height = window.innerHeight;
 
 // Set 2D context
 
-var contactCtx = contactCanvas.getContext("2d");
+const contactCtx = contactCanvas.getContext("2d");
 
 // contactMouse coordiantes
 
-var contactMouse = {
+const contactMouse = {
     x: undefined,
     y: undefined
 };
@@ -35,7 +35,7 @@ window.addEventListener("mousemove",
 
 window.addEventListener("resize", function() {
     contactCanvas.width = window.innerWidth;
-    contactCanvas.height = window.innerHeight;
+    contactCanvas.height = 600;
     init();
 });
 
@@ -121,7 +121,7 @@ function init() {
 
     // Randomize circle value (position, velocity, fill and stroke color, and opacity)
 
-    for (var i = 0; i < 100; i++) {
+    for (let i = 0; i < 100; i++) {
         var rad = randomIntFromRange(2,4);
         var x = Math.random() * (window.innerWidth - rad * 2);
         var y = Math.random() * (window.innerHeight - rad * 2);
@@ -149,7 +149,7 @@ function contactAnimation() {
 
     // Draw the circles
 
-    for(var i = 0; i < contactCircles.length; i++) {
+    for(let i = 0; i < contactCircles.length; i++) {
         contactCircles[i].update();
     }
 
