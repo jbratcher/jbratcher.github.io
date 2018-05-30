@@ -433,12 +433,7 @@ main {
       top: 6rem; }
       main #projects .grid {
         flex-flow: row wrap;
-        justify-content: space-around; }
-        main #projects .grid .card {
-          width: 30vw; }
-          main #projects .grid .card figure a img, main #projects .grid .card figure a #canvasPort {
-            width: 100%;
-            height: auto; } }
+        justify-content: space-around; } }
 
 @media (min-width: 60rem) and (max-width: 80rem) {
   main {
@@ -453,24 +448,22 @@ main {
       top: 6rem; }
       main #projects .grid {
         flex-flow: row wrap;
-        justify-content: space-around; }
-        main #projects .grid .card {
-          width: 30vw; }
-          main #projects .grid .card figure a img, main #projects .grid .card figure a #canvasPort {
-            width: 100%;
-            height: auto; } }
-
-@media (min-width: 40rem) and (max-width: 60rem) {
-  #projects .grid .card p {
-    font-size: 2rem; } }
+        justify-content: space-around; } }
 
 @media (max-width: 25rem) {
-  #projects .grid img {
+  #projects .grid .card figure a img, #projects .grid .card figure a #canvasPort {
     width: 70vw; } }
 
 @media (min-width: 60rem) {
   #projects .grid .card {
-    width: 30vw; } }
+    width: 30vw; }
+    #projects .grid .card p {
+      font-size: 1.5rem; }
+    #projects .grid .card figure a img, #projects .grid .card figure a #canvasPort {
+      width: 100%;
+      height: 40vh; }
+    #projects .grid .card figure a #canvasPort {
+      width: 30vw; } }
 
 #blog {
   display: flex;

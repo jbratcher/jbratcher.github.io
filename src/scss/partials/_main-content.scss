@@ -169,9 +169,7 @@ main {
 
                     canvas#canvasPort {
                         background-image: radial-gradient(circle at top left, #52E5E7 10%, #130CB7 100%);
-                        // width: 90vw;
-                        // max-width: 90vw;
-                        // height: 40vh;
+
                     }
 
                 }
@@ -243,20 +241,6 @@ main {
                 flex-flow: row wrap;
                 justify-content: space-around;
 
-                .card {
-                    width: 30vw;
-
-                    figure a {
-
-                      img, #canvasPort {
-                        width: 100%;
-                        height: auto;
-                      }
-
-                    }
-
-                }
-
             }
 
         }
@@ -286,36 +270,6 @@ main {
                 flex-flow: row wrap;
                 justify-content: space-around;
 
-                .card {
-                    width: 30vw;
-
-                    figure a {
-
-                      img, #canvasPort {
-                        width: 100%;
-                        height: auto;
-                      }
-
-                    }
-
-                }
-
-            }
-
-        }
-
-    }
-
-}
-
-@media (min-width: 40rem) and (max-width: 60rem) {
-
-    #projects .grid {
-
-        .card {
-
-            p {
-                font-size: 2rem;
             }
 
         }
@@ -328,9 +282,17 @@ main {
 
     #projects .grid {
 
-        img {
-            width: 70vw;
+      .card {
+
+        figure a {
+
+          img, #canvasPort {
+              width: 70vw;
+          }
+
         }
+
+      }
 
     }
 
@@ -340,6 +302,24 @@ main {
 
     #projects .grid .card {
         width: 30vw;
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        figure a {
+
+          img, #canvasPort {
+            width: 100%;
+            height: 40vh;
+          }
+
+          #canvasPort {
+            width: 30vw;
+          }
+
+        }
+
     }
 
 }
