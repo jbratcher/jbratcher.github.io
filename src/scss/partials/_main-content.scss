@@ -2,9 +2,8 @@
 
 main {
     @include column;
-    padding: 0 0 25rem;
     position: relative;
-    z-index: 1;
+    z-index: 50;
 
     .main-bg-clip {
         box-shadow: 0 0.5rem 1rem #636363;
@@ -18,6 +17,7 @@ main {
         background: linear-gradient(#fff 0%, #eee 70%, #ddd 100%);
         transform: skewY(-3deg);
     }
+    
 }
 
 // Sidebar

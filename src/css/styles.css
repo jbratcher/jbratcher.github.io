@@ -270,9 +270,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 25rem;
   position: relative;
-  z-index: 1; }
+  z-index: 50; }
   main .main-bg-clip {
     box-shadow: 0 0.5rem 1rem #636363;
     position: absolute;
@@ -472,7 +471,8 @@ main {
   background: #000c11;
   color: #333;
   padding: 5rem 0;
-  position: relative; }
+  position: relative;
+  z-index: 10; }
   #blog .blog-bg-clip {
     box-shadow: 0 -0.5rem 1rem #636363;
     position: absolute;
