@@ -271,7 +271,8 @@ main {
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 50; }
+  z-index: 50;
+  padding-bottom: 20rem; }
   main .main-bg-clip {
     box-shadow: 0 0.5rem 1rem #636363;
     position: absolute;
@@ -307,9 +308,10 @@ main {
     #sidebar .bio h2 {
       font-size: 1.5rem;
       text-transform: uppercase;
-      letter-spacing: 0.3rem;
-      padding: 0.7rem 0;
-      margin-top: -3rem; }
+      letter-spacing: 0.125rem;
+      padding: 0 1rem;
+      margin-top: -3rem;
+      white-space: pre; }
     #sidebar .bio h3 {
       font-size: 1.5rem; }
     #sidebar .bio img {
@@ -380,7 +382,7 @@ main {
             position: relative;
             top: 0;
             width: 90vw;
-            height: 80vh;
+            height: 50vh;
             padding: 0;
             margin: 1rem 0;
             border-radius: 3rem;
@@ -463,6 +465,33 @@ main {
       height: 40vh; }
     #projects .grid .card figure a #canvasPort {
       width: 30vw; } }
+
+@media (min-width: 60rem) {
+  #projects .grid .card {
+    width: 30vw; }
+    #projects .grid .card p {
+      font-size: 1.5rem; }
+    #projects .grid .card figure a img, #projects .grid .card figure a #canvasPort {
+      width: 100%;
+      height: 40vh; }
+    #projects .grid .card figure a #canvasPort {
+      width: 30vw; } }
+
+@media (min-width: 48rem) and (max-width: 60rem) {
+  main {
+    padding-bottom: 25rem; }
+    main #projects #githubBtn {
+      font-size: 2rem; }
+    main #projects .grid .card {
+      width: 80vw; }
+      main #projects .grid .card p {
+        font-size: 2rem;
+        padding: 1rem 0; }
+      main #projects .grid .card figure a img, main #projects .grid .card figure a #canvasPort {
+        width: 100%;
+        height: 70vh; }
+      main #projects .grid .card figure a #canvasPort {
+        width: 80vw; } }
 
 #blog {
   display: flex;
