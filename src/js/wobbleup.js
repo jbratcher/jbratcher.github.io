@@ -1,9 +1,5 @@
 // Drawing and animating circles with random velocity and color
 
-// Report JS file connected
-
-console.log("wobbleup connected");
-
 // Set up the canvas and make full screen
 
 const contactCanvas = document.querySelector("#contact-canvas");

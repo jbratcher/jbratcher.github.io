@@ -1,9 +1,5 @@
 // Drawing and animating circles with random velocity and color
 
-// Report JS file connected
-
-console.log("weather-right.js connected");
-
 // Get initial width of object
 
 let elementWidth = document.getElementById("canvasPort").clientWidth;
