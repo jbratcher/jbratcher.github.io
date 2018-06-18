@@ -177,6 +177,10 @@ nav {
 
 @media (min-width: 40rem) {
 
+    header ul li {
+        padding: 1rem;
+    }
+
     .menu-toggle,
     nav .menu-close {
       display: none;

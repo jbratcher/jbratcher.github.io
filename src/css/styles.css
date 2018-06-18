@@ -222,6 +222,8 @@ nav {
     position: fixed; } }
 
 @media (min-width: 40rem) {
+  header ul li {
+    padding: 1rem; }
   .menu-toggle,
   nav .menu-close {
     display: none; }
@@ -463,7 +465,7 @@ main {
       font-size: 1.5rem; }
     #projects .grid .card figure a img, #projects .grid .card figure a #canvasPort {
       width: 100%;
-      height: 50vh; }
+      height: auto; }
     #projects .grid .card figure a #canvasPort {
       width: 30vw; } }
 
