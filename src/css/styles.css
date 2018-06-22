@@ -387,7 +387,7 @@ main {
             height: 50vh;
             padding: 0;
             margin: 1rem 0;
-            border-radius: 3rem;
+            border-radius: 2rem;
             transition: 0.5s ease-in-out;
             box-shadow: 0.1rem 0.1rem 0.25rem #636363;
             z-index: 100; }
@@ -547,7 +547,7 @@ main {
       width: 100%;
       height: auto;
       max-width: 80vw;
-      border-radius: 3rem;
+      border-radius: 1rem;
       opacity: 0.6;
       transition: 0.5s ease-in-out; }
       #blog .blog-grid img:hover {
