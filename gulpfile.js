@@ -1,37 +1,32 @@
 // Require dependencies
-// Gulp, BrowserSync, SASS, useref with gulpif to bundle and minify CSS adn JS, CSS autoprefixer, Imagemin to optimize images, cache to reduce reload, del to remove(clean) the dist directory
 
 const gulp          = require('gulp');
-const pump          = require('pump');
 const browserSync   = require('browser-sync').create();
 const sass          = require('gulp-sass');
-const useref        = require('gulp-useref');
-const uglify        = require('gulp-uglify');
-const gulpIf        = require('gulp-if');
-const cssnano       = require('gulp-cssnano');
-const imagemin      = require('gulp-imagemin');
+const useref        = require('gulp-useref');  // replace unmodded files with modded files
+const uglify        = require('gulp-uglify');  // js concat and minify
+const gulpIf        = require('gulp-if');  // conditional statements
+const cssnano       = require('gulp-cssnano');  // css minification
+const imagemin      = require('gulp-imagemin');  // img optimization
 const cache         = require('gulp-cache');
 const autoprefixer  = require('gulp-autoprefixer');
-const babel         = require('gulp-babel');
+const babel         = require('gulp-babel');  // compile js to es2015
+const ts            = require('gulp-typescript');
 const del           = require('del');
 
 // Move vendor files from node modules to src folders
 
-// Move Fonts (font awesome) to src/fonts
-
 gulp.task('fonts', () =>
-  gulp.src('node_modules/font-awesome/fonts/*')
+  gulp.src('node_modules/font-awesome/css/fonts/*')
     .pipe(gulp.dest('src/css/fonts'))
 );
-
-// Move Font Awesome Icons CSS to src/css/vendor
 
 gulp.task('fa', () =>
   gulp.src('node_modules/font-awesome/css/font-awesome.min.css')
     .pipe(gulp.dest('src/css/vendor'))
 );
 
-// Compile Sass & Inject Into Browser (Watched)
+// Compile sass & inject into browser (watched)
 
 gulp.task('sass', () =>
   gulp.src('src/scss/*.scss')
@@ -39,6 +34,17 @@ gulp.task('sass', () =>
       .pipe(gulp.dest("src/css"))
       .pipe(browserSync.stream())
 );
+
+// Complie typescript
+
+gulp.task("tsc", () => {
+  var tsResult = gulp.src("src/ts/*.ts")
+      .pipe(ts({
+            noImplicitAny: false
+      }));
+  return tsResult.js.pipe(gulp.dest("src/js"));
+});
+
 
 // Add vendor prefixes to src CSS and move to dist
 
@@ -51,32 +57,42 @@ gulp.task('autoprefix', () =>
         .pipe(gulp.dest('dist/css'))
 );
 
-// Optimize Images and cache (Watched)
+// Compile ES6 to ES5 with Babel
+
+gulp.task('compilejs', () =>
+    gulp.src('src/js/*.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(gulp.dest('dist/js'))
+);
+
+// Optimize images and cache (watched)
 
 gulp.task('img', () =>
   gulp.src('src/img/*.+(png|jpg|jpeg|gif|svg)')
     .pipe(cache(imagemin({
           interlaced: true
         })))
-  .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest('dist/img'))
 );
 
 // Live Reload function
 
-// Serve and Watch src files
-
-gulp.task('browserSync', gulp.parallel('sass', function() {
+gulp.task('browserSync', gulp.parallel('sass', () => {
   browserSync.init({
       server: "./",
-      port: 8082     // Change port as needed, 8082 is for Cloud 9 workspace
+      port: 8082     // 8082 is for Cloud 9 workspaces
 }),
-    gulp.watch(["src/scss/*.scss", "src/scss/partials/*.scss"], gulp.parallel('sass')),
+    gulp.watch("src/scss/*.scss", gulp.parallel('sass')),
+    gulp.watch('src/ts/*.ts', gulp.parallel('tsc')),
+    gulp.watch("src/ts/*.ts").on('change', browserSync.reload),
     gulp.watch("*.html").on('change', browserSync.reload),
-    gulp.watch("src/js/*.js").on('change', browserSync.reload);
+    gulp.watch("src/js/*.js").on('change', browserSync.reload),
+    gulp.watch("src/img/*").on('change', browserSync.reload);
 }));
 
-// Bundle JS, complie and minify
-// Bundle CSS and minify (prefix in 'autoprefix' task)
+// Bundle JS,CSS and minify
 
 gulp.task('useref', () =>
   gulp.src('*.html')
@@ -92,22 +108,18 @@ gulp.task('useref', () =>
 // Move src files to dist
 
 gulp.task('build:dist', () =>
-    gulp.src(["src/**", "index.html", "!src/scss/**"])
+    gulp.src([ "index.html", "src/**", "!src/{scss,scss/*}", "!src/{ts,ts/*}"])
         .pipe(gulp.dest("dist"))
 );
 
-// Clean Dist folder
+gulp.task('clean:dist', () => del('dist'));
 
-gulp.task('clean:dist', () =>
-  del('dist')
-);
+// Remove unminified files
 
-gulp.task('clean:files', () =>
-  del(['dist/css/styles.css', 'dist/js/index.js', 'dist/js/weather-right.js'])
-);
+gulp.task('clean:files', () => del(['dist/css/styles.css', 'dist/css/vendor/', 'dist/js/*', "!dist/js/main.min.js", "!dist/js/{vendor, vendor/*}"]));
 
 // Gulp default tasks
 
-gulp.task('default', gulp.parallel('sass', 'fonts', 'fa', 'browserSync'));
+gulp.task('default', gulp.parallel('sass', 'tsc', 'fonts', 'fa', 'img', 'browserSync'));
 
-gulp.task('build', gulp.series('clean:dist', 'build:dist', 'img', 'autoprefix', 'useref', 'clean:files'));
+gulp.task('build', gulp.series('clean:dist', 'build:dist', 'sass', 'tsc', 'img', 'autoprefix', 'compilejs', 'useref', 'clean:files'));

@@ -1,0 +1,38 @@
+// Classes
+
+// Button and button colors
+
+.btn {
+    @include btn;
+
+    &:hover, &:focus, &:active, &:target {
+        border: 0.2rem solid #fff;
+        background: $primary-color;
+        color: #fff;
+    }
+
+}
+
+.btn {
+    @include bg-colors($ui-colors);
+}
+
+// Cards (content boxes)
+
+.card {
+    @include column;
+    color: #333;
+    font-size: 1rem;
+    margin: 1rem;
+
+    h3 {
+        text-align: center;
+        font-size: 1.33rem;
+        padding: 0 0 0.5rem;
+    }
+
+    p {
+        width: 50%;
+        padding-bottom: 0.5rem;
+    }
+}

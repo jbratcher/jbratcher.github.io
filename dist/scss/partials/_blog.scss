@@ -1,0 +1,205 @@
+// Blog
+
+#blog {
+    @include column;
+    background: $tertiary-color;
+    color: #333;
+    padding: 5rem 0;
+    position: relative;
+    z-index: 10;
+
+    .blog-bg-clip {
+        box-shadow: 0 -0.5rem 1rem #636363;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        transform: skewY(-3deg);
+    }
+
+    h2 {
+        margin-top: 3rem;
+        position: absolute;
+        z-index: 1;
+        font-size: 3rem;
+    }
+
+    .blog-grid {
+        @include column;
+        margin-top: 11rem;
+        position: relative;
+        z-index: 99;
+
+        li figure {
+            @include column;
+
+            a {
+                color: #333;
+                @include column;
+            }
+
+            h3 {
+                color: $secondary-color;
+            }
+
+            h5 {
+                font-size: 0.75rem;
+            }
+
+            p {
+                padding: 1rem 0;
+            }
+
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 80vw;
+            border-radius: 1rem;
+            opacity: 0.6;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+    }
+
+}
+
+// Blog Post
+
+#blog-post {
+    padding: 5rem 0;
+    color: #333;
+
+    h1, h3, p {
+        line-height: 1.5;
+        padding: 1rem 2rem;
+    }
+
+}
+
+// Code Blog Code
+
+/* Container for the code block and header */
+
+.code-container {
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  border-radius: 0.5rem;
+  width: 85vw;
+}
+
+/* HTML Header */
+
+.html {
+    @include code-box;
+    background: #ff9800;
+
+}
+
+/* CSS Header */
+
+.css {
+    @include code-box;
+    background: #399cbd;
+}
+
+/* JS Header */
+
+.js {
+    @include code-box;
+    background: #ffdb58;
+}
+
+// Small line-height for CSS and JS boxes
+
+#css, #js {
+
+  p {
+    line-height: 0.5;
+  }
+
+}
+
+/* Code on black background */
+
+.code-block {
+  padding: 1rem;
+}
+
+.tag {
+  color: #ab875d;
+}
+
+.class {
+  color: #dfc48c;
+}
+
+.attr {
+  color: #8f9c6c;
+}
+
+.text {
+  color: #eee;
+}
+
+.prop {
+  color: #9b869c;
+}
+
+.value {
+  color: #cd6a51;
+}
+
+.var {
+  color: #809bbd;
+}
+
+.obj {
+  color: #96b38a;
+}
+
+/* Indention Helpers */
+
+.indent-half {
+  padding: 0 1rem;
+}
+
+.indent-1 {
+  padding: 0 2rem;
+}
+
+.indent-2 {
+  padding: 0 4rem;
+}
+
+// spacing helpers
+
+.lead {
+  margin-bottom: 2rem;
+}
+
+// Media Queries
+
+@media (min-width: 60rem) {
+
+  #blog .blog-grid {
+      flex-flow: row wrap;
+      justify-content: space-around;
+
+      img {
+          width: 40vw;
+          height: 50vh;
+      }
+
+  }
+
+}

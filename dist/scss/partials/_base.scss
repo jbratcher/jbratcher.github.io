@@ -1,0 +1,42 @@
+//////////////////////////////
+
+// Base                     // 
+
+//////////////////////////////
+
+@import './modules/config';
+
+// Simple reset
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --base-font-size: 16px;
+}
+
+html,body {
+    background: $white;
+    font-size: $base__font-size;
+    line-height: ($base__line-height / $base__font-size);
+    font-family: $font-family__primary;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    
+    &:hover {
+        color: $color-tertiary;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
