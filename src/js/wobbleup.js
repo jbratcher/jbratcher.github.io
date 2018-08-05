@@ -1,4 +1,5 @@
 // Drawing and animating circles with random velocity and color
+console.log('js connected')
 
 // Set up the canvas and make full screen
 
