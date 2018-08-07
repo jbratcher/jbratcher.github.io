@@ -1,5 +1,12 @@
 // Drawing and animating circles with random velocity and color
-console.log('js connected')
+
+console.log('js connected');
+
+// Utility Function for random integer
+
+const randomIntFromRange = (min, max) => {
+    return Math.random() * (max - min) + min;
+};
 
 // Set up the canvas and make full screen
 
