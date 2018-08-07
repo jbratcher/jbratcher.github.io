@@ -133,9 +133,9 @@ main {
         @include column;
 
         .card {
-            margin: 2rem 1rem 0;
-            height: auto;
-            max-width: 90vw;
+            // margin: 2rem 1rem 0;
+            // height: auto;
+            // max-width: 90vw;
 
             figure {
                 @include column
@@ -148,14 +148,13 @@ main {
                         font-size: 2.25rem;
                     }
 
-                    img, #canvasPort {
+                    img {
                         background: #ccc;
                         position: relative;
                         top: 0;
-                        width: 80vw;
-                        height: 50vh;
-                        padding: 0;
-                        margin: 1rem 0;
+                        width: 100%;
+                        max-width: 80vw;
+                        height: auto;
                         border-radius: 2rem;
                         transition: 0.5s ease-in-out;
                         box-shadow: 0.1rem 0.1rem 0.25rem #636363;
@@ -167,11 +166,6 @@ main {
                             opacity: 1;
                             box-shadow: 0.5rem 0.5rem 1rem #636363;
                         }
-                    }
-
-                    canvas#canvasPort {
-                        background-image: radial-gradient(circle at top left, #52E5E7 10%, #130CB7 100%);
-
                     }
 
                 }
@@ -242,6 +236,11 @@ main {
             .grid {
                 flex-flow: row wrap;
                 justify-content: space-around;
+                
+                img {
+                  width: 40vw;
+                  height: 50vh;
+              }
 
             }
 
