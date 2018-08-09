@@ -127,13 +127,16 @@ function init() {
 
     for (let i = 0; i < 100; i++) {
         var rad = randomIntFromRange(2,4);
-        var x = Math.random() * (window.innerWidth - rad * 2);
-        var y = Math.random() * (window.innerHeight - rad * 2);
+        var x = Math.random() * (window.innerWidth - rad * 2);  // random x pos +- rad from window edge
+        var y = Math.random() * (window.innerHeight - rad * 2); // same but for height instead of width
         var dx = 0.2;
         var dy = -randomIntFromRange(0.2,0.3);
         var color = "#fff";
         var boundaryRight = x + rad;
         var boundaryLeft = x - rad;
+        if(this.y < window.innerHeight + rad) {
+            this.y = window.innerHeight - rad * 2;
+        }
         contactCircles.push(new Circle(x,y,dx,dy,rad,color,boundaryRight,boundaryLeft));
     }
 
