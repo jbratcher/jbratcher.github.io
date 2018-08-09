@@ -57,15 +57,24 @@ main {
         }
 
         img {
-            position: relative;
-            top: -4.5rem;
-            width: 40%;
+            
             border: 0.25rem double $tertiary-color;
             border-bottom: 0.25rem solid $tertiary-color;
             border-radius: 50%;
+            filter: sepia(.3);
+            position: relative;
+            top: -4.5rem;
             transition: 0.5s ease-in-out;
+            width: 40%;
+            
+            // xpro filter extention to after psuedo-element
+            &::after {
+                background: radial-gradient(circle, rgb(230, 231, 224) 40%, rgba(43, 42, 161, .6) 110%);
+                mix-blend-mode: color-burn;
+             }
 
             &:hover {
+                filter: none;
                 transform: scale(1.1);
             }
 
@@ -133,9 +142,6 @@ main {
         @include column;
 
         .card {
-            // margin: 2rem 1rem 0;
-            // height: auto;
-            // max-width: 90vw;
 
             figure {
                 @include column
@@ -176,6 +182,10 @@ main {
                 align-self: flex-start;
                 margin-top: 2rem;
 
+            }
+            
+            figcaption {
+                padding: 0.5rem 0;
             }
 
         }

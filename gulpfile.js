@@ -29,7 +29,7 @@ gulp.task('fa', () =>
 // Compile sass & inject into browser (watched)
 
 gulp.task('sass', () =>
-  gulp.src('src/scss/*.scss')
+  gulp.src('src/scss/{*.scss, **/*.scss}')
       .pipe(sass())
       .pipe(gulp.dest("src/css"))
       .pipe(browserSync.stream())
@@ -79,12 +79,12 @@ gulp.task('img', () =>
 
 // Live Reload function
 
-gulp.task('browserSync', gulp.parallel('sass', () => {
+gulp.task('browserSync', gulp.parallel(() => {
   browserSync.init({
       server: "./",
       port: 8082     // 8082 is for Cloud 9 workspaces
 }),
-    gulp.watch("src/scss/*.scss", gulp.parallel('sass')),
+    gulp.watch("src/scss/{*.scss, **/*.scss}", gulp.parallel('sass')),
     gulp.watch('src/ts/*.ts', gulp.parallel('tsc')),
     gulp.watch("src/ts/*.ts").on('change', browserSync.reload),
     gulp.watch("*.html").on('change', browserSync.reload),
